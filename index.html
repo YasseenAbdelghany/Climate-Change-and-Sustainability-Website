@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AquaWatt · Save water, energy and CO₂ at home</title>
+<meta name="description" content="AquaWatt is a free, private household calculator for Egyptian families that shows how saving water also saves electricity and cuts CO₂ (SDG 6, 7 and 13).">
+<link rel="canonical" href="https://yasseenabdelghany.github.io/Climate-Change-and-Sustainability-Website/">
+<meta name="theme-color" content="#f3f7f8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b1a1f" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AquaWatt">
+<meta property="og:title" content="AquaWatt · Save water, energy and CO₂ at home">
+<meta property="og:description" content="A free household calculator for Egyptian families: every litre you save also saves energy and cuts CO₂. SDG 6, 7 and 13.">
+<meta property="og:url" content="https://yasseenabdelghany.github.io/Climate-Change-and-Sustainability-Website/">
+<meta property="og:image" content="https://yasseenabdelghany.github.io/Climate-Change-and-Sustainability-Website/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AquaWatt: every litre you save also saves energy and cuts CO₂.">
+<meta property="og:locale" content="ar_EG">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AquaWatt · Save water, energy and CO₂ at home">
+<meta name="twitter:description" content="A free household calculator for Egyptian families: every litre you save also saves energy and cuts CO₂.">
+<meta name="twitter:image" content="https://yasseenabdelghany.github.io/Climate-Change-and-Sustainability-Website/assets/og-image.png">
+<script>
+/* Set language, direction and theme before first paint so the page never flashes the wrong layout. */
+(function () {
+  var p = {};
+  try { p = (JSON.parse(localStorage.getItem("aquawatt.prefs")) || {}).data || {}; } catch (e) {}
+  var lang = p.lang === "en" ? "en" : "ar", root = document.documentElement;
+  root.lang = lang; root.dir = lang === "ar" ? "rtl" : "ltr";
+  if (p.theme === "light" || p.theme === "dark") root.setAttribute("data-theme", p.theme);
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans+Arabic:wght@400;600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap nav">
+    <a class="brand" href="#top"><span class="drops" aria-hidden="true"><i class="d6"></i><i class="d7"></i><i class="d13"></i></span>AquaWatt</a>
+    <nav id="siteNav" aria-label="Sections" data-i18n-attr="aria-label:nav.label"><ul>
+      <li><a href="#problem" data-i18n="nav.problem">Problem</a></li>
+      <li><a href="#research" data-i18n="nav.research">Research</a></li>
+      <li><a href="#calculator" data-i18n="nav.calculator">Calculator</a></li>
+      <li><a href="#team" data-i18n="nav.team">Team</a></li>
+      <li><a href="#references" data-i18n="nav.references">References</a></li>
+    </ul></nav>
+    <div class="tools">
+      <button class="tool" id="langBtn" type="button"></button>
+      <button class="tool icon" id="themeBtn" type="button">
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button class="tool icon menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="siteNav" data-i18n-attr="aria-label:nav.menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="notice" id="storageNotice" role="status" hidden>
+  <div class="wrap notice-in"><p data-i18n="storage.blocked">Your browser is blocking local storage, so your progress will not be kept after you close this page. Everything else still works.</p>
+  <button type="button" class="link-btn" id="storageDismiss" data-i18n="storage.dismiss">OK</button></div>
+</div>
+
+<main id="main">
+  <div class="wrap hero">
+    <div class="hero-copy">
+      <div class="sdg-tags"><span class="tag w" data-i18n="tag.6">SDG 6 · Clean water</span><span class="tag e" data-i18n="tag.7">SDG 7 · Clean energy</span><span class="tag c" data-i18n="tag.13">SDG 13 · Climate action</span></div>
+      <h1 data-i18n-html="hero.title">Every litre you save also saves <span class="e">energy</span> and cuts <span class="c">CO₂</span>.</h1>
+      <p class="lead" data-i18n="hero.lead">Water, electricity and climate are one connected problem. Heating, pumping and treating water uses power, and in Egypt most power still comes from fossil fuels. AquaWatt shows a household how much it uses and which small changes save the most.</p>
+      <a class="btn" href="#calculator" data-i18n="hero.cta">Calculate your home's footprint →</a>
+    </div>
+    <div class="facts" role="group" aria-label="Key facts from the UN SDG Report 2026" data-i18n-attr="aria-label:facts.label">
+      <div class="fact w"><b data-i18n="fact1.big">&gt;75%</b><span data-i18n="fact1.text">water stress in Northern Africa and Western Asia, the most water-stressed regions on Earth</span><small data-i18n="fact1.src">UN SDG REPORT 2026 · GOAL 6</small></div>
+      <div class="fact e"><b data-i18n="fact2.big">655M</b><span data-i18n="fact2.text">people still had no electricity in 2024, and renewables were only 18% of global energy use</span><small data-i18n="fact2.src">UN SDG REPORT 2026 · GOAL 7</small></div>
+      <div class="fact c"><b data-i18n="fact3.big">57.7 Gt</b><span data-i18n="fact3.text">CO₂-equivalent emitted in 2024, a record. 2015–2025 was the hottest 11-year stretch on record</span><small data-i18n="fact3.src">UN SDG REPORT 2026 · GOAL 13</small></div>
+    </div>
+  </div>
+
+  <section id="problem">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow" data-i18n="problem.eyebrow">The problem</span>
+        <h2 data-i18n="problem.title">Three goals, one household problem</h2>
+        <p class="lead" data-i18n="problem.lead">The UN Sustainable Development Goals Report 2026 shows that water stress is not improving, clean energy is growing too slowly, and emissions are still rising. Households in water-scarce countries like Egypt sit where all three meet.</p>
+      </div>
+      <div class="goals">
+        <article class="goal w">
+          <span class="num" data-i18n="goal6.num">SDG 6</span><h3 data-i18n="goal6.title">Clean water and sanitation</h3>
+          <ul>
+            <li data-i18n="goal6.1">2.1 billion people lack safely managed drinking water.</li>
+            <li data-i18n="goal6.2">Global water stress is stuck at 18%, nearly the same as 2015.</li>
+            <li data-i18n="goal6.3">In Northern Africa and Western Asia it is above 75%.</li>
+          </ul>
+        </article>
+        <article class="goal e">
+          <span class="num" data-i18n="goal7.num">SDG 7</span><h3 data-i18n="goal7.title">Affordable and clean energy</h3>
+          <ul>
+            <li data-i18n="goal7.1">Renewables supply only 18% of final energy use.</li>
+            <li data-i18n="goal7.2">Electricity is the leading sector, at just over 30% renewable.</li>
+            <li data-i18n="goal7.3">Energy-intensity gains slowed to 1.5% in 2023, below target.</li>
+          </ul>
+        </article>
+        <article class="goal c">
+          <span class="num" data-i18n="goal13.num">SDG 13</span><h3 data-i18n="goal13.title">Climate action</h3>
+          <ul>
+            <li data-i18n="goal13.1">2024 reached 1.55 °C above pre-industrial levels.</li>
+            <li data-i18n="goal13.2">Current pledges still lead to 2.3–2.5 °C of warming.</li>
+            <li data-i18n="goal13.3">A hotter climate means more droughts and higher water demand.</li>
+          </ul>
+        </article>
+      </div>
+      <figure class="loop">
+        <svg id="loopSvg" viewBox="0 0 760 170" role="img" aria-labelledby="loopT">
+          <title id="loopT" data-i18n="loop.title">The water-energy-climate loop</title>
+          <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--muted)"/></marker></defs>
+          <!-- Shapes are mirrored as a group for RTL; labels are repositioned in script.js so the text itself is never flipped. -->
+          <g id="loopShapes">
+            <rect x="10" y="40" width="190" height="70" rx="10" fill="var(--water-soft)"/>
+            <rect x="285" y="40" width="190" height="70" rx="10" fill="var(--energy-soft)"/>
+            <rect x="560" y="40" width="190" height="70" rx="10" fill="var(--climate-soft)"/>
+            <line x1="204" y1="75" x2="280" y2="75" stroke="var(--muted)" stroke-width="2" marker-end="url(#ar)"/>
+            <line x1="479" y1="75" x2="555" y2="75" stroke="var(--muted)" stroke-width="2" marker-end="url(#ar)"/>
+            <path d="M655 114 C655 160, 105 160, 105 116" fill="none" stroke="var(--muted)" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#ar)"/>
+          </g>
+          <g class="loop-text" font-size="15">
+            <text x="105" y="70" text-anchor="middle" font-weight="700" fill="var(--water)" data-i18n="loop.water">Water use</text>
+            <text x="105" y="92" text-anchor="middle" fill="var(--muted)" font-size="13" data-i18n="loop.waterSub">showers, taps, laundry</text>
+            <text x="380" y="70" text-anchor="middle" font-weight="700" fill="var(--energy)" data-i18n="loop.energy">Electricity</text>
+            <text x="380" y="92" text-anchor="middle" fill="var(--muted)" font-size="13" data-i18n="loop.energySub">heating, pumping, treating</text>
+            <text x="655" y="70" text-anchor="middle" font-weight="700" fill="var(--climate)" data-i18n="loop.co2">CO₂ emissions</text>
+            <text x="655" y="92" text-anchor="middle" fill="var(--muted)" font-size="13" data-i18n="loop.co2Sub">mostly gas-fired power</text>
+            <text x="380" y="160" text-anchor="middle" fill="var(--muted)" font-size="13" data-i18n="loop.back">warming → drought and heat → more water and cooling demand</text>
+          </g>
+        </svg>
+        <figcaption class="loop-cap" data-i18n="loop.cap">This loop is why we treat SDG 6, 7 and 13 together. Saving hot water saves the most, because heating water takes far more energy than pumping it.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="research">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow" data-i18n="research.eyebrow">What the research says</span>
+        <h2 data-i18n="research.title">Feedback changes behaviour, if it is specific</h2>
+        <p class="lead" data-i18n="research.lead">We reviewed peer-reviewed studies on household water and energy use, feedback tools and Egypt's water situation. These are the findings that shaped our design.</p>
+      </div>
+      <div class="findings">
+        <div class="finding"><span class="big w" data-i18n="f1.big">8%</span><div><p data-i18n-html="f1.text"><strong>Lasting water savings from smart-meter feedback.</strong> About 47% of 334 households in Valencia kept using 8% less water more than two years later.</p><cite>Cominola et al., 2021</cite></div></div>
+        <div class="finding"><span class="big c" data-i18n="f2.big">~10%</span><div><p data-i18n-html="f2.text"><strong>Lower carbon footprint after using a calculator.</strong> Users cut emissions about 10% in the first weeks, then the effect faded without follow-up.</p><cite>Enlund et al., 2023</cite></div></div>
+        <div class="finding"><span class="big e" data-i18n="f3.big">42</span><div><p data-i18n-html="f3.text"><strong>Studies in a feedback meta-analysis.</strong> Feedback reduces energy use overall. Frequent feedback combined with goals works best.</p><cite>Karlin et al., 2015</cite></div></div>
+        <div class="finding"><span class="big e" data-i18n="f4.big">6.3%</span><div><p data-i18n-html="f4.text"><strong>Savings for the highest users</strong> when they were compared with their neighbours, versus 2.0% on average.</p><cite>Allcott, 2011</cite></div></div>
+        <div class="finding"><span class="big w" data-i18n="f5.big">23%</span><div><p data-i18n-html="f5.text"><strong>Of footprint-calculator users felt they knew how to act.</strong> 91% learned something and 78% felt motivated, but most lacked concrete steps.</p><cite>Collins et al., 2020</cite></div></div>
+        <div class="finding"><span class="big c" data-i18n="f6.big">10%</span><div><p data-i18n-html="f6.text"><strong>Possible drop in Nile inflow to Lake Nasser by 2095</strong> in one projection, though models disagree. Upper Egypt is already water-scarce.</p><cite>Ashour et al., 2024</cite></div></div>
+      </div>
+      <div class="gap-note"><p data-i18n-html="gap.text"><strong>The gap we target:</strong> most calculators tell people their footprint but not what to do next. AquaWatt turns your numbers into a ranked list of actions, each with its own water, energy, CO₂ and money savings, and lets you build a personal plan.</p></div>
+    </div>
+  </section>
+
+  <section id="calculator" class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow" data-i18n="calc.eyebrow">Our solution</span>
+        <h2 data-i18n="calc.title">AquaWatt household calculator</h2>
+        <p class="lead" data-i18n="calc.lead">Enter your household's habits. The numbers update instantly, and nothing you type leaves your browser. The form starts with an example family of five.</p>
+      </div>
+      <div class="calc">
+        <form class="panel" id="form" autocomplete="off">
+          <div class="panel-head"><h3 data-i18n="calc.formTitle">Your household</h3><button type="button" class="link-btn" id="resetCalc" data-i18n="calc.reset">Reset to the example family</button></div>
+          <div class="fields">
+            <div class="field"><label for="people" data-i18n="calc.people">People at home</label><input id="people" type="number" inputmode="numeric" min="1" max="20" value="5"></div>
+            <div class="field"><label for="heater" data-i18n="calc.heater">Water heater</label>
+              <select id="heater"><option value="electric" selected data-i18n="calc.heaterElectric">Electric</option><option value="gas" data-i18n="calc.heaterGas">Gas</option><option value="solar" data-i18n="calc.heaterSolar">Solar</option></select></div>
+            <div class="field full"><label for="shower"><span data-i18n="calc.shower">Average shower length:</span> <output id="showerOut" for="shower">8</output> <span data-i18n="unit.min">min</span></label><input id="shower" type="range" min="2" max="25" value="8"><div class="range-row" aria-hidden="true"><span id="showerMin">2</span><span id="showerMax">25 min</span></div></div>
+            <div class="field"><label for="showers" data-i18n="calc.showers">Showers per person per day</label><input id="showers" type="number" inputmode="decimal" min="0" max="3" step="0.5" value="1"></div>
+            <div class="field"><label for="laundry" data-i18n="calc.laundry">Laundry loads per week</label><input id="laundry" type="number" inputmode="numeric" min="0" max="30" value="5"></div>
+            <div class="field"><label for="ac" data-i18n="calc.ac">Air conditioners used</label><input id="ac" type="number" inputmode="numeric" min="0" max="10" value="2"></div>
+            <div class="field"><label for="acHours" data-i18n="calc.acHours">AC hours per day (summer)</label><input id="acHours" type="number" inputmode="numeric" min="0" max="24" value="6"></div>
+            <div class="field"><label for="acTemp" data-i18n="calc.acTemp">AC temperature (°C)</label><input id="acTemp" type="number" inputmode="numeric" min="16" max="30" value="22"></div>
+            <div class="field"><label for="bulbs" data-i18n="calc.bulbs">Light bulbs at home</label><input id="bulbs" type="number" inputmode="numeric" min="0" max="60" value="12"></div>
+            <div class="field full"><label for="led"><span data-i18n="calc.led">Share of bulbs that are LED:</span> <output id="ledOut" for="led">50%</output></label><input id="led" type="range" min="0" max="100" step="10" value="50"></div>
+            <div class="field"><label for="price" data-i18n="calc.price">Electricity price (EGP/kWh)</label><input id="price" type="number" inputmode="decimal" min="0" step="0.05" value="1.60" aria-describedby="priceHint"><span class="hint" id="priceHint" data-i18n="calc.priceHint">Check your bill; prices vary by tier.</span></div>
+            <div class="field end"><label class="check"><input id="tap" type="checkbox" checked> <span data-i18n="calc.tap">Tap runs while brushing teeth</span></label></div>
+          </div>
+        </form>
+
+        <div class="panel results">
+          <h3 data-i18n="calc.resultsTitle">Your monthly footprint</h3>
+          <div class="readout" aria-live="polite">
+            <div class="meter w"><span class="lbl" data-i18n="meter.water">Water</span><span class="val" id="oW">0</span><span class="unit" data-i18n="meter.waterUnit">litres / month</span></div>
+            <div class="meter e"><span class="lbl" data-i18n="meter.energy">Electricity</span><span class="val" id="oE">0</span><span class="unit" data-i18n="meter.energyUnit">kWh / month</span></div>
+            <div class="meter c"><span class="lbl" data-i18n="meter.co2">CO₂</span><span class="val" id="oC">0</span><span class="unit" data-i18n="meter.co2Unit">kg / month</span></div>
+          </div>
+          <h3 data-i18n="calc.actionsTitle">Actions ranked by CO₂ saved</h3>
+          <p class="empty hint-top" data-i18n="calc.actionsHint">Tick the ones your family will do to build your plan.</p>
+          <div class="actions" id="actions"></div>
+          <div class="plan" id="plan" aria-live="polite"></div>
+        </div>
+      </div>
+      <details class="assume">
+        <summary data-i18n="assume.title">How we calculate (assumptions)</summary>
+        <ul>
+          <li data-i18n="assume.1">Standard shower head 9 L/min, low-flow 6 L/min; 60% of shower water is heated by 25 °C.</li>
+          <li data-i18n="assume.2">Electric heater: 0.032 kWh per heated litre (90% efficient). Gas heater: 0.0073 kg CO₂ per heated litre. Solar: about zero.</li>
+          <li data-i18n="assume.3">Brushing with the tap running: 24 L per person per day; with the tap off: 2 L. Toilets 36 L and kitchen/drinking 25 L per person per day.</li>
+          <li data-i18n="assume.4">Laundry: 60 L and 0.9 kWh per warm load; 0.4 kWh for a cold full load, with about 20% fewer loads.</li>
+          <li data-i18n="assume.5">Air conditioner: 1.1 kW average draw; about 4% less energy for each °C higher, up to 25 °C.</li>
+          <li data-i18n="assume.6">Bulbs on 5 h/day; LED 9 W, older bulbs 25 W on average. Other appliances (fridge, TV, router): 120 kWh/month.</li>
+          <li data-i18n="assume.7">Water supply and treatment: 0.6 kWh per m³. Grid emission factor about 0.47 kg CO₂/kWh (approximate Egypt average). 30-day month.</li>
+          <li data-i18n="assume.8">These are estimates for awareness, not a bill. Your real numbers depend on your appliances and habits.</li>
+        </ul>
+      </details>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap two">
+      <div>
+        <div class="sec-head"><span class="eyebrow" data-i18n="how.eyebrow">How we built it</span><h2 data-i18n="how.title">Simple, private, works on any phone</h2></div>
+        <ol class="steps">
+          <li><div><h3 data-i18n="how.1t">Research</h3><p data-i18n="how.1">We chose SDG 6, 7 and 13 from the UN SDG Report 2026 and reviewed peer-reviewed papers from Google Scholar and ScienceDirect.</p></div></li>
+          <li><div><h3 data-i18n="how.2t">Model</h3><p data-i18n="how.2">We turned the research into a simple model of household water, electricity and CO₂ use, with every assumption listed on the page.</p></div></li>
+          <li><div><h3 data-i18n="how.3t">Build</h3><p data-i18n="how.3">One web page in HTML, CSS and JavaScript. No sign-up, no data collection, and it adapts to phone screens and dark mode.</p></div></li>
+          <li><div><h3 data-i18n="how.4t">Verify</h3><p data-i18n="how.4">We used AI tools to help summarise papers and check code, then checked every number against the original sources.</p></div></li>
+        </ol>
+      </div>
+      <div id="team">
+        <div class="sec-head tight"><span class="eyebrow" data-i18n="team.eyebrow">The team</span></div>
+        <div class="team-head"><h2 data-i18n="team.title">Who we are</h2><span class="teamno" id="teamNo">Team No. —</span></div>
+        <p class="lead team-lead" data-i18n="team.lead">Computer engineering students, Alamein International University · GEO217 Climate Change and Sustainability.</p>
+        <ul class="team" id="teamList"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="references">
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow" data-i18n="refs.eyebrow">Sources</span><h2 data-i18n="refs.title">References (APA 7)</h2></div>
+      <ol class="refs" lang="en" dir="ltr">
+        <li>Abdelzaher, M. A., Farahat, E. M., Abdel-Ghafar, H. M., Balboul, B. A. A., &amp; Awad, M. M. (2023). Environmental policy to develop a conceptual design for the water–energy–food nexus: A case study in Wadi-Dara on the Red Sea coast, Egypt. <em>Water, 15</em>(4), 780. <a href="https://doi.org/10.3390/w15040780" target="_blank" rel="noopener">https://doi.org/10.3390/w15040780</a></li>
+        <li>Albertarelli, S., Fraternali, P., Herrera, S., Melenhorst, M., Novak, J., Pasini, C., Rizzoli, A.-E., &amp; Rottondi, C. (2018). A survey on the design of gamified systems for energy and water sustainability. <em>Games, 9</em>(3), 38. <a href="https://doi.org/10.3390/g9030038" target="_blank" rel="noopener">https://doi.org/10.3390/g9030038</a></li>
+        <li>Allcott, H. (2011). Social norms and energy conservation. <em>Journal of Public Economics, 95</em>(9–10), 1082–1095. <a href="https://www.sciencedirect.com/science/article/pii/S0047272711000478" target="_blank" rel="noopener">https://www.sciencedirect.com/science/article/pii/S0047272711000478</a></li>
+        <li>Alshami, A., Ali, E., Elsayed, M., Eltoukhy, A. E. E., &amp; Zayed, T. (2024). IoT innovations in sustainable water and wastewater management and water quality monitoring: A comprehensive review of advancements, implications, and future directions. <em>IEEE Access, 12</em>, 58427–58453. <a href="https://doi.org/10.1109/ACCESS.2024.3392573" target="_blank" rel="noopener">https://doi.org/10.1109/ACCESS.2024.3392573</a></li>
+        <li>Ashour, M. A., El Degwee, Y. A., Hashem, R. H., Abdou, A. A., &amp; Abu-Zaid, T. S. (2024). The extent to which the available water resources in Upper Egypt can be affected by climate change. <em>Limnological Review, 24</em>(2), 164–177. <a href="https://doi.org/10.3390/limnolrev24020009" target="_blank" rel="noopener">https://doi.org/10.3390/limnolrev24020009</a></li>
+        <li>Collins, A., Galli, A., Hipwood, T., &amp; Murthy, A. (2020). Living within a One Planet reality: The contribution of personal Footprint calculators. <em>Environmental Research Letters, 15</em>(2), 025008. <a href="https://doi.org/10.1088/1748-9326/ab5f96" target="_blank" rel="noopener">https://doi.org/10.1088/1748-9326/ab5f96</a></li>
+        <li>Cominola, A., Giuliani, M., Castelletti, A., Fraternali, P., Herrera Gonzalez, S. L., Guardiola Herrero, J. C., Novak, J., &amp; Rizzoli, A. E. (2021). Long-term water conservation is fostered by smart meter-based feedback and digital user engagement. <em>npj Clean Water, 4</em>, 29. <a href="https://doi.org/10.1038/s41545-021-00119-0" target="_blank" rel="noopener">https://doi.org/10.1038/s41545-021-00119-0</a></li>
+        <li>Enlund, J., Andersson, D., &amp; Carlsson, F. (2023). Individual carbon footprint reduction: Evidence from pro-environmental users of a carbon calculator. <em>Environmental and Resource Economics, 86</em>(3), 433–467. <a href="https://doi.org/10.1007/s10640-023-00800-7" target="_blank" rel="noopener">https://doi.org/10.1007/s10640-023-00800-7</a></li>
+        <li>Hamiche, A. M., Stambouli, A. B., &amp; Flazi, S. (2016). A review of the water-energy nexus. <em>Renewable and Sustainable Energy Reviews, 65</em>, 319–331. <a href="https://doi.org/10.1016/j.rser.2016.07.020" target="_blank" rel="noopener">https://doi.org/10.1016/j.rser.2016.07.020</a></li>
+        <li>Karlin, B., Zinger, J. F., &amp; Ford, R. (2015). The effects of feedback on energy conservation: A meta-analysis. <em>Psychological Bulletin, 141</em>(6), 1205–1227. <a href="https://doi.org/10.1037/a0039650" target="_blank" rel="noopener">https://doi.org/10.1037/a0039650</a></li>
+        <li>Megahed, T. F., &amp; Radwan, A. (2020). Performance investigation of zero-building-integrated photovoltaic roof system: A case study in Egypt. <em>Alexandria Engineering Journal, 59</em>(6), 5053–5067. <a href="https://doi.org/10.1016/j.aej.2020.09.031" target="_blank" rel="noopener">https://doi.org/10.1016/j.aej.2020.09.031</a></li>
+        <li>United Nations Department of Economic and Social Affairs. (2026). <em>The Sustainable Development Goals report 2026</em>. United Nations.</li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap"><span data-i18n="footer.line">AquaWatt · GEO217 Climate Change and Sustainability · Alamein International University</span><span>#SDGs #GEO217 #AIU</span></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

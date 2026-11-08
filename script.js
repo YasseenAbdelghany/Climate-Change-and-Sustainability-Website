@@ -1,0 +1,476 @@
+/* ==== Edit team details here ==== */
+const TEAM = {
+  number: "__",
+  members: [
+    { name: { ar: "الطالب ١", en: "Student 1" }, role: "researchAnalysis" },
+    { name: { ar: "الطالب ٢", en: "Student 2" }, role: "contentDevelopment" },
+    { name: { ar: "الطالب ٣", en: "Student 3" }, role: "deployingAI" },
+    { name: { ar: "الطالب ٤", en: "Student 4" }, role: "digitalPublishing" },
+    { name: { ar: "الطالب ٥", en: "Student 5" }, role: "finalOutput" }
+  ]
+};
+
+const SITE_URL = "https://yasseenabdelghany.github.io/Climate-Change-and-Sustainability-Website/";
+
+/* ==== Translations: one entry per string, { key: { ar, en } } ==== */
+const I18N = {
+  "skip": { ar: "تخطَّ إلى المحتوى", en: "Skip to content" },
+  "nav.label": { ar: "أقسام الصفحة", en: "Sections" },
+  "nav.menu": { ar: "القائمة", en: "Menu" },
+  "nav.problem": { ar: "المشكلة", en: "Problem" },
+  "nav.research": { ar: "الأبحاث", en: "Research" },
+  "nav.calculator": { ar: "الحاسبة", en: "Calculator" },
+  "nav.team": { ar: "الفريق", en: "Team" },
+  "nav.references": { ar: "المراجع", en: "References" },
+  "lang.other": { ar: "English", en: "العربية" },
+  "lang.switch": { ar: "Switch to English", en: "التبديل إلى العربية" },
+  "theme.toDark": { ar: "التبديل إلى الوضع الداكن", en: "Switch to dark mode" },
+  "theme.toLight": { ar: "التبديل إلى الوضع الفاتح", en: "Switch to light mode" },
+  "storage.blocked": { ar: "متصفحك يمنع التخزين المحلي، لذلك لن يُحفظ تقدّمك بعد إغلاق الصفحة. كل شيء آخر يعمل كالمعتاد.", en: "Your browser is blocking local storage, so your progress will not be kept after you close this page. Everything else still works." },
+  "storage.dismiss": { ar: "حسنًا", en: "OK" },
+
+  "tag.6": { ar: "الهدف ٦ · المياه النظيفة", en: "SDG 6 · Clean water" },
+  "tag.7": { ar: "الهدف ٧ · الطاقة النظيفة", en: "SDG 7 · Clean energy" },
+  "tag.13": { ar: "الهدف ١٣ · العمل المناخي", en: "SDG 13 · Climate action" },
+  "hero.title": { ar: 'كل لتر مياه توفّره يوفّر معه <span class="e">الكهرباء</span> ويقلّل <span class="c">انبعاثات الكربون</span>.', en: 'Every litre you save also saves <span class="e">energy</span> and cuts <span class="c">CO₂</span>.' },
+  "hero.lead": { ar: "المياه والكهرباء والمناخ مشكلة واحدة مترابطة. تسخين المياه وضخّها ومعالجتها يحتاج إلى كهرباء، ومعظم الكهرباء في مصر ما زال يُنتَج من الوقود الأحفوري. يوضّح AquaWatt لكل أسرة حجم استهلاكها، وأيّ التغييرات الصغيرة توفّر أكثر.", en: "Water, electricity and climate are one connected problem. Heating, pumping and treating water uses power, and in Egypt most power still comes from fossil fuels. AquaWatt shows a household how much it uses and which small changes save the most." },
+  "hero.cta": { ar: "احسب بصمة بيتك ←", en: "Calculate your home's footprint →" },
+  "facts.label": { ar: "حقائق رئيسية من تقرير الأمم المتحدة لأهداف التنمية المستدامة ٢٠٢٦", en: "Key facts from the UN SDG Report 2026" },
+  "fact1.big": { ar: "+٧٥٪", en: ">75%" },
+  "fact1.text": { ar: "نسبة الإجهاد المائي في شمال أفريقيا وغرب آسيا، وهما أكثر مناطق العالم إجهادًا مائيًا", en: "water stress in Northern Africa and Western Asia, the most water-stressed regions on Earth" },
+  "fact1.src": { ar: "تقرير أهداف التنمية المستدامة ٢٠٢٦ · الهدف ٦", en: "UN SDG REPORT 2026 · GOAL 6" },
+  "fact2.big": { ar: "٦٥٥ مليون", en: "655M" },
+  "fact2.text": { ar: "شخص ظلّوا بلا كهرباء في ٢٠٢٤، ولم تتجاوز الطاقة المتجددة ١٨٪ من استهلاك الطاقة في العالم", en: "people still had no electricity in 2024, and renewables were only 18% of global energy use" },
+  "fact2.src": { ar: "تقرير أهداف التنمية المستدامة ٢٠٢٦ · الهدف ٧", en: "UN SDG REPORT 2026 · GOAL 7" },
+  "fact3.big": { ar: "٥٧٫٧ غيغاطن", en: "57.7 Gt" },
+  "fact3.text": { ar: "من مكافئ ثاني أكسيد الكربون انبعثت في ٢٠٢٤، وهو رقم قياسي. وكانت الفترة ٢٠١٥–٢٠٢٥ أشدّ ١١ عامًا حرارةً منذ بدء التسجيل", en: "CO₂-equivalent emitted in 2024, a record. 2015–2025 was the hottest 11-year stretch on record" },
+  "fact3.src": { ar: "تقرير أهداف التنمية المستدامة ٢٠٢٦ · الهدف ١٣", en: "UN SDG REPORT 2026 · GOAL 13" },
+
+  "problem.eyebrow": { ar: "المشكلة", en: "The problem" },
+  "problem.title": { ar: "ثلاثة أهداف، ومشكلة واحدة في كل بيت", en: "Three goals, one household problem" },
+  "problem.lead": { ar: "يُظهر تقرير الأمم المتحدة لأهداف التنمية المستدامة ٢٠٢٦ أن الإجهاد المائي لا يتحسّن، وأن الطاقة النظيفة تنمو ببطء شديد، وأن الانبعاثات ما زالت ترتفع. والبيوت في الدول التي تعاني شحّ المياه، مثل مصر، تقع في قلب المشكلات الثلاث.", en: "The UN Sustainable Development Goals Report 2026 shows that water stress is not improving, clean energy is growing too slowly, and emissions are still rising. Households in water-scarce countries like Egypt sit where all three meet." },
+  "goal6.num": { ar: "الهدف ٦", en: "SDG 6" },
+  "goal6.title": { ar: "المياه النظيفة والصرف الصحي", en: "Clean water and sanitation" },
+  "goal6.1": { ar: "٢٫١ مليار شخص لا يحصلون على مياه شرب مُدارة بأمان.", en: "2.1 billion people lack safely managed drinking water." },
+  "goal6.2": { ar: "الإجهاد المائي العالمي ثابت عند ١٨٪، تقريبًا كما كان في ٢٠١٥.", en: "Global water stress is stuck at 18%, nearly the same as 2015." },
+  "goal6.3": { ar: "ويتجاوز ٧٥٪ في شمال أفريقيا وغرب آسيا.", en: "In Northern Africa and Western Asia it is above 75%." },
+  "goal7.num": { ar: "الهدف ٧", en: "SDG 7" },
+  "goal7.title": { ar: "طاقة نظيفة وبأسعار معقولة", en: "Affordable and clean energy" },
+  "goal7.1": { ar: "الطاقة المتجددة تغطي ١٨٪ فقط من الاستهلاك النهائي للطاقة.", en: "Renewables supply only 18% of final energy use." },
+  "goal7.2": { ar: "قطاع الكهرباء في المقدمة، بحصة متجددة تزيد قليلًا على ٣٠٪.", en: "Electricity is the leading sector, at just over 30% renewable." },
+  "goal7.3": { ar: "تباطأ تحسّن كفاءة استخدام الطاقة إلى ١٫٥٪ في ٢٠٢٣، أقل من المستهدف.", en: "Energy-intensity gains slowed to 1.5% in 2023, below target." },
+  "goal13.num": { ar: "الهدف ١٣", en: "SDG 13" },
+  "goal13.title": { ar: "العمل المناخي", en: "Climate action" },
+  "goal13.1": { ar: "وصل عام ٢٠٢٤ إلى ١٫٥٥ درجة مئوية فوق مستويات ما قبل الثورة الصناعية.", en: "2024 reached 1.55 °C above pre-industrial levels." },
+  "goal13.2": { ar: "التعهدات الحالية ما زالت تقود إلى احترار بين ٢٫٣ و٢٫٥ درجة مئوية.", en: "Current pledges still lead to 2.3–2.5 °C of warming." },
+  "goal13.3": { ar: "مناخ أكثر حرارة يعني موجات جفاف أكثر وطلبًا أعلى على المياه.", en: "A hotter climate means more droughts and higher water demand." },
+  "loop.title": { ar: "حلقة المياه والطاقة والمناخ", en: "The water-energy-climate loop" },
+  "loop.water": { ar: "استخدام المياه", en: "Water use" },
+  "loop.waterSub": { ar: "الاستحمام، الحنفيات، الغسيل", en: "showers, taps, laundry" },
+  "loop.energy": { ar: "الكهرباء", en: "Electricity" },
+  "loop.energySub": { ar: "التسخين، الضخ، المعالجة", en: "heating, pumping, treating" },
+  "loop.co2": { ar: "انبعاثات CO₂", en: "CO₂ emissions" },
+  "loop.co2Sub": { ar: "معظمها من محطات تعمل بالغاز", en: "mostly gas-fired power" },
+  "loop.back": { ar: "الاحترار ← جفاف وحرّ ← طلب أكبر على المياه والتبريد", en: "warming → drought and heat → more water and cooling demand" },
+  "loop.cap": { ar: "لهذا نتعامل مع الأهداف ٦ و٧ و١٣ معًا. توفير المياه الساخنة هو الأكثر أثرًا، لأن تسخين المياه يحتاج إلى طاقة أكبر بكثير من ضخّها.", en: "This loop is why we treat SDG 6, 7 and 13 together. Saving hot water saves the most, because heating water takes far more energy than pumping it." },
+
+  "research.eyebrow": { ar: "ماذا تقول الأبحاث", en: "What the research says" },
+  "research.title": { ar: "معرفة الاستهلاك تغيّر السلوك، بشرط أن تكون محددة", en: "Feedback changes behaviour, if it is specific" },
+  "research.lead": { ar: "راجعنا دراسات علمية محكّمة عن استهلاك المياه والطاقة في البيوت، وعن أدوات متابعة الاستهلاك، وعن الوضع المائي في مصر. هذه أهم النتائج التي بنينا عليها تصميمنا.", en: "We reviewed peer-reviewed studies on household water and energy use, feedback tools and Egypt's water situation. These are the findings that shaped our design." },
+  "f1.big": { ar: "٨٪", en: "8%" },
+  "f1.text": { ar: "<strong>توفير دائم في المياه بفضل متابعة العدّادات الذكية.</strong> نحو ٤٧٪ من ٣٣٤ أسرة في فالنسيا استمرّت في استهلاك مياه أقل بنسبة ٨٪ بعد أكثر من عامين.", en: "<strong>Lasting water savings from smart-meter feedback.</strong> About 47% of 334 households in Valencia kept using 8% less water more than two years later." },
+  "f2.big": { ar: "≈١٠٪", en: "~10%" },
+  "f2.text": { ar: "<strong>بصمة كربونية أقل بعد استخدام حاسبة.</strong> خفّض المستخدمون انبعاثاتهم بنحو ١٠٪ في الأسابيع الأولى، ثم تلاشى الأثر دون متابعة.", en: "<strong>Lower carbon footprint after using a calculator.</strong> Users cut emissions about 10% in the first weeks, then the effect faded without follow-up." },
+  "f3.big": { ar: "٤٢", en: "42" },
+  "f3.text": { ar: "<strong>دراسة شملها تحليل تجميعي عن أثر متابعة الاستهلاك.</strong> المتابعة تقلّل استهلاك الطاقة عمومًا، وأفضل النتائج تأتي من متابعة متكررة مع أهداف واضحة.", en: "<strong>Studies in a feedback meta-analysis.</strong> Feedback reduces energy use overall. Frequent feedback combined with goals works best." },
+  "f4.big": { ar: "٦٫٣٪", en: "6.3%" },
+  "f4.text": { ar: "<strong>توفير لدى الأعلى استهلاكًا</strong> عندما قُورن استهلاكهم باستهلاك جيرانهم، مقابل ٢٫٠٪ في المتوسط.", en: "<strong>Savings for the highest users</strong> when they were compared with their neighbours, versus 2.0% on average." },
+  "f5.big": { ar: "٢٣٪", en: "23%" },
+  "f5.text": { ar: "<strong>فقط من مستخدمي حاسبات البصمة شعروا أنهم يعرفون ماذا يفعلون.</strong> ٩١٪ تعلّموا شيئًا جديدًا و٧٨٪ شعروا بالحماس، لكن معظمهم افتقد خطوات عملية واضحة.", en: "<strong>Of footprint-calculator users felt they knew how to act.</strong> 91% learned something and 78% felt motivated, but most lacked concrete steps." },
+  "f6.big": { ar: "١٠٪", en: "10%" },
+  "f6.text": { ar: "<strong>انخفاض محتمل في تدفّق النيل إلى بحيرة ناصر بحلول ٢٠٩٥</strong> وفق أحد التوقعات، مع اختلاف النماذج. وصعيد مصر يعاني بالفعل من شحّ المياه.", en: "<strong>Possible drop in Nile inflow to Lake Nasser by 2095</strong> in one projection, though models disagree. Upper Egypt is already water-scarce." },
+  "gap.text": { ar: "<strong>الفجوة التي نستهدفها:</strong> معظم الحاسبات تخبر الناس ببصمتهم، لكنها لا تقول لهم ماذا يفعلون بعد ذلك. يحوّل AquaWatt أرقامك إلى قائمة إجراءات مرتّبة، لكلٍّ منها توفيره في المياه والطاقة وCO₂ والمال، ويساعدك على بناء خطة خاصة بأسرتك.", en: "<strong>The gap we target:</strong> most calculators tell people their footprint but not what to do next. AquaWatt turns your numbers into a ranked list of actions, each with its own water, energy, CO₂ and money savings, and lets you build a personal plan." },
+
+  "calc.eyebrow": { ar: "حلّنا", en: "Our solution" },
+  "calc.title": { ar: "حاسبة AquaWatt المنزلية", en: "AquaWatt household calculator" },
+  "calc.lead": { ar: "أدخل عادات أسرتك، وستتغيّر الأرقام فورًا. لا يغادر أي شيء تكتبه متصفحك. تبدأ الحاسبة بمثال لأسرة من خمسة أفراد.", en: "Enter your household's habits. The numbers update instantly, and nothing you type leaves your browser. The form starts with an example family of five." },
+  "calc.formTitle": { ar: "أسرتك", en: "Your household" },
+  "calc.reset": { ar: "العودة إلى مثال الأسرة", en: "Reset to the example family" },
+  "calc.people": { ar: "عدد أفراد البيت", en: "People at home" },
+  "calc.heater": { ar: "سخّان المياه", en: "Water heater" },
+  "calc.heaterElectric": { ar: "كهربائي", en: "Electric" },
+  "calc.heaterGas": { ar: "غاز", en: "Gas" },
+  "calc.heaterSolar": { ar: "شمسي", en: "Solar" },
+  "calc.shower": { ar: "متوسط مدة الاستحمام:", en: "Average shower length:" },
+  "unit.min": { ar: "دقيقة", en: "min" },
+  "calc.showers": { ar: "مرّات الاستحمام لكل فرد يوميًا", en: "Showers per person per day" },
+  "calc.laundry": { ar: "غسلات الغسالة في الأسبوع", en: "Laundry loads per week" },
+  "calc.ac": { ar: "عدد أجهزة التكييف المستخدمة", en: "Air conditioners used" },
+  "calc.acHours": { ar: "ساعات التكييف يوميًا (في الصيف)", en: "AC hours per day (summer)" },
+  "calc.acTemp": { ar: "درجة حرارة التكييف (°م)", en: "AC temperature (°C)" },
+  "calc.bulbs": { ar: "عدد لمبات الإضاءة في البيت", en: "Light bulbs at home" },
+  "calc.led": { ar: "نسبة لمبات LED:", en: "Share of bulbs that are LED:" },
+  "calc.price": { ar: "سعر الكهرباء (جنيه لكل ك.و.س)", en: "Electricity price (EGP/kWh)" },
+  "calc.priceHint": { ar: "راجع فاتورتك، فالسعر يختلف حسب الشريحة.", en: "Check your bill; prices vary by tier." },
+  "calc.tap": { ar: "الحنفية مفتوحة أثناء غسل الأسنان", en: "Tap runs while brushing teeth" },
+  "calc.resultsTitle": { ar: "بصمة أسرتك الشهرية", en: "Your monthly footprint" },
+  "meter.water": { ar: "المياه", en: "Water" },
+  "meter.waterUnit": { ar: "لتر / شهر", en: "litres / month" },
+  "meter.energy": { ar: "الكهرباء", en: "Electricity" },
+  "meter.energyUnit": { ar: "ك.و.س / شهر", en: "kWh / month" },
+  "meter.co2": { ar: "CO₂", en: "CO₂" },
+  "meter.co2Unit": { ar: "كجم / شهر", en: "kg / month" },
+  "calc.actionsTitle": { ar: "إجراءات مرتّبة حسب توفير CO₂", en: "Actions ranked by CO₂ saved" },
+  "calc.actionsHint": { ar: "اختر ما ستلتزم به أسرتك لتبني خطتك.", en: "Tick the ones your family will do to build your plan." },
+  "calc.allDone": { ar: "أسرتك تطبّق بالفعل كل ما في قائمتنا. أحسنتم.", en: "Your household already does everything on our list. Well done." },
+  "act.lowflow.t": { ar: "ركّب رؤوس دُش موفّرة للمياه", en: "Fit low-flow shower heads" },
+  "act.lowflow.why": { ar: "تقلّل التدفق من نحو ٩ إلى ٦ لترات في الدقيقة بنفس الإحساس.", en: "Cuts flow from about 9 to 6 L/min with the same feel." },
+  "act.shorter.t": { ar: "قلّل مدة الاستحمام دقيقتين", en: "Shower 2 minutes shorter" },
+  "act.shorter.why": { ar: "مياه ساخنة أقل تعني طاقة تسخين أقل.", en: "Less hot water means less heating energy." },
+  "act.tap.t": { ar: "اقفل الحنفية أثناء غسل الأسنان", en: "Turn the tap off while brushing" },
+  "act.tap.why": { ar: "يوفّر نحو ٢٢ لترًا لكل فرد كل يوم.", en: "Saves about 22 L per person every day." },
+  "act.ac.t": { ar: "اضبط التكييف على ٢٥ درجة", en: "Set the AC to 25 °C" },
+  "act.ac.why": { ar: "كل درجة أعلى توفّر نحو ٤٪ من طاقة التبريد.", en: "Each degree warmer saves about 4% of cooling energy." },
+  "act.led.t": { ar: "غيّر كل اللمبات إلى LED", en: "Switch every bulb to LED" },
+  "act.led.why": { ar: "لمبات LED تستهلك نحو ثلث كهرباء اللمبات القديمة.", en: "LEDs use roughly a third of the power of older bulbs." },
+  "act.laundry.t": { ar: "اغسل بحمولة كاملة وماء بارد", en: "Wash full loads in cold water" },
+  "act.laundry.why": { ar: "غسلات أقل، ولا تسخين للمياه داخل الغسالة.", en: "Fewer loads and no water heating in the machine." },
+  "act.solar.t": { ar: "ركّب سخّانًا شمسيًا", en: "Install a solar water heater" },
+  "act.solar.why": { ar: "شمس مصر قادرة على تسخين كل مياه البيت الساخنة تقريبًا.", en: "Egypt's sunshine can heat almost all household hot water." },
+  "chip.money": { ar: "≈ {n} جنيه / شهر", en: "≈ {n} EGP / month" },
+  "plan.title": { ar: "خطتك", en: "Your plan" },
+  "plan.empty": { ar: "اختر إجراءً من الأعلى لترى ما توفّره أسرتك.", en: "Tick an action above to see what your family saves." },
+  "plan.count": {
+    ar: { one: "إجراء واحد", two: "إجراءان", few: "{n} إجراءات", many: "{n} إجراءً", other: "{n} إجراء" },
+    en: { one: "{n} action", other: "{n} actions" }
+  },
+  "plan.saves": { ar: "توفّر {w} لتر مياه و{e} ك.و.س و{c} كجم CO₂ كل شهر.", en: "Saves {w} L of water, {e} kWh and {c} kg of CO₂ every month." },
+  "plan.year": { ar: "خلال سنة: نحو {m3} م³ من المياه و{c} كجم CO₂ و{egp} جنيه. أي مياه أقل بنسبة {pw}٪ وCO₂ أقل بنسبة {pc}٪.", en: "Over a year: about {m3} m³ of water, {c} kg of CO₂ and {egp} EGP. That is {pw}% less water and {pc}% less CO₂." },
+  "unit.L": { ar: "لتر", en: "L" },
+  "unit.kWh": { ar: "ك.و.س", en: "kWh" },
+  "unit.kgCO2": { ar: "كجم CO₂", en: "kg CO₂" },
+
+  "assume.title": { ar: "كيف نحسب (الافتراضات)", en: "How we calculate (assumptions)" },
+  "assume.1": { ar: "رأس الدُش العادي ٩ لترات في الدقيقة، والموفّر ٦ لترات؛ ويُسخَّن ٦٠٪ من مياه الاستحمام بمقدار ٢٥ درجة مئوية.", en: "Standard shower head 9 L/min, low-flow 6 L/min; 60% of shower water is heated by 25 °C." },
+  "assume.2": { ar: "السخّان الكهربائي: ٠٫٠٣٢ ك.و.س لكل لتر ساخن (كفاءة ٩٠٪). سخّان الغاز: ٠٫٠٠٧٣ كجم CO₂ لكل لتر ساخن. الشمسي: صفر تقريبًا.", en: "Electric heater: 0.032 kWh per heated litre (90% efficient). Gas heater: 0.0073 kg CO₂ per heated litre. Solar: about zero." },
+  "assume.3": { ar: "غسل الأسنان والحنفية مفتوحة: ٢٤ لترًا لكل فرد يوميًا؛ ومع قفلها: لتران. السيفون ٣٦ لترًا، والمطبخ والشرب ٢٥ لترًا لكل فرد يوميًا.", en: "Brushing with the tap running: 24 L per person per day; with the tap off: 2 L. Toilets 36 L and kitchen/drinking 25 L per person per day." },
+  "assume.4": { ar: "الغسيل: ٦٠ لترًا و٠٫٩ ك.و.س لكل غسلة دافئة؛ و٠٫٤ ك.و.س للغسلة الكاملة بماء بارد، مع غسلات أقل بنحو ٢٠٪.", en: "Laundry: 60 L and 0.9 kWh per warm load; 0.4 kWh for a cold full load, with about 20% fewer loads." },
+  "assume.5": { ar: "التكييف: متوسط استهلاك ١٫١ كيلوواط؛ وطاقة أقل بنحو ٤٪ مع كل درجة أعلى حتى ٢٥ درجة.", en: "Air conditioner: 1.1 kW average draw; about 4% less energy for each °C higher, up to 25 °C." },
+  "assume.6": { ar: "الإضاءة ٥ ساعات يوميًا؛ لمبة LED ‏٩ واط، واللمبات القديمة ٢٥ واط في المتوسط. باقي الأجهزة (الثلاجة، التلفزيون، الراوتر): ١٢٠ ك.و.س شهريًا.", en: "Bulbs on 5 h/day; LED 9 W, older bulbs 25 W on average. Other appliances (fridge, TV, router): 120 kWh/month." },
+  "assume.7": { ar: "إمداد المياه ومعالجتها: ٠٫٦ ك.و.س لكل م³. معامل انبعاثات الشبكة نحو ٠٫٤٧ كجم CO₂ لكل ك.و.س (متوسط تقريبي لمصر). الشهر ٣٠ يومًا.", en: "Water supply and treatment: 0.6 kWh per m³. Grid emission factor about 0.47 kg CO₂/kWh (approximate Egypt average). 30-day month." },
+  "assume.8": { ar: "هذه تقديرات للتوعية وليست فاتورة. أرقامك الحقيقية تعتمد على أجهزتك وعاداتك.", en: "These are estimates for awareness, not a bill. Your real numbers depend on your appliances and habits." },
+
+  "how.eyebrow": { ar: "كيف بنيناه", en: "How we built it" },
+  "how.title": { ar: "بسيط، يحفظ خصوصيتك، ويعمل على أي هاتف", en: "Simple, private, works on any phone" },
+  "how.1t": { ar: "البحث", en: "Research" },
+  "how.1": { ar: "اخترنا الأهداف ٦ و٧ و١٣ من تقرير الأمم المتحدة لأهداف التنمية المستدامة ٢٠٢٦، وراجعنا أوراقًا بحثية محكّمة من Google Scholar وScienceDirect.", en: "We chose SDG 6, 7 and 13 from the UN SDG Report 2026 and reviewed peer-reviewed papers from Google Scholar and ScienceDirect." },
+  "how.2t": { ar: "النموذج", en: "Model" },
+  "how.2": { ar: "حوّلنا نتائج الأبحاث إلى نموذج بسيط لاستهلاك البيت من المياه والكهرباء وCO₂، مع عرض كل افتراض على الصفحة.", en: "We turned the research into a simple model of household water, electricity and CO₂ use, with every assumption listed on the page." },
+  "how.3t": { ar: "البناء", en: "Build" },
+  "how.3": { ar: "صفحة ويب واحدة بلغات HTML وCSS وJavaScript. بلا تسجيل ولا جمع بيانات، وتتكيّف مع شاشات الهواتف والوضع الداكن.", en: "One web page in HTML, CSS and JavaScript. No sign-up, no data collection, and it adapts to phone screens and dark mode." },
+  "how.4t": { ar: "التحقق", en: "Verify" },
+  "how.4": { ar: "استخدمنا أدوات الذكاء الاصطناعي للمساعدة في تلخيص الأبحاث ومراجعة الكود، ثم راجعنا كل رقم بمقارنته بالمصادر الأصلية.", en: "We used AI tools to help summarise papers and check code, then checked every number against the original sources." },
+  "team.eyebrow": { ar: "الفريق", en: "The team" },
+  "team.title": { ar: "من نحن", en: "Who we are" },
+  "team.no": { ar: "فريق رقم {n}", en: "Team No. {n}" },
+  "team.lead": { ar: "طلاب هندسة الحاسبات، جامعة العلمين الدولية · مقرر GEO217 تغيّر المناخ والاستدامة.", en: "Computer engineering students, Alamein International University · GEO217 Climate Change and Sustainability." },
+  "role.researchAnalysis": { ar: "البحث والتحليل", en: "Research & Analysis" },
+  "role.contentDevelopment": { ar: "إعداد المحتوى", en: "Content Development" },
+  "role.deployingAI": { ar: "توظيف أدوات الذكاء الاصطناعي", en: "Deploying AI tools" },
+  "role.digitalPublishing": { ar: "النشر الرقمي", en: "Digital publishing" },
+  "role.finalOutput": { ar: "المُخرَج النهائي", en: "Final output" },
+  "refs.eyebrow": { ar: "المصادر", en: "Sources" },
+  "refs.title": { ar: "المراجع (APA 7)", en: "References (APA 7)" },
+  "footer.line": { ar: "AquaWatt · مقرر GEO217 تغيّر المناخ والاستدامة · جامعة العلمين الدولية", en: "AquaWatt · GEO217 Climate Change and Sustainability · Alamein International University" }
+};
+
+/* ==== Storage: versioned, validated, and never fatal ==== */
+const STORE_VERSION = 1;
+const store = (() => {
+  let ok = true;
+  try { localStorage.setItem("aquawatt.__test", "1"); localStorage.removeItem("aquawatt.__test"); }
+  catch (e) { ok = false; }
+  return {
+    get available() { return ok; },
+    get(key, isValid) {
+      if (!ok) return null;
+      try {
+        const obj = JSON.parse(localStorage.getItem("aquawatt." + key));
+        if (!obj || obj.v !== STORE_VERSION) return null;
+        return isValid(obj.data) ? obj.data : null;
+      } catch (e) { return null; }
+    },
+    set(key, data) {
+      if (!ok) return false;
+      try { localStorage.setItem("aquawatt." + key, JSON.stringify({ v: STORE_VERSION, data })); return true; }
+      catch (e) { ok = false; showStorageNotice(); return false; }
+    },
+    remove(key) { if (ok) try { localStorage.removeItem("aquawatt." + key); } catch (e) {} }
+  };
+})();
+const isObj = x => x !== null && typeof x === "object" && !Array.isArray(x);
+
+function showStorageNotice() {
+  const n = document.getElementById("storageNotice");
+  if (n && !n.dataset.dismissed) n.hidden = false;
+}
+
+/* ==== Language ==== */
+const prefs = store.get("prefs", d => isObj(d)) || {};
+let lang = document.documentElement.lang === "en" ? "en" : "ar";
+const langListeners = [];
+
+function t(key, vars) {
+  const entry = I18N[key];
+  if (!entry) return key;
+  let s = entry[lang] ?? entry.en;
+  if (isObj(s)) s = s[new Intl.PluralRules(lang).select(vars?.n ?? 0)] ?? s.other;
+  // Plain numbers are formatted for the active language; pre-formatted strings pass through.
+  return vars ? s.replace(/\{(\w+)\}/g, (m, k) => (k in vars ? (typeof vars[k] === "number" ? fmt(vars[k]) : vars[k]) : m)) : s;
+}
+
+const numLocale = () => (lang === "ar" ? "ar-EG" : "en-US");
+const fmt = (n, dp = 0) => new Intl.NumberFormat(numLocale(), { maximumFractionDigits: dp, minimumFractionDigits: dp }).format(n);
+// Savings shown as a negative change. Intl adds the right bidi marks so the minus sits correctly in Arabic.
+const neg = (n, dp = 0) => (lang === "ar" ? new Intl.NumberFormat("ar-EG", { maximumFractionDigits: dp, minimumFractionDigits: dp, signDisplay: "always" }).format(-n) : "−" + fmt(n, dp));
+
+function applyI18n(root = document) {
+  root.querySelectorAll("[data-i18n]").forEach(el => { el.textContent = t(el.dataset.i18n); });
+  root.querySelectorAll("[data-i18n-html]").forEach(el => { el.innerHTML = t(el.dataset.i18nHtml); });
+  root.querySelectorAll("[data-i18n-attr]").forEach(el => {
+    el.dataset.i18nAttr.split(";").forEach(pair => { const [attr, key] = pair.split(":"); el.setAttribute(attr.trim(), t(key.trim())); });
+  });
+}
+
+function setLang(next, save = true) {
+  lang = next === "en" ? "en" : "ar";
+  const root = document.documentElement;
+  root.lang = lang; root.dir = lang === "ar" ? "rtl" : "ltr";
+  applyI18n();
+  const btn = document.getElementById("langBtn");
+  btn.textContent = t("lang.other");
+  btn.lang = lang === "ar" ? "en" : "ar";
+  btn.setAttribute("aria-label", t("lang.switch"));
+  layoutLoop();
+  updateThemeButton();
+  langListeners.forEach(fn => fn());
+  if (save) { prefs.lang = lang; store.set("prefs", prefs); }
+}
+
+/* The loop diagram reads right-to-left in Arabic: mirror the shapes, move the labels. */
+function layoutLoop() {
+  const W = 760, rtl = lang === "ar";
+  document.getElementById("loopShapes").setAttribute("transform", rtl ? `translate(${W},0) scale(-1,1)` : "");
+  document.querySelectorAll("#loopSvg .loop-text text").forEach(el => {
+    if (!el.dataset.x) el.dataset.x = el.getAttribute("x");
+    const x = +el.dataset.x;
+    el.setAttribute("x", rtl ? W - x : x);
+  });
+}
+
+/* ==== Theme ==== */
+const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+const isDark = () => {
+  const forced = document.documentElement.getAttribute("data-theme");
+  return forced ? forced === "dark" : darkQuery.matches;
+};
+function updateThemeButton() {
+  const btn = document.getElementById("themeBtn");
+  const label = t(isDark() ? "theme.toLight" : "theme.toDark");
+  btn.setAttribute("aria-label", label); btn.title = label;
+}
+document.getElementById("themeBtn").addEventListener("click", () => {
+  const next = isDark() ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", next);
+  prefs.theme = next; store.set("prefs", prefs);
+  updateThemeButton();
+  document.dispatchEvent(new CustomEvent("themechange"));
+});
+darkQuery.addEventListener?.("change", () => { updateThemeButton(); document.dispatchEvent(new CustomEvent("themechange")); });
+
+/* ==== Header: language button, mobile menu, storage notice ==== */
+document.getElementById("langBtn").addEventListener("click", () => setLang(lang === "ar" ? "en" : "ar"));
+(() => {
+  const btn = document.getElementById("menuBtn"), nav = document.getElementById("siteNav");
+  const close = () => { nav.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); };
+  btn.addEventListener("click", () => {
+    const open = !nav.classList.contains("open");
+    nav.classList.toggle("open", open); btn.setAttribute("aria-expanded", String(open));
+  });
+  nav.addEventListener("click", e => { if (e.target.closest("a")) close(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && nav.classList.contains("open")) { close(); btn.focus(); } });
+})();
+document.getElementById("storageDismiss").addEventListener("click", () => {
+  const n = document.getElementById("storageNotice"); n.hidden = true; n.dataset.dismissed = "1";
+});
+if (!store.available) showStorageNotice();
+
+/* ==== Team ==== */
+function renderTeam() {
+  document.getElementById("teamNo").textContent = t("team.no", { n: TEAM.number });
+  const ul = document.getElementById("teamList");
+  ul.innerHTML = "";
+  TEAM.members.forEach(m => {
+    const li = document.createElement("li");
+    const n = document.createElement("span"); n.className = "name"; n.textContent = m.name[lang] ?? m.name.en;
+    const r = document.createElement("span"); r.className = "role"; r.textContent = t("role." + m.role);
+    li.append(n, r); ul.append(li);
+  });
+}
+langListeners.push(renderTeam);
+
+// #region model
+/* ==== Model (constants and formulas unchanged from the original calculator) ==== */
+const K = {
+  flow: 9, lowFlow: 6, hotFrac: 0.6,
+  kwhPerHotL: 4.186 * 25 / 3600 / 0.9,       // electric heater
+  co2PerHotLGas: 4.186 * 25 / 3600 / 0.8 * 0.2, // gas heater, kg
+  brushOn: 24, brushOff: 2, toilet: 36, kitchen: 25,
+  laundryL: 60, laundryKwh: 0.9, laundryKwhCold: 0.4,
+  acKw: 1.1, bulbHours: 5, led: 9, oldBulb: 25, base: 120,
+  supplyKwhPerL: 0.0006, grid: 0.47, days: 30
+};
+
+function model(s){
+  const d = K.days;
+  const showerL = s.people * s.showers * s.shower * (s.lowFlow ? K.lowFlow : K.flow);
+  const brushL = s.people * (s.tap ? K.brushOn : K.brushOff);
+  const loadsWeek = s.laundry * (s.laundryCold ? 0.8 : 1);
+  const laundryLday = loadsWeek * K.laundryL / 7;
+  const waterDay = showerL + brushL + s.people * (K.toilet + K.kitchen) + laundryLday;
+  const water = waterDay * d;
+
+  const hotL = showerL * K.hotFrac * d;
+  const heatKwh = s.heater === "electric" ? hotL * K.kwhPerHotL : 0;
+  const gasCo2 = s.heater === "gas" ? hotL * K.co2PerHotLGas : 0;
+  const acKwh = s.ac * s.acHours * K.acKw * d * acScale(s.acTemp);
+  const lightKwh = s.bulbs * K.bulbHours * d * (s.led * K.led + (1 - s.led) * K.oldBulb) / 1000;
+  const laundryKwh = loadsWeek * (d / 7) * (s.laundryCold ? K.laundryKwhCold : K.laundryKwh);
+  const supplyKwh = water * K.supplyKwhPerL;
+  const kwh = heatKwh + acKwh + lightKwh + laundryKwh + supplyKwh + K.base;
+  const co2 = kwh * K.grid + gasCo2;
+  return { water, kwh, co2 };
+}
+// AC energy relative to a 25 °C setpoint: about 4% more per degree colder.
+function acScale(t){ return 1 + 0.04 * Math.max(0, 25 - t); }
+
+// Action text lives in I18N under "act.<id>.t" and "act.<id>.why".
+const ACTIONS = [
+  { id: "lowflow", apply: s => (s.lowFlow = true), show: s => s.shower > 0 && s.showers > 0 },
+  { id: "shorter", apply: s => (s.shower = Math.max(1, s.shower - 2)), show: s => s.shower > 3 && s.showers > 0 },
+  { id: "tap", apply: s => (s.tap = false), show: s => s.tap },
+  { id: "ac", apply: s => (s.acTemp = 25), show: s => s.ac > 0 && s.acHours > 0 && s.acTemp < 25 },
+  { id: "led", apply: s => (s.led = 1), show: s => s.bulbs > 0 && s.led < 1 },
+  { id: "laundry", apply: s => (s.laundryCold = true), show: s => s.laundry > 0 },
+  { id: "solar", apply: s => (s.heater = "solar"), show: s => s.heater !== "solar" }
+];
+
+// Each available action with its own savings, ranked by CO₂ (then water), exactly as the original.
+function rankActions(s, base) {
+  return ACTIONS.filter(a => a.show(s)).map(a => {
+    const t = { ...s }; a.apply(t); const m = model(t);
+    return { ...a, w: base.water - m.water, e: base.kwh - m.kwh, c: base.co2 - m.co2 };
+  }).filter(a => a.c > 0.05 || a.w > 1).sort((x, y) => y.c - x.c || y.w - x.w);
+}
+
+// Combined savings of the chosen actions applied together.
+function planSavings(s, base, ids) {
+  const t = { ...s }; ACTIONS.filter(a => ids.has(a.id)).forEach(a => a.apply(t));
+  const m = model(t);
+  return { w: base.water - m.water, e: base.kwh - m.kwh, c: base.co2 - m.co2 };
+}
+// #endregion model
+
+/* ==== Calculator UI ==== */
+const FIELDS = ["people", "heater", "shower", "showers", "laundry", "ac", "acHours", "acTemp", "bulbs", "led", "price", "tap"];
+const $ = id => document.getElementById(id);
+const DEFAULTS = Object.fromEntries(FIELDS.map(id => [id, $(id).type === "checkbox" ? $(id).checked : $(id).value]));
+const DEFAULT_PLAN = ["lowflow", "tap", "solar"]; // example plan
+const chosen = new Set();
+let current = null; // latest { s, base, plan } for other features (tracker, share card)
+
+function read(){
+  const v = id => parseFloat(document.getElementById(id).value);
+  const clamp = (x, lo, hi) => isFinite(x) ? Math.min(hi, Math.max(lo, x)) : lo;
+  return {
+    people: clamp(v("people"), 1, 20), heater: document.getElementById("heater").value,
+    shower: clamp(v("shower"), 0, 60), showers: clamp(v("showers"), 0, 5),
+    laundry: clamp(v("laundry"), 0, 50), ac: clamp(v("ac"), 0, 20), acHours: clamp(v("acHours"), 0, 24),
+    acTemp: clamp(v("acTemp"), 16, 30), bulbs: clamp(v("bulbs"), 0, 100), led: clamp(v("led"), 0, 100) / 100,
+    price: clamp(v("price"), 0, 100), tap: document.getElementById("tap").checked,
+    lowFlow: false, laundryCold: false
+  };
+}
+
+function chip(cls, text) { const c = document.createElement("span"); c.className = "chip " + cls; c.textContent = text; return c; }
+
+function update(){
+  $("showerOut").textContent = fmt(+$("shower").value);
+  $("ledOut").textContent = fmt(+$("led").value) + (lang === "ar" ? "٪" : "%");
+  const s = read();
+  const base = model(s);
+  $("oW").textContent = fmt(base.water);
+  $("oE").textContent = fmt(base.kwh);
+  $("oC").textContent = fmt(base.co2);
+
+  const list = rankActions(s, base);
+  for (const id of [...chosen]) if (!list.some(a => a.id === id)) chosen.delete(id);
+
+  const box = $("actions");
+  box.innerHTML = "";
+  if (!list.length) box.innerHTML = `<p class="empty">${t("calc.allDone")}</p>`;
+  list.forEach(a => {
+    const lab = document.createElement("label"); lab.className = "action"; lab.id = "action-" + a.id;
+    const cb = document.createElement("input"); cb.type = "checkbox"; cb.id = "act-" + a.id; cb.checked = chosen.has(a.id);
+    cb.addEventListener("change", () => { cb.checked ? chosen.add(a.id) : chosen.delete(a.id); update(); $("act-" + a.id)?.focus(); });
+    const div = document.createElement("div");
+    const title = document.createElement("div"); title.className = "t"; title.textContent = t(`act.${a.id}.t`);
+    const why = document.createElement("div"); why.className = "why"; why.textContent = t(`act.${a.id}.why`);
+    const chips = document.createElement("div"); chips.className = "chips";
+    if (a.w >= 1) chips.append(chip("w", `${neg(a.w)} ${t("unit.L")}`));
+    chips.append(chip("e", `${neg(a.e, 1)} ${t("unit.kWh")}`), chip("c", `${neg(a.c, 1)} ${t("unit.kgCO2")}`));
+    if (a.e * s.price >= 1) chips.append(chip("m", t("chip.money", { n: fmt(a.e * s.price) })));
+    div.append(title, why, chips);
+    lab.append(cb, div); box.append(lab);
+  });
+
+  const plan = $("plan");
+  current = { s, base, plan: null };
+  if (!chosen.size){
+    plan.innerHTML = `<span class="pt">${t("plan.title")}</span><span class="pv">${t("plan.empty")}</span>`;
+  } else {
+    const p = planSavings(s, base, chosen);
+    current.plan = { ...p, ids: [...chosen], price: s.price };
+    plan.innerHTML = `<span class="pt">${t("plan.title")} · ${t("plan.count", { n: chosen.size })}</span>
+      <span class="pv">${t("plan.saves", { w: fmt(p.w), e: fmt(p.e), c: fmt(p.c) })}</span>
+      <span class="py">${t("plan.year", { m3: fmt(p.w * 12 / 1000, 1), c: fmt(p.c * 12), egp: fmt(p.e * 12 * s.price), pw: fmt(p.w / base.water * 100), pc: fmt(p.c / base.co2 * 100) })}</span>`;
+  }
+  saveCalc();
+  document.dispatchEvent(new CustomEvent("planchange"));
+}
+
+function saveCalc() {
+  const inputs = Object.fromEntries(FIELDS.map(id => [id, $(id).type === "checkbox" ? $(id).checked : $(id).value]));
+  store.set("calc", { inputs, chosen: [...chosen] });
+}
+function loadCalc() {
+  const saved = store.get("calc", d => isObj(d) && isObj(d.inputs) && Array.isArray(d.chosen));
+  const inputs = saved ? saved.inputs : DEFAULTS;
+  FIELDS.forEach(id => {
+    const el = $(id), v = inputs[id];
+    if (el.type === "checkbox") el.checked = typeof v === "boolean" ? v : DEFAULTS[id];
+    else if (id === "heater") el.value = ["electric", "gas", "solar"].includes(v) ? v : DEFAULTS[id];
+    else el.value = typeof v === "string" && v.trim() !== "" && isFinite(+v) ? v : DEFAULTS[id];
+  });
+  chosen.clear();
+  (saved ? saved.chosen.filter(id => ACTIONS.some(a => a.id === id)) : DEFAULT_PLAN).forEach(id => chosen.add(id));
+}
+
+$("form").addEventListener("input", update);
+$("form").addEventListener("submit", e => e.preventDefault());
+$("resetCalc").addEventListener("click", () => { store.remove("calc"); loadCalc(); update(); });
+langListeners.push(() => { $("showerMin").textContent = fmt(2); $("showerMax").textContent = `${fmt(25)} ${t("unit.min")}`; update(); });
+
+/* ==== Start ==== */
+loadCalc();
+setLang(lang, false);
