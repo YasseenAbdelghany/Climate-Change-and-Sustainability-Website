@@ -189,6 +189,27 @@ details.assume{margin-top:18px;color:var(--band-muted);font-size:.9rem}
 details.assume summary{cursor:pointer;font-weight:600;color:var(--band-ink)}
 details.assume ul{margin:10px 0 0;padding-inline-start:18px;display:grid;gap:4px}
 
+/* impact strip: running totals from months the family marked as done */
+.impact{padding-block:28px;background:var(--surface)}
+.impact-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.4fr);gap:20px 32px;align-items:center}
+.impact-head{display:grid;gap:4px}
+.impact-head h2{font-size:1.35rem}
+.counters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:0}
+.counter{padding-inline:16px;border-inline-start:1px solid var(--line);display:grid;gap:2px;min-width:0}
+.counter dt{font-size:.85rem;color:var(--muted);font-weight:600}
+.counter dd{margin:0;font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.counter .num{font-size:1.6rem;font-weight:600}
+.counter .u{font-size:.85rem;color:var(--muted)}
+.counter.w .num{color:var(--water)} .counter.e .num{color:var(--energy)} .counter.c .num{color:var(--climate)}
+.impact-empty{grid-column:1/-1;color:var(--muted);font-size:.92rem}
+@media (max-width:860px){.impact-in{grid-template-columns:1fr}.counters{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 0}.counter:nth-child(odd){border-inline-start:0;padding-inline-start:0}}
+
+/* "we did our plan" control under the plan */
+.track{margin-top:12px;display:grid;gap:6px}
+.track-row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.track .btn{background:var(--climate);color:var(--surface)}
+.track .btn.done{background:var(--climate-soft);color:var(--climate);opacity:1;cursor:default}
+
 /* how / team */
 .two{display:grid;grid-template-columns:1fr 1fr;gap:32px}
 @media (max-width:860px){.two{grid-template-columns:1fr}}

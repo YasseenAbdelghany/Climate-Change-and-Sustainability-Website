@@ -150,6 +150,23 @@ const I18N = {
   "unit.kWh": { ar: "ك.و.س", en: "kWh" },
   "unit.kgCO2": { ar: "كجم CO₂", en: "kg CO₂" },
 
+  "unit.kg": { ar: "كجم", en: "kg" },
+  "impact.title": { ar: "ما وفّره بيتنا", en: "Our home's savings" },
+  "impact.note": { ar: "تقديرات من الحاسبة، وليست قياسات فعلية.", en: "Estimates from the calculator, not measured savings." },
+  "impact.water": { ar: "مياه موفّرة", en: "Water saved" },
+  "impact.energy": { ar: "كهرباء موفّرة", en: "Electricity saved" },
+  "impact.co2": { ar: "CO₂ تجنّبناه", en: "CO₂ avoided" },
+  "impact.months": { ar: "أشهر مسجّلة", en: "Months tracked" },
+  "impact.empty": { ar: "ابنِ خطة في الحاسبة، ثم سجّل كل شهر تلتزم فيه أسرتك بها.", en: "Build a plan in the calculator, then mark each month your family follows it." },
+  "impact.go": { ar: "اذهب إلى خطتك", en: "Go to your plan" },
+  "track.mark": { ar: "طبّقنا خطتنا هذا الشهر", en: "We did our plan this month" },
+  "track.done": { ar: "✓ سُجّل شهر {month}", en: "✓ Added for {month}" },
+  "track.undo": { ar: "تراجع", en: "Undo" },
+  "track.needPlan": { ar: "اختر إجراءً واحدًا على الأقل لتسجّل شهرك.", en: "Choose at least one action to record your month." },
+  "track.ready": { ar: "يضيف توفير خطتك الشهري إلى إجمالي بيتك لشهر {month}. مرة واحدة كل شهر.", en: "Adds your plan's monthly savings to your home's totals for {month}. Once per month." },
+  "track.added": { ar: "أُضيف توفير شهر {month} إلى إجمالي بيتك.", en: "{month}'s savings were added to your home's totals." },
+  "track.undone": { ar: "أُلغي تسجيل شهر {month}.", en: "{month} was removed from your totals." },
+  "track.again": { ar: "يمكنك التسجيل مرة أخرى الشهر القادم. لتغيير ما سُجّل، تراجع ثم سجّل من جديد.", en: "You can record again next month. To change this month, undo and record again." },
   "assume.title": { ar: "كيف نحسب (الافتراضات)", en: "How we calculate (assumptions)" },
   "assume.1": { ar: "رأس الدُش العادي ٩ لترات في الدقيقة، والموفّر ٦ لترات؛ ويُسخَّن ٦٠٪ من مياه الاستحمام بمقدار ٢٥ درجة مئوية.", en: "Standard shower head 9 L/min, low-flow 6 L/min; 60% of shower water is heated by 25 °C." },
   "assume.2": { ar: "السخّان الكهربائي: ٠٫٠٣٢ ك.و.س لكل لتر ساخن (كفاءة ٩٠٪). سخّان الغاز: ٠٫٠٠٧٣ كجم CO₂ لكل لتر ساخن. الشمسي: صفر تقريبًا.", en: "Electric heater: 0.032 kWh per heated litre (90% efficient). Gas heater: 0.0073 kg CO₂ per heated litre. Solar: about zero." },
@@ -470,6 +487,74 @@ $("form").addEventListener("input", update);
 $("form").addEventListener("submit", e => e.preventDefault());
 $("resetCalc").addEventListener("click", () => { store.remove("calc"); loadCalc(); update(); });
 langListeners.push(() => { $("showerMin").textContent = fmt(2); $("showerMax").textContent = `${fmt(25)} ${t("unit.min")}`; update(); });
+
+/* ==== Impact tracker: plan savings added once per calendar month ==== */
+const monthKey = (d = new Date()) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
+const MONTH_RE = /^\d{4}-(0[1-9]|1[0-2])$/;
+const finiteNonNeg = x => typeof x === "number" && isFinite(x) && x >= 0;
+const validTracker = d => isObj(d) && isObj(d.months) &&
+  Object.entries(d.months).every(([k, v]) => MONTH_RE.test(k) && isObj(v) && ["w", "e", "c"].every(f => finiteNonNeg(v[f])));
+const tracker = store.get("tracker", validTracker) || { months: {} };
+let trackMsg = null; // last action message, so it survives a language switch
+
+function monthName(key) {
+  const [y, m] = key.split("-").map(Number);
+  return new Intl.DateTimeFormat(lang === "ar" ? "ar-EG" : "en-GB", { month: "long", year: "numeric" }).format(new Date(y, m - 1, 1));
+}
+
+// One subtle motion: totals count up to their new value (skipped with reduced motion).
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+function countTo(el, value, animate) {
+  const from = +el.dataset.value || 0;
+  el.dataset.value = value;
+  if (!animate || reduceMotion.matches || from === value) { el.textContent = fmt(value); return; }
+  const start = performance.now(), dur = 700;
+  const step = now => {
+    const p = Math.min(1, (now - start) / dur), eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = fmt(from + (value - from) * eased);
+    if (p < 1 && +el.dataset.value === value) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
+function renderTracker(animate = false) {
+  const entries = Object.values(tracker.months);
+  const sum = f => entries.reduce((a, v) => a + v[f], 0);
+  countTo($("tW"), Math.round(sum("w")), animate);
+  countTo($("tE"), Math.round(sum("e")), animate);
+  countTo($("tC"), Math.round(sum("c")), animate);
+  countTo($("tM"), entries.length, animate);
+  $("impactEmpty").hidden = entries.length > 0;
+
+  const key = monthKey(), done = key in tracker.months, btn = $("markMonth");
+  btn.textContent = done ? t("track.done", { month: monthName(key) }) : t("track.mark");
+  btn.classList.toggle("done", done);
+  btn.disabled = done || !current?.plan;
+  btn.setAttribute("aria-disabled", String(btn.disabled));
+  $("undoMonth").hidden = !done;
+  $("trackMsg").textContent = trackMsg ? t(trackMsg, { month: monthName(key) })
+    : done ? t("track.again") : current?.plan ? t("track.ready", { month: monthName(key) }) : t("track.needPlan");
+}
+
+$("markMonth").addEventListener("click", () => {
+  const key = monthKey();
+  if (key in tracker.months || !current?.plan) return;
+  const { w, e, c } = current.plan;
+  tracker.months[key] = { w: Math.max(0, w), e: Math.max(0, e), c: Math.max(0, c) };
+  store.set("tracker", tracker);
+  trackMsg = "track.added";
+  renderTracker(true);
+  $("undoMonth").focus();
+});
+$("undoMonth").addEventListener("click", () => {
+  delete tracker.months[monthKey()];
+  store.set("tracker", tracker);
+  trackMsg = "track.undone";
+  renderTracker(true);
+  $("markMonth").focus();
+});
+document.addEventListener("planchange", () => { trackMsg = null; renderTracker(); });
+langListeners.push(() => renderTracker());
 
 /* ==== Start ==== */
 loadCalc();

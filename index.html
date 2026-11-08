@@ -85,6 +85,22 @@
     </div>
   </div>
 
+  <section id="impact" class="impact" aria-labelledby="impactTitle">
+    <div class="wrap impact-in">
+      <div class="impact-head">
+        <h2 id="impactTitle" data-i18n="impact.title">Our home's savings</h2>
+        <p class="hint" data-i18n="impact.note">Estimates from the calculator, not measured savings.</p>
+      </div>
+      <dl class="counters">
+        <div class="counter w"><dt data-i18n="impact.water">Water saved</dt><dd><span class="num" id="tW">0</span> <span class="u" data-i18n="unit.L">L</span></dd></div>
+        <div class="counter e"><dt data-i18n="impact.energy">Electricity saved</dt><dd><span class="num" id="tE">0</span> <span class="u" data-i18n="unit.kWh">kWh</span></dd></div>
+        <div class="counter c"><dt data-i18n="impact.co2">CO₂ avoided</dt><dd><span class="num" id="tC">0</span> <span class="u" data-i18n="unit.kg">kg</span></dd></div>
+        <div class="counter m"><dt data-i18n="impact.months">Months tracked</dt><dd><span class="num" id="tM">0</span></dd></div>
+      </dl>
+      <p class="impact-empty" id="impactEmpty"><span data-i18n="impact.empty">Build a plan in the calculator, then mark each month your family follows it.</span> <a href="#track" data-i18n="impact.go">Go to your plan</a></p>
+    </div>
+  </section>
+
   <section id="problem">
     <div class="wrap">
       <div class="sec-head">
@@ -203,6 +219,13 @@
           <p class="empty hint-top" data-i18n="calc.actionsHint">Tick the ones your family will do to build your plan.</p>
           <div class="actions" id="actions"></div>
           <div class="plan" id="plan" aria-live="polite"></div>
+          <div class="track anchor" id="track">
+            <div class="track-row">
+              <button type="button" class="btn" id="markMonth" data-i18n="track.mark">We did our plan this month</button>
+              <button type="button" class="link-btn" id="undoMonth" hidden data-i18n="track.undo">Undo</button>
+            </div>
+            <p class="hint" id="trackMsg" aria-live="polite"></p>
+          </div>
         </div>
       </div>
       <details class="assume">
