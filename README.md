@@ -62,20 +62,6 @@ docs/                final project report (Word and PDF)
 tests/               calculator check (Node.js) and a copy of the original model
 ```
 
-### Edit the team details
-
-Open `script.js`. The `TEAM` object is at the very top:
-
-```js
-const TEAM = {
-  number: "78",
-  members: [
-    { name: { ar: "احمد خالد احمد سعيد", en: "Ahmed Khaled Ahmed Said" }, role: "researchAnalysis" },
-    ...
-  ]
-};
-```
-
 Change `number` and each member's Arabic and English name. Roles are translated automatically.
 
 ## How we calculate (assumptions)
