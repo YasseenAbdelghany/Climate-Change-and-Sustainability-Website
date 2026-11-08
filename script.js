@@ -1,12 +1,12 @@
 /* ==== Edit team details here ==== */
 const TEAM = {
-  number: "__",
+  number: "78",
   members: [
-    { name: { ar: "الطالب ١", en: "Student 1" }, role: "researchAnalysis" },
-    { name: { ar: "الطالب ٢", en: "Student 2" }, role: "contentDevelopment" },
-    { name: { ar: "الطالب ٣", en: "Student 3" }, role: "deployingAI" },
-    { name: { ar: "الطالب ٤", en: "Student 4" }, role: "digitalPublishing" },
-    { name: { ar: "الطالب ٥", en: "Student 5" }, role: "finalOutput" }
+    { name: { ar: "احمد خالد احمد سعيد", en: "Ahmed Khaled Ahmed Said" }, role: "researchAnalysis" },
+    { name: { ar: "محمد هاني عوض عبد الحليم", en: "Mohamed Hany Awad Abdelhaleem" }, role: "contentDevelopment" },
+    { name: { ar: "احمد ياسر ابراهيم السيد", en: "Ahmed Yasser Ibrahim Elsayed" }, role: "deployingAI" },
+    { name: { ar: "احمد خالد فتحي احمد", en: "Ahmed Khaled Fathy Ahmed" }, role: "digitalPublishing" },
+    { name: { ar: "ياسين أحمد السيد عبدالغني", en: "Yasseen Ahmed ELSayed Abdelghany" }, role: "finalOutput" }
   ]
 };
 
@@ -428,7 +428,6 @@ function showStorageNotice() {
 }
 
 /* ==== Language ==== */
-const prefs = store.get("prefs", d => isObj(d)) || {};
 let lang = document.documentElement.lang === "en" ? "en" : "ar";
 const langListeners = [];
 
@@ -454,7 +453,7 @@ function applyI18n(root = document) {
   });
 }
 
-function setLang(next, save = true) {
+function setLang(next) {
   lang = next === "en" ? "en" : "ar";
   const root = document.documentElement;
   root.lang = lang; root.dir = lang === "ar" ? "rtl" : "ltr";
@@ -468,7 +467,6 @@ function setLang(next, save = true) {
   layoutLoop();
   updateThemeButton();
   langListeners.forEach(fn => fn());
-  if (save) { prefs.lang = lang; store.set("prefs", prefs); }
 }
 
 /* The loop diagram reads right-to-left in Arabic: mirror the shapes, move the labels. */
@@ -496,7 +494,6 @@ function updateThemeButton() {
 document.getElementById("themeBtn").addEventListener("click", () => {
   const next = isDark() ? "light" : "dark";
   document.documentElement.setAttribute("data-theme", next);
-  prefs.theme = next; store.set("prefs", prefs);
   updateThemeButton();
   document.dispatchEvent(new CustomEvent("themechange"));
 });
@@ -1330,7 +1327,7 @@ document.addEventListener("planchange", updateShareButton);
 
 /* ==== Start ==== */
 loadCalc();
-setLang(lang, false);
+setLang(lang);
 // Reveal once the main fonts are in (or after 1.2 s at most), so text does not re-wrap and jump in front of the reader.
 (() => {
   const css = document.getElementById("fontCss");

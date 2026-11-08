@@ -23,7 +23,7 @@ AquaWatt treats three UN Sustainable Development Goals as **one household proble
 
 ## Features
 
-- **Arabic and English** with a full right-to-left layout in Arabic (the default) and Arabic-Indic digits. The choice is remembered.
+- **English and Arabic**: the site opens in English with the light theme; one click switches to Arabic with a full right-to-left layout and Arabic-Indic digits, and another switches to dark mode.
 - **Household calculator**: monthly water (L), electricity (kWh) and CO₂ (kg), 7 actions ranked by CO₂ saved, and a "Your plan" total with yearly savings.
 - **Our home's savings**: mark "We did our plan this month" once per calendar month (with undo); running totals of water, electricity and CO₂ saved. These are estimates from the calculator, not measured savings.
 - **Habits quiz**: 7 questions, a habit profile, and the top 3 tips for your weakest habits. Each tip jumps to the matching action in the calculator. Scoring is explained on the page.
@@ -67,7 +67,7 @@ Open `script.js`. The `TEAM` object is at the very top:
 const TEAM = {
   number: "__",
   members: [
-    { name: { ar: "الطالب ١", en: "Student 1" }, role: "researchAnalysis" },
+    { name: { ar: "احمد خالد احمد سعيد", en: "Ahmed Khaled Ahmed Said" }, role: "researchAnalysis" },
     ...
   ]
 };
@@ -121,15 +121,15 @@ These are estimates for awareness, not a bill. Real numbers depend on each home'
 
 ## Team
 
-Team No. __ · Computer engineering students, Alamein International University
+Team No. 78 · Computer engineering students, Alamein International University
 
 | Name | Role |
 |---|---|
-| Student 1 | Research & Analysis |
-| Student 2 | Content Development |
-| Student 3 | Deploying AI tools |
-| Student 4 | Digital publishing |
-| Student 5 | Final output |
+| Ahmed Khaled Ahmed Said | Research & Analysis |
+| Mohamed Hany Awad Abdelhaleem | Content Development |
+| Ahmed Yasser Ibrahim Elsayed | Deploying AI tools |
+| Ahmed Khaled Fathy Ahmed | Digital publishing |
+| Yasseen Ahmed ELSayed Abdelghany | Final output |
 
 ## Deploy on GitHub Pages
 
@@ -168,7 +168,7 @@ A step-by-step guide for a first-time user. It takes about 5 minutes.
 
 ## المزايا
 
-- **العربية والإنجليزية** مع اتجاه كامل من اليمين إلى اليسار في العربية (اللغة الافتراضية) وأرقام عربية، ويُحفظ اختيارك.
+- **الإنجليزية والعربية:** يفتح الموقع بالإنجليزية وبالوضع الفاتح، وبضغطة واحدة يتحوّل إلى العربية باتجاه كامل من اليمين إلى اليسار وأرقام عربية، أو إلى الوضع الداكن.
 - **الحاسبة المنزلية:** استهلاك شهري للمياه (لتر) والكهرباء (ك.و.س) وCO₂ (كجم)، و٧ إجراءات مرتّبة حسب توفير CO₂، وإجمالي «خطتك» مع التوفير السنوي.
 - **ما وفّره بيتنا:** زر «طبّقنا خطتنا هذا الشهر» مرة واحدة كل شهر (مع إمكانية التراجع)، وإجمالي تراكمي للمياه والكهرباء وCO₂. هذه تقديرات من الحاسبة وليست قياسات فعلية.
 - **اختبار العادات:** ٧ أسئلة، وملف لعادات أسرتك، وأهم ٣ نصائح لأضعف عاداتكم، وكل نصيحة تنقلك إلى الإجراء المناسب في الحاسبة. طريقة حساب النقاط موضّحة في الصفحة.
@@ -216,15 +216,15 @@ A step-by-step guide for a first-time user. It takes about 5 minutes.
 
 ## الفريق
 
-فريق رقم __ · طلاب هندسة الحاسبات، جامعة العلمين الدولية
+فريق رقم ٧٨ · طلاب هندسة الحاسبات، جامعة العلمين الدولية
 
 | الاسم | الدور |
 |---|---|
-| الطالب ١ | البحث والتحليل |
-| الطالب ٢ | إعداد المحتوى |
-| الطالب ٣ | توظيف أدوات الذكاء الاصطناعي |
-| الطالب ٤ | النشر الرقمي |
-| الطالب ٥ | المُخرَج النهائي |
+| احمد خالد احمد سعيد | البحث والتحليل |
+| محمد هاني عوض عبد الحليم | إعداد المحتوى |
+| احمد ياسر ابراهيم السيد | توظيف أدوات الذكاء الاصطناعي |
+| احمد خالد فتحي احمد | النشر الرقمي |
+| ياسين أحمد السيد عبدالغني | المُخرَج النهائي |
 
 ## النشر على GitHub Pages خطوة بخطوة
 

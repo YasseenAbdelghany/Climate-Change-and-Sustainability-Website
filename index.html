@@ -6,8 +6,7 @@
 <title>AquaWatt · Save water, energy and CO₂ at home</title>
 <meta name="description" content="AquaWatt is a free, private household calculator for Egyptian families that shows how saving water also saves electricity and cuts CO₂ (SDG 6, 7 and 13).">
 <link rel="canonical" href="https://yasseenabdelghany.github.io/Climate-Change-and-Sustainability-Website/">
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0f2232" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AquaWatt">
@@ -18,20 +17,18 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="AquaWatt: every litre you save also saves energy and cuts CO₂.">
-<meta property="og:locale" content="ar_EG">
-<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_EG">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="AquaWatt · Save water, energy and CO₂ at home">
 <meta name="twitter:description" content="A free household calculator for Egyptian families: every litre you save also saves energy and cuts CO₂.">
 <meta name="twitter:image" content="https://yasseenabdelghany.github.io/Climate-Change-and-Sustainability-Website/assets/og-image.png">
 <script>
-/* Set language, direction and theme before first paint so the page never flashes the wrong layout. */
+/* Every visit opens in English with the light theme; the language and theme buttons switch them for that visit only. */
 (function () {
-  var p = {};
-  try { p = (JSON.parse(localStorage.getItem("aquawatt.prefs")) || {}).data || {}; } catch (e) {}
-  var lang = p.lang === "en" ? "en" : "ar", root = document.documentElement;
-  root.lang = lang; root.dir = lang === "ar" ? "rtl" : "ltr";
-  if (p.theme === "light" || p.theme === "dark") root.setAttribute("data-theme", p.theme);
+  var root = document.documentElement;
+  root.lang = "en"; root.dir = "ltr";
+  root.setAttribute("data-theme", "light");
   // Hide the page until script.js has filled in the chosen language, so text does not swap in front of the reader.
   root.classList.add("i18n-pending");
   setTimeout(function () { root.classList.remove("i18n-pending"); }, 3000);
