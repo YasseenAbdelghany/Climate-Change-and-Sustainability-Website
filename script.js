@@ -167,6 +167,86 @@ const I18N = {
   "track.added": { ar: "أُضيف توفير شهر {month} إلى إجمالي بيتك.", en: "{month}'s savings were added to your home's totals." },
   "track.undone": { ar: "أُلغي تسجيل شهر {month}.", en: "{month} was removed from your totals." },
   "track.again": { ar: "يمكنك التسجيل مرة أخرى الشهر القادم. لتغيير ما سُجّل، تراجع ثم سجّل من جديد.", en: "You can record again next month. To change this month, undo and record again." },
+  "nav.quiz": { ar: "اختبار العادات", en: "Habits quiz" },
+  "quiz.eyebrow": { ar: "فحص العادات", en: "Habits check" },
+  "quiz.title": { ar: "ما مدى حرص بيتكم على المياه والطاقة؟", en: "How water- and energy-wise is your home?" },
+  "quiz.lead": { ar: "سبعة أسئلة سريعة عن العادات اليومية، تحصلون بعدها على ملف عاداتكم وأهم ثلاث نصائح تفيد بيتكم.", en: "Seven quick questions about everyday habits. You get a habit profile and the three tips that would help your home most." },
+  "quiz.count": { ar: "السؤال {n} من {total}", en: "Question {n} of {total}" },
+  "quiz.back": { ar: "السابق", en: "Back" },
+  "quiz.next": { ar: "التالي", en: "Next" },
+  "quiz.finish": { ar: "اعرض نتيجتي", en: "See my result" },
+  "quiz.retake": { ar: "أعيدوا الاختبار", en: "Retake the quiz" },
+  "quiz.yourProfile": { ar: "ملف عاداتكم", en: "Your habit profile" },
+  "quiz.score": { ar: "{score} من {max} نقطة", en: "{score} of {max} points" },
+  "quiz.tipsTitle": { ar: "أهم النصائح لبيتكم", en: "Your top tips" },
+  "quiz.noTips": { ar: "لا نقاط ضعف: حصلت كل إجاباتكم على الدرجة الكاملة.", en: "No weak spots: every answer scored full points." },
+  "quiz.tipMeta": { ar: "إجابتكم: {n} من ٣ نقاط", en: "Your answer: {n} of 3 points" },
+  "quiz.showCalc": { ar: "اعرضه في الحاسبة", en: "Show it in the calculator" },
+  "quiz.showBills": { ar: "افتح متتبّع الفواتير", en: "Open the bill tracker" },
+  "quiz.howTitle": { ar: "كيف تُحسب النقاط", en: "How the points work" },
+  "quiz.how1": { ar: "كل إجابة تعطي من ٠ إلى ٣ نقاط. ٣ نقاط هي العادة الأكثر توفيرًا للمياه والطاقة، و٠ هي الأقل.", en: "Each answer gives 0 to 3 points. 3 points is the most water- and energy-wise habit, 0 is the least." },
+  "quiz.how2": { ar: "مجموعكم من ٢١ نقطة يحدّد ملفكم:", en: "Your total out of 21 sets your profile:" },
+  "quiz.how3": { ar: "النصائح تأتي من أقل إجاباتكم نقاطًا. وعند التعادل، تتقدّم العادة التي توفّر طاقة أكثر في حاسبتنا.", en: "Tips come from your lowest-scoring answers. When two answers tie, the habit that saves more energy in our calculator comes first." },
+  "quiz.saved": { ar: "إجاباتكم محفوظة على هذا الجهاز فقط.", en: "Your answers are saved on this device only." },
+  "quiz.band": { ar: "{from}–{to} نقطة: ", en: "{from}–{to} points: " },
+  "q.shower": { ar: "كم تستغرق مدة الاستحمام المعتادة في بيتكم؟", en: "How long is a typical shower in your home?" },
+  "q.shower.0": { ar: "أقل من ٥ دقائق", en: "Under 5 minutes" },
+  "q.shower.1": { ar: "من ٥ إلى ٨ دقائق", en: "5 to 8 minutes" },
+  "q.shower.2": { ar: "من ٩ إلى ١٢ دقيقة", en: "9 to 12 minutes" },
+  "q.shower.3": { ar: "أكثر من ١٢ دقيقة", en: "More than 12 minutes" },
+  "q.tap": { ar: "هل تقفلون الحنفية أثناء غسل الأسنان أو تصبين الأطباق؟", en: "Do you turn the tap off while brushing your teeth or soaping dishes?" },
+  "q.tap.0": { ar: "دائمًا", en: "Always" },
+  "q.tap.1": { ar: "غالبًا", en: "Usually" },
+  "q.tap.2": { ar: "أحيانًا", en: "Sometimes" },
+  "q.tap.3": { ar: "نادرًا", en: "Rarely" },
+  "q.ac": { ar: "في الصيف، على أي درجة تضبطون التكييف عادةً؟", en: "In summer, what temperature is your AC usually set to?" },
+  "q.ac.0": { ar: "لا نستخدم التكييف", en: "We do not use AC" },
+  "q.ac.1": { ar: "٢٥ درجة أو أعلى", en: "25 °C or warmer" },
+  "q.ac.2": { ar: "من ٢٣ إلى ٢٤ درجة", en: "23 to 24 °C" },
+  "q.ac.3": { ar: "من ٢٠ إلى ٢٢ درجة", en: "20 to 22 °C" },
+  "q.ac.4": { ar: "أقل من ٢٠ درجة", en: "Below 20 °C" },
+  "q.lights": { ar: "أي وصف ينطبق على الإضاءة في بيتكم؟", en: "Which best describes your lighting?" },
+  "q.lights.0": { ar: "كلها LED، ونطفئ الأنوار في الغرف الفارغة", en: "All LED, and we switch off lights in empty rooms" },
+  "q.lights.1": { ar: "معظمها LED", en: "Mostly LED" },
+  "q.lights.2": { ar: "خليط من LED ولمبات قديمة", en: "A mix of LED and older bulbs" },
+  "q.lights.3": { ar: "معظمها لمبات قديمة، وتبقى مضاءة كثيرًا", en: "Mostly older bulbs, often left on" },
+  "q.laundry": { ar: "كيف تشغّلون الغسالة عادةً؟", en: "How do you usually run the washing machine?" },
+  "q.laundry.0": { ar: "حمولة كاملة بماء بارد", en: "Full loads in cold water" },
+  "q.laundry.1": { ar: "حمولة كاملة بماء دافئ أو ساخن", en: "Full loads in warm or hot water" },
+  "q.laundry.2": { ar: "حمولة غير كاملة في أحيان كثيرة", en: "Often half loads" },
+  "q.laundry.3": { ar: "حمولات صغيرة بماء ساخن عدة مرات في الأسبوع", en: "Small hot-water loads several times a week" },
+  "q.heater": { ar: "كيف تُسخَّن المياه في بيتكم؟", en: "How is your hot water heated?" },
+  "q.heater.0": { ar: "سخّان شمسي", en: "Solar water heater" },
+  "q.heater.1": { ar: "سخّان غاز", en: "Gas heater" },
+  "q.heater.2": { ar: "سخّان كهربائي نشغّله عند الحاجة فقط", en: "Electric heater, switched on only when needed" },
+  "q.heater.3": { ar: "سخّان كهربائي يعمل طوال اليوم", en: "Electric heater left on all day" },
+  "q.bills": { ar: "كم مرة تراجعون فواتير الكهرباء والمياه؟", en: "How often do you check your electricity and water bills?" },
+  "q.bills.0": { ar: "كل شهر، ونقارنها بالشهر السابق", en: "Every month, and we compare with last month" },
+  "q.bills.1": { ar: "كل شهر", en: "Every month" },
+  "q.bills.2": { ar: "فقط عندما تبدو الفاتورة مرتفعة", en: "Only when a bill looks high" },
+  "q.bills.3": { ar: "نادرًا أو لا نراجعها", en: "Rarely or never" },
+  "tip.shower.t": { ar: "قصّروا الاستحمام دقيقتين", en: "Shorten showers by 2 minutes" },
+  "tip.shower.why": { ar: "مياه الاستحمام الساخنة هي أكبر استهلاك للطاقة مرتبط بالمياه في البيت، ورؤوس الدُش الموفّرة تساعد أيضًا.", en: "Hot shower water is the biggest water-related energy use at home, and low-flow heads help too." },
+  "tip.tap.t": { ar: "اقفلوا الحنفية أثناء غسل الأسنان", en: "Turn the tap off while brushing" },
+  "tip.tap.why": { ar: "توفير نحو ٢٢ لترًا لكل فرد يوميًا، دون أي تكلفة.", en: "About 22 L saved per person every day, at no cost." },
+  "tip.ac.t": { ar: "اضبطوا التكييف على ٢٥ درجة", en: "Set the AC to 25 °C" },
+  "tip.ac.why": { ar: "كل درجة أعلى توفّر نحو ٤٪ من طاقة التبريد.", en: "Each degree warmer saves about 4% of cooling energy." },
+  "tip.lights.t": { ar: "استبدلوا اللمبات بـ LED وأطفئوا الغرف الفارغة", en: "Switch to LED and turn off lights in empty rooms" },
+  "tip.lights.why": { ar: "لمبات LED تستهلك نحو ثلث كهرباء اللمبات القديمة.", en: "LEDs use roughly a third of the power of older bulbs." },
+  "tip.laundry.t": { ar: "اغسلوا حمولة كاملة بماء بارد", en: "Wash full loads in cold water" },
+  "tip.laundry.why": { ar: "غسلات أقل، ولا تسخين للمياه داخل الغسالة.", en: "Fewer loads and no water heating in the machine." },
+  "tip.heater.t": { ar: "فكّروا في سخّان شمسي", en: "Consider a solar water heater" },
+  "tip.heater.why": { ar: "شمس مصر قادرة على تسخين كل مياه البيت الساخنة تقريبًا.", en: "Egypt's sunshine can heat almost all household hot water." },
+  "tip.bills.t": { ar: "تابعوا فواتيركم كل شهر", en: "Track your bills every month" },
+  "tip.bills.why": { ar: "المتابعة المتكررة مع أهداف واضحة تحقق أكبر توفير في الطاقة (Karlin et al., 2015).", en: "Frequent feedback with clear goals saves the most energy (Karlin et al., 2015)." },
+  "profile.0": { ar: "جاهزون للبداية", en: "Ready to start" },
+  "profile.0.text": { ar: "تغييرات صغيرة ستُحدث فرقًا كبيرًا في بيتكم. ابدؤوا بالنصائح التالية.", en: "Small changes will make a big difference in your home. Start with the tips below." },
+  "profile.1": { ar: "في منتصف الطريق", en: "Halfway there" },
+  "profile.1.text": { ar: "لديكم بالفعل عادات جيدة، وبعض التغييرات ستأخذ بيتكم أبعد بكثير.", en: "You already have some good habits. A few changes will take your home much further." },
+  "profile.2": { ar: "موفّرون حريصون", en: "Careful savers" },
+  "profile.2.text": { ar: "بيتكم يستخدم المياه والطاقة بحكمة. بقيت لمسات أخيرة على بعض العادات.", en: "Your home already uses water and energy wisely. Fine-tune the last few habits." },
+  "profile.3": { ar: "أبطال التوفير", en: "Home champions" },
+  "profile.3.text": { ar: "عادات ممتازة. شاركوها مع العائلة والجيران، فالمقارنة مع الآخرين تشجّع على التوفير (Allcott, 2011).", en: "Excellent habits. Share them with family and neighbours: comparing with others helps people save (Allcott, 2011)." },
   "assume.title": { ar: "كيف نحسب (الافتراضات)", en: "How we calculate (assumptions)" },
   "assume.1": { ar: "رأس الدُش العادي ٩ لترات في الدقيقة، والموفّر ٦ لترات؛ ويُسخَّن ٦٠٪ من مياه الاستحمام بمقدار ٢٥ درجة مئوية.", en: "Standard shower head 9 L/min, low-flow 6 L/min; 60% of shower water is heated by 25 °C." },
   "assume.2": { ar: "السخّان الكهربائي: ٠٫٠٣٢ ك.و.س لكل لتر ساخن (كفاءة ٩٠٪). سخّان الغاز: ٠٫٠٠٧٣ كجم CO₂ لكل لتر ساخن. الشمسي: صفر تقريبًا.", en: "Electric heater: 0.032 kWh per heated litre (90% efficient). Gas heater: 0.0073 kg CO₂ per heated litre. Solar: about zero." },
@@ -555,6 +635,121 @@ $("undoMonth").addEventListener("click", () => {
 });
 document.addEventListener("planchange", () => { trackMsg = null; renderTracker(); });
 langListeners.push(() => renderTracker());
+
+/* ==== Habits quiz ==== */
+// points[i] is the score of option i (3 = most water- and energy-wise).
+// Array order is the tie-break priority: habits that save more energy in the calculator come first.
+const QUIZ = [
+  { id: "heater", points: [3, 2, 1, 0], action: ["solar"], field: "heater", k: "e" },
+  { id: "shower", points: [3, 2, 1, 0], action: ["shorter", "lowflow"], field: "shower", k: "w" },
+  { id: "ac", points: [3, 3, 2, 1, 0], action: ["ac"], field: "acTemp", k: "e" },
+  { id: "lights", points: [3, 2, 1, 0], action: ["led"], field: "led", k: "e" },
+  { id: "laundry", points: [3, 2, 1, 0], action: ["laundry"], field: "laundry", k: "e" },
+  { id: "tap", points: [3, 2, 1, 0], action: ["tap"], field: "tap", k: "w" },
+  { id: "bills", points: [3, 2, 1, 0], section: "bills", k: "c" }
+];
+// Questions are asked in an everyday order, separate from the tie-break order.
+const QUIZ_ORDER = ["shower", "tap", "ac", "lights", "laundry", "heater", "bills"];
+const QUIZ_MAX = 3 * QUIZ.length;
+const PROFILES = [{ from: 0, to: 7 }, { from: 8, to: 13 }, { from: 14, to: 18 }, { from: 19, to: 21 }];
+const qById = Object.fromEntries(QUIZ.map(q => [q.id, q]));
+
+const validQuiz = d => isObj(d) && isObj(d.answers) && Number.isInteger(d.step) && d.step >= 0 && d.step < QUIZ.length &&
+  Object.entries(d.answers).every(([id, i]) => qById[id] && Number.isInteger(i) && i >= 0 && i < qById[id].points.length);
+const quiz = store.get("quiz", validQuiz) || { answers: {}, step: 0, done: false };
+// A save can claim "done" without every answer (e.g. edited by hand); send it back to the questions.
+if (quiz.done && !QUIZ.every(q => q.id in quiz.answers)) quiz.done = false;
+const saveQuiz = () => store.set("quiz", quiz);
+const quizScore = id => qById[id].points[quiz.answers[id]];
+
+function renderQuiz(focus = false) {
+  $("quizForm").hidden = !!quiz.done;
+  $("qResult").hidden = !quiz.done;
+  renderBands();
+  if (quiz.done) return renderQuizResult(focus);
+  const q = qById[QUIZ_ORDER[quiz.step]];
+  $("qCount").textContent = t("quiz.count", { n: quiz.step + 1, total: QUIZ.length });
+  $("qBar").style.width = ((quiz.step + 1) / QUIZ.length * 100) + "%";
+  $("qLegend").textContent = t("q." + q.id);
+  const opts = $("qOpts");
+  opts.innerHTML = "";
+  q.points.forEach((p, i) => {
+    const lab = document.createElement("label"); lab.className = "opt";
+    const r = document.createElement("input"); r.type = "radio"; r.name = "q"; r.value = i; r.checked = quiz.answers[q.id] === i;
+    r.addEventListener("change", () => { quiz.answers[q.id] = i; saveQuiz(); updateQuizNav(); });
+    const span = document.createElement("span"); span.textContent = t(`q.${q.id}.${i}`);
+    lab.append(r, span); opts.append(lab);
+  });
+  $("qBack").disabled = quiz.step === 0;
+  updateQuizNav();
+  if (focus) $("qLegend").focus({ preventScroll: true });
+}
+function updateQuizNav() {
+  $("qNext").textContent = t(quiz.step === QUIZ.length - 1 ? "quiz.finish" : "quiz.next");
+  $("qNext").disabled = !(QUIZ_ORDER[quiz.step] in quiz.answers);
+}
+function renderBands() {
+  const ul = $("qBands"); ul.innerHTML = "";
+  PROFILES.forEach((b, i) => {
+    const li = document.createElement("li");
+    const name = document.createElement("b"); name.textContent = t("profile." + i);
+    li.append(t("quiz.band", { from: b.from, to: b.to }), name); ul.append(li);
+  });
+}
+
+function renderQuizResult(focus) {
+  const total = QUIZ.reduce((a, q) => a + quizScore(q.id), 0);
+  const pi = PROFILES.findIndex(b => total >= b.from && total <= b.to);
+  $("qProfile").textContent = t("profile." + pi);
+  $("qScore").textContent = t("quiz.score", { score: total, max: QUIZ_MAX });
+  $("qProfileText").textContent = t(`profile.${pi}.text`);
+  const weak = QUIZ.filter(q => quizScore(q.id) < 3)
+    .sort((a, b) => quizScore(a.id) - quizScore(b.id) || QUIZ.indexOf(a) - QUIZ.indexOf(b)).slice(0, 3);
+  const ol = $("qTips"); ol.innerHTML = "";
+  if (!weak.length) { const li = document.createElement("li"); li.textContent = t("quiz.noTips"); ol.append(li); }
+  weak.forEach(q => {
+    const li = document.createElement("li"); li.className = q.k;
+    const tt = document.createElement("span"); tt.className = "tip-t"; tt.textContent = t(`tip.${q.id}.t`);
+    const why = document.createElement("span"); why.textContent = t(`tip.${q.id}.why`);
+    const meta = document.createElement("span"); meta.className = "tip-meta"; meta.textContent = t("quiz.tipMeta", { n: quizScore(q.id) });
+    const go = document.createElement("button"); go.type = "button"; go.className = "link-btn";
+    go.textContent = t(q.section ? "quiz.showBills" : "quiz.showCalc");
+    go.addEventListener("click", () => showTarget(q));
+    li.append(tt, why, meta, go); ol.append(li);
+  });
+  if (focus) $("qProfile").focus({ preventScroll: true });
+}
+
+// Scroll to the matching calculator action (or its input, if the action is not listed) and highlight it briefly.
+function showTarget(q) {
+  let el, focusEl;
+  if (q.section) { el = $(q.section); focusEl = el?.querySelector("h2"); }
+  else {
+    const id = q.action.find(a => $("action-" + a));
+    el = id ? $("action-" + id) : $(q.field)?.closest(".field");
+    focusEl = id ? $("act-" + id) : $(q.field);
+  }
+  if (!el) return;
+  el.scrollIntoView({ behavior: reduceMotion.matches ? "auto" : "smooth", block: "center" });
+  if (focusEl) {
+    if (!focusEl.matches("input,select,button,a")) focusEl.tabIndex = -1;
+    focusEl.focus({ preventScroll: true });
+  }
+  el.classList.add("flash");
+  setTimeout(() => el.classList.remove("flash"), 2600);
+}
+
+$("quizForm").addEventListener("submit", e => {
+  e.preventDefault();
+  if (!(QUIZ_ORDER[quiz.step] in quiz.answers)) return;
+  if (quiz.step < QUIZ.length - 1) quiz.step++; else quiz.done = true;
+  saveQuiz(); renderQuiz(true);
+});
+// Enter on a chosen option moves on, like pressing Next.
+$("qOpts").addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); $("quizForm").requestSubmit(); } });
+$("qBack").addEventListener("click", () => { if (quiz.step > 0) { quiz.step--; saveQuiz(); renderQuiz(true); } });
+$("qRetake").addEventListener("click", () => { quiz.answers = {}; quiz.step = 0; quiz.done = false; saveQuiz(); renderQuiz(true); });
+langListeners.push(() => renderQuiz());
 
 /* ==== Start ==== */
 loadCalc();

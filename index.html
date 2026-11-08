@@ -49,6 +49,7 @@
       <li><a href="#problem" data-i18n="nav.problem">Problem</a></li>
       <li><a href="#research" data-i18n="nav.research">Research</a></li>
       <li><a href="#calculator" data-i18n="nav.calculator">Calculator</a></li>
+      <li><a href="#quiz" data-i18n="nav.quiz">Habits quiz</a></li>
       <li><a href="#team" data-i18n="nav.team">Team</a></li>
       <li><a href="#references" data-i18n="nav.references">References</a></li>
     </ul></nav>
@@ -241,6 +242,51 @@
           <li data-i18n="assume.8">These are estimates for awareness, not a bill. Your real numbers depend on your appliances and habits.</li>
         </ul>
       </details>
+    </div>
+  </section>
+
+  <section id="quiz">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow" data-i18n="quiz.eyebrow">Habits check</span>
+        <h2 data-i18n="quiz.title">How water- and energy-wise is your home?</h2>
+        <p class="lead" data-i18n="quiz.lead">Seven quick questions about everyday habits. You get a habit profile and the three tips that would help your home most.</p>
+      </div>
+      <div class="quiz-grid">
+        <div class="quiz-card" id="quizCard">
+          <form id="quizForm" autocomplete="off">
+            <div class="q-progress">
+              <span id="qCount" aria-live="polite"></span>
+              <div class="q-bar" aria-hidden="true"><i id="qBar"></i></div>
+            </div>
+            <fieldset class="q-set">
+              <legend id="qLegend" tabindex="-1"></legend>
+              <div class="opts" id="qOpts"></div>
+            </fieldset>
+            <div class="q-nav">
+              <button type="button" class="btn ghost small" id="qBack" data-i18n="quiz.back">Back</button>
+              <button type="submit" class="btn small" id="qNext"></button>
+            </div>
+          </form>
+          <div class="q-result" id="qResult" hidden>
+            <p class="eyebrow" data-i18n="quiz.yourProfile">Your habit profile</p>
+            <h3 id="qProfile" tabindex="-1"></h3>
+            <p class="q-score" id="qScore"></p>
+            <p id="qProfileText"></p>
+            <h4 data-i18n="quiz.tipsTitle">Your top tips</h4>
+            <ol class="tips" id="qTips"></ol>
+            <button type="button" class="btn ghost small" id="qRetake" data-i18n="quiz.retake">Retake the quiz</button>
+          </div>
+        </div>
+        <aside class="quiz-how">
+          <h3 data-i18n="quiz.howTitle">How the points work</h3>
+          <p data-i18n="quiz.how1">Each answer gives 0 to 3 points. 3 points is the most water- and energy-wise habit, 0 is the least.</p>
+          <p data-i18n="quiz.how2">Your total out of 21 sets your profile:</p>
+          <ul class="bands" id="qBands"></ul>
+          <p data-i18n="quiz.how3">Tips come from your lowest-scoring answers. When two answers tie, the habit that saves more energy in our calculator comes first.</p>
+          <p class="hint" data-i18n="quiz.saved">Your answers are saved on this device only.</p>
+        </aside>
+      </div>
     </div>
   </section>
 

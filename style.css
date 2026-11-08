@@ -210,6 +210,40 @@ details.assume ul{margin:10px 0 0;padding-inline-start:18px;display:grid;gap:4px
 .track .btn{background:var(--climate);color:var(--surface)}
 .track .btn.done{background:var(--climate-soft);color:var(--climate);opacity:1;cursor:default}
 
+/* habits quiz */
+.quiz-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:860px){.quiz-grid{grid-template-columns:1fr}}
+.quiz-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;min-width:0}
+.q-progress{display:grid;gap:8px;margin-bottom:16px;font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+.q-bar{height:6px;border-radius:99px;background:var(--line);overflow:hidden}
+.q-bar i{display:block;height:100%;width:0;background:var(--water);border-radius:inherit;transition:width .3s}
+.q-set{border:0;margin:0;padding:0;min-width:0}
+.q-set legend{font-family:var(--display);font-weight:700;font-size:1.3rem;line-height:1.3;margin-bottom:14px;padding:0;outline:none}
+.opts{display:grid;gap:8px}
+.opt{display:flex;gap:12px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:11px 14px;cursor:pointer;font-weight:600}
+.opt:hover{border-color:var(--muted)}
+.opt:has(input:checked){border-color:var(--water);background:var(--water-soft)}
+.opt:has(input:focus-visible){outline:3px solid var(--water);outline-offset:2px}
+.opt input{width:18px;height:18px;margin:0;flex:none;accent-color:var(--water)}
+.q-nav{display:flex;justify-content:space-between;gap:12px;margin-top:18px}
+.q-result{display:grid;gap:10px}
+.q-result h3{font-size:1.7rem;outline:none}
+.q-result h4{font-family:var(--display);font-size:1.05rem;margin:10px 0 0}
+.q-score{font-family:var(--mono);font-weight:600;color:var(--water)}
+.tips{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.tips li{border-inline-start:4px solid var(--k,var(--water));background:var(--bg);border-radius:0 10px 10px 0;padding:12px 14px;display:grid;gap:6px}
+html[dir="rtl"] .tips li{border-radius:10px 0 0 10px}
+.tips li.w{--k:var(--water)} .tips li.e{--k:var(--energy-mark)} .tips li.c{--k:var(--climate)}
+.tips .tip-t{font-weight:700}
+.tips .tip-meta{font-family:var(--mono);font-size:.75rem;color:var(--muted)}
+.tips .link-btn{justify-self:start;padding:0}
+.quiz-how{display:grid;gap:10px;color:var(--muted);font-size:.95rem;padding-top:4px}
+.quiz-how h3{color:var(--ink)}
+.bands{margin:0;padding-inline-start:18px;display:grid;gap:3px}
+.bands b{color:var(--ink);font-weight:600}
+/* highlight for the calculator item a quiz tip points to */
+.flash{box-shadow:0 0 0 3px var(--energy-mark)!important;border-color:var(--energy-mark)!important}
+
 /* how / team */
 .two{display:grid;grid-template-columns:1fr 1fr;gap:32px}
 @media (max-width:860px){.two{grid-template-columns:1fr}}
