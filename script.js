@@ -247,6 +247,47 @@ const I18N = {
   "profile.2.text": { ar: "بيتكم يستخدم المياه والطاقة بحكمة. بقيت لمسات أخيرة على بعض العادات.", en: "Your home already uses water and energy wisely. Fine-tune the last few habits." },
   "profile.3": { ar: "أبطال التوفير", en: "Home champions" },
   "profile.3.text": { ar: "عادات ممتازة. شاركوها مع العائلة والجيران، فالمقارنة مع الآخرين تشجّع على التوفير (Allcott, 2011).", en: "Excellent habits. Share them with family and neighbours: comparing with others helps people save (Allcott, 2011)." },
+  "nav.bills": { ar: "الفواتير", en: "Bills" },
+  "bills.eyebrow": { ar: "متتبّع الفواتير", en: "Bill tracker" },
+  "bills.title": { ar: "تابِع فواتيرك الحقيقية شهرًا بشهر", en: "Track your real bills, month by month" },
+  "bills.lead": { ar: "أدخل استهلاك كل شهر من الكهرباء (ك.و.س) والمياه (م³) كما في فواتيرك. سترى الاتجاه، والتغيّر عن الشهر السابق، ورقمًا تقريبيًا لانبعاثات CO₂. كل شيء يبقى على هذا الجهاز.", en: "Enter each month's electricity (kWh) and water (m³) from your bills. You will see the trend, the change from the month before and an approximate CO₂ figure. Everything stays on this device." },
+  "bills.add": { ar: "أضف شهرًا", en: "Add a month" },
+  "bills.edit": { ar: "تعديل {month}", en: "Edit {month}" },
+  "bills.month": { ar: "الشهر", en: "Month" },
+  "bills.year": { ar: "السنة", en: "Year" },
+  "bills.kwh": { ar: "الكهرباء (ك.و.س)", en: "Electricity (kWh)" },
+  "bills.m3": { ar: "المياه (م³)", en: "Water (m³)" },
+  "bills.co2": { ar: "CO₂ (≈ كجم)", en: "CO₂ (≈ kg)" },
+  "bills.actions": { ar: "إجراءات", en: "Actions" },
+  "bills.save": { ar: "أضف الشهر", en: "Add month" },
+  "bills.saveEdit": { ar: "احفظ التعديل", en: "Save changes" },
+  "bills.cancel": { ar: "إلغاء", en: "Cancel" },
+  "bills.editBtn": { ar: "تعديل", en: "Edit" },
+  "bills.deleteBtn": { ar: "حذف", en: "Delete" },
+  "bills.editLabel": { ar: "تعديل {month}", en: "Edit {month}" },
+  "bills.deleteLabel": { ar: "حذف {month}", en: "Delete {month}" },
+  "bills.confirmDelete": { ar: "هل تريد حذف بيانات {month}؟", en: "Delete the entry for {month}?" },
+  "bills.tableCaption": { ar: "الأشهر المسجّلة", en: "Your entries" },
+  "bills.noRows": { ar: "لم تُضِف أي شهر بعد.", en: "No months added yet." },
+  "bills.errFuture": { ar: "هذا الشهر لم يأتِ بعد. اختر هذا الشهر أو شهرًا سابقًا.", en: "That month has not happened yet. Choose this month or an earlier one." },
+  "bills.errDup": { ar: "لديك بالفعل بيانات {month}. استخدم «تعديل» في صفّه لتغييرها.", en: "You already have {month}. Use Edit on that row to change it." },
+  "bills.errKwh": { ar: "أدخل استهلاك الكهرباء رقمًا موجبًا بالكيلوواط ساعة.", en: "Enter electricity use as a positive number of kWh." },
+  "bills.errM3": { ar: "أدخل استهلاك المياه رقمًا موجبًا بالمتر المكعب.", en: "Enter water use as a positive number of m³." },
+  "bills.errBig": { ar: "هذا الرقم يبدو كبيرًا جدًا لبيت واحد. راجع الفاتورة.", en: "That number looks too large for one home. Check the bill." },
+  "bills.co2Note": { ar: "رقم CO₂ تقريبي: (ك.و.س + م³ × ٠٫٦) × ٠٫٤٧ كجم، باستخدام معامل الشبكة وطاقة إمداد المياه من الحاسبة.", en: "CO₂ is approximate: (kWh + m³ × 0.6) × 0.47 kg, using the calculator's grid factor and water-supply energy." },
+  "bills.chartEmpty": { ar: "أضف شهرًا واحدًا على الأقل لترى الرسم، وشهرين لترى الاتجاه.", en: "Add at least one month to see the chart, and two to see a trend." },
+  "bills.chartLabel": { ar: "رسمان خطيان لاستهلاك الكهرباء والمياه خلال {n} شهر. الأرقام نفسها في الجدول أسفله.", en: "Line charts of electricity and water use over {n} months. The same numbers are in the table below." },
+  "bills.latest": { ar: "آخر شهر: {v} {unit}", en: "Latest: {v} {unit}" },
+  "bills.change": { ar: "{pct} عن {month}", en: "{pct} vs {month}" },
+  "data.title": { ar: "بياناتك", en: "Your data" },
+  "data.text": { ar: "احفظ نسخة احتياطية من كل ما يحفظه AquaWatt على هذا الجهاز (الحاسبة، والتوفير، والاختبار، والفواتير)، أو افتحها على هاتف أو كمبيوتر آخر.", en: "Save a backup of everything AquaWatt keeps on this device (calculator, savings, quiz and bills), or load it on another phone or computer." },
+  "data.export": { ar: "صدّر بياناتي (JSON)", en: "Export my data (JSON)" },
+  "data.import": { ar: "استورد من ملف", en: "Import from a file" },
+  "data.exported": { ar: "تم تنزيل الملف {file}.", en: "Downloaded {file}." },
+  "data.confirmImport": { ar: "هل تريد استبدال بيانات AquaWatt على هذا الجهاز ببيانات هذا الملف؟", en: "Replace the AquaWatt data on this device with the data in this file?" },
+  "data.imported": { ar: "تم الاستيراد. جارٍ إعادة تحميل الصفحة…", en: "Imported. Reloading the page…" },
+  "data.invalid": { ar: "هذا الملف ليس نسخة احتياطية صالحة من AquaWatt.", en: "This file is not a valid AquaWatt backup." },
+  "data.noStorage": { ar: "الاستيراد يحتاج إلى التخزين المحلي، وهو محظور في هذا المتصفح.", en: "Importing needs browser storage, which is blocked here." },
   "assume.title": { ar: "كيف نحسب (الافتراضات)", en: "How we calculate (assumptions)" },
   "assume.1": { ar: "رأس الدُش العادي ٩ لترات في الدقيقة، والموفّر ٦ لترات؛ ويُسخَّن ٦٠٪ من مياه الاستحمام بمقدار ٢٥ درجة مئوية.", en: "Standard shower head 9 L/min, low-flow 6 L/min; 60% of shower water is heated by 25 °C." },
   "assume.2": { ar: "السخّان الكهربائي: ٠٫٠٣٢ ك.و.س لكل لتر ساخن (كفاءة ٩٠٪). سخّان الغاز: ٠٫٠٠٧٣ كجم CO₂ لكل لتر ساخن. الشمسي: صفر تقريبًا.", en: "Electric heater: 0.032 kWh per heated litre (90% efficient). Gas heater: 0.0073 kg CO₂ per heated litre. Solar: about zero." },
@@ -550,8 +591,9 @@ function saveCalc() {
   const inputs = Object.fromEntries(FIELDS.map(id => [id, $(id).type === "checkbox" ? $(id).checked : $(id).value]));
   store.set("calc", { inputs, chosen: [...chosen] });
 }
+const validCalc = d => isObj(d) && isObj(d.inputs) && Array.isArray(d.chosen) && d.chosen.every(id => typeof id === "string");
 function loadCalc() {
-  const saved = store.get("calc", d => isObj(d) && isObj(d.inputs) && Array.isArray(d.chosen));
+  const saved = store.get("calc", validCalc);
   const inputs = saved ? saved.inputs : DEFAULTS;
   FIELDS.forEach(id => {
     const el = $(id), v = inputs[id];
@@ -750,6 +792,271 @@ $("qOpts").addEventListener("keydown", e => { if (e.key === "Enter") { e.prevent
 $("qBack").addEventListener("click", () => { if (quiz.step > 0) { quiz.step--; saveQuiz(); renderQuiz(true); } });
 $("qRetake").addEventListener("click", () => { quiz.answers = {}; quiz.step = 0; quiz.done = false; saveQuiz(); renderQuiz(true); });
 langListeners.push(() => renderQuiz());
+
+/* ==== Bill tracker ==== */
+const monthIndex = key => { const [y, m] = key.split("-").map(Number); return y * 12 + m - 1; };
+const keyFromIndex = i => `${Math.floor(i / 12)}-${String(i % 12 + 1).padStart(2, "0")}`;
+const validBills = d => isObj(d) && Array.isArray(d.entries) &&
+  d.entries.every(e => isObj(e) && MONTH_RE.test(e.m) && ["kwh", "m3"].every(f => typeof e[f] === "number" && isFinite(e[f]) && e[f] > 0)) &&
+  new Set(d.entries.map(e => e.m)).size === d.entries.length;
+const bills = store.get("bills", validBills) || { entries: [] };
+const billCo2 = e => (e.kwh + e.m3 * 1000 * K.supplyKwhPerL) * K.grid;
+const sortedBills = () => [...bills.entries].sort((a, b) => monthIndex(a.m) - monthIndex(b.m));
+let editingBill = null;
+
+// Accept Arabic-Indic digits and the Arabic decimal separator, since many phones type them.
+function parseNum(str) {
+  const s = String(str).trim()
+    .replace(/[٠-٩]/g, d => d.charCodeAt(0) - 0x0660)
+    .replace(/[۰-۹]/g, d => d.charCodeAt(0) - 0x06F0)
+    .replace(/[٫,]/g, ".").replace(/[٬\s]/g, "");
+  return /^\d*\.?\d+$/.test(s) ? parseFloat(s) : NaN;
+}
+const pct = n => new Intl.NumberFormat(numLocale(), { style: "percent", maximumFractionDigits: 0, signDisplay: "exceptZero" }).format(n);
+const shortMonth = key => {
+  const [y, m] = key.split("-").map(Number);
+  return new Intl.DateTimeFormat(lang === "ar" ? "ar-EG" : "en-GB", { month: "short" }).format(new Date(y, m - 1, 1));
+};
+
+function fillMonthSelects() {
+  const mSel = $("billMonth"), ySel = $("billYear");
+  const keep = { m: mSel.value, y: ySel.value };
+  const now = new Date(), names = new Intl.DateTimeFormat(lang === "ar" ? "ar-EG" : "en-GB", { month: "long" });
+  mSel.innerHTML = ""; ySel.innerHTML = "";
+  for (let m = 1; m <= 12; m++) mSel.add(new Option(names.format(new Date(2000, m - 1, 1)), String(m).padStart(2, "0")));
+  for (let y = now.getFullYear(); y >= now.getFullYear() - 9; y--) ySel.add(new Option(fmt(y).replace(/[٬,]/g, ""), String(y)));
+  mSel.value = keep.m || String(now.getMonth() + 1).padStart(2, "0");
+  ySel.value = keep.y || String(now.getFullYear());
+}
+
+function setBillError(msg, field) {
+  $("billError").textContent = msg || "";
+  ["billKwh", "billM3", "billMonth"].forEach(id => $(id).removeAttribute("aria-invalid"));
+  if (field) { $(field).setAttribute("aria-invalid", "true"); $(field).focus(); }
+}
+
+$("billForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const key = `${$("billYear").value}-${$("billMonth").value}`;
+  const kwh = parseNum($("billKwh").value), m3 = parseNum($("billM3").value);
+  if (monthIndex(key) > monthIndex(monthKey())) return setBillError(t("bills.errFuture"), "billMonth");
+  if (key !== editingBill && bills.entries.some(b => b.m === key)) return setBillError(t("bills.errDup", { month: monthName(key) }), "billMonth");
+  if (!(kwh > 0)) return setBillError(t("bills.errKwh"), "billKwh");
+  if (kwh > 100000) return setBillError(t("bills.errBig"), "billKwh");
+  if (!(m3 > 0)) return setBillError(t("bills.errM3"), "billM3");
+  if (m3 > 10000) return setBillError(t("bills.errBig"), "billM3");
+  bills.entries = bills.entries.filter(b => b.m !== key && b.m !== editingBill);
+  bills.entries.push({ m: key, kwh, m3 });
+  store.set("bills", bills);
+  resetBillForm();
+  renderBills();
+});
+$("billCancel").addEventListener("click", () => resetBillForm(true));
+
+function resetBillForm(focus) {
+  editingBill = null;
+  $("billKwh").value = ""; $("billM3").value = "";
+  setBillError("");
+  $("billFormTitle").textContent = t("bills.add");
+  $("billSave").textContent = t("bills.save");
+  $("billCancel").hidden = true;
+  if (focus) $("billKwh").focus();
+}
+function startEdit(entry) {
+  editingBill = entry.m;
+  const [y, m] = entry.m.split("-");
+  $("billYear").value = y; $("billMonth").value = m;
+  $("billKwh").value = entry.kwh; $("billM3").value = entry.m3;
+  setBillError("");
+  $("billFormTitle").textContent = t("bills.edit", { month: monthName(entry.m) });
+  $("billSave").textContent = t("bills.saveEdit");
+  $("billCancel").hidden = false;
+  $("billForm").scrollIntoView({ behavior: reduceMotion.matches ? "auto" : "smooth", block: "center" });
+  $("billKwh").focus({ preventScroll: true });
+}
+
+function renderBills() {
+  const rows = $("billRows"), list = sortedBills();
+  rows.innerHTML = "";
+  if (!list.length) rows.innerHTML = `<tr class="empty-row"><td colspan="5">${t("bills.noRows")}</td></tr>`;
+  [...list].reverse().forEach(entry => {
+    const tr = document.createElement("tr");
+    const cell = (text, cls) => { const td = document.createElement("td"); if (cls) td.className = cls; td.textContent = text; tr.append(td); return td; };
+    const th = document.createElement("th"); th.scope = "row"; th.textContent = monthName(entry.m); tr.append(th);
+    cell(fmt(entry.kwh, entry.kwh % 1 ? 1 : 0), "num");
+    cell(fmt(entry.m3, entry.m3 % 1 ? 1 : 0), "num");
+    cell(fmt(billCo2(entry)), "num");
+    const act = cell("", "row-actions");
+    const edit = document.createElement("button"); edit.type = "button"; edit.className = "link-btn";
+    edit.textContent = t("bills.editBtn"); edit.setAttribute("aria-label", t("bills.editLabel", { month: monthName(entry.m) }));
+    edit.addEventListener("click", () => startEdit(entry));
+    const del = document.createElement("button"); del.type = "button"; del.className = "link-btn del";
+    del.textContent = t("bills.deleteBtn"); del.setAttribute("aria-label", t("bills.deleteLabel", { month: monthName(entry.m) }));
+    del.addEventListener("click", () => {
+      if (!confirm(t("bills.confirmDelete", { month: monthName(entry.m) }))) return;
+      bills.entries = bills.entries.filter(b => b.m !== entry.m);
+      if (editingBill === entry.m) resetBillForm();
+      store.set("bills", bills);
+      renderBills();
+      $("billKwh").focus();
+    });
+    act.append(edit, del);
+    rows.append(tr);
+  });
+  drawBillChart(list);
+}
+
+/* Two small panels share one time axis instead of a dual-axis chart: kWh and m³ have different scales. */
+function drawBillChart(list) {
+  const box = $("billChart"), tip = $("billTip");
+  tip.hidden = true;
+  if (!list.length) { box.innerHTML = `<p class="chart-empty">${t("bills.chartEmpty")}</p>`; return; }
+  const NS = "http://www.w3.org/2000/svg", rtl = lang === "ar";
+  // Draw at the container's real width so text stays readable on phones.
+  const W = Math.max(280, Math.round(box.clientWidth || 640)), padStart = 46, padEnd = 30, panelH = 150, gap = 20, axisH = 26, H = panelH * 2 + gap + axisH;
+  const i0 = monthIndex(list[0].m), span = Math.max(1, monthIndex(list[list.length - 1].m) - i0);
+  const px = f => (rtl ? W - (padStart + f * (W - padStart - padEnd)) : padStart + f * (W - padStart - padEnd));
+  const xOf = key => px(list.length === 1 ? 0.5 : (monthIndex(key) - i0) / span);
+  const startEdge = rtl ? W : 0, endEdge = rtl ? 0 : W;
+
+  const svg = document.createElementNS(NS, "svg");
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  svg.setAttribute("role", "img");
+  svg.setAttribute("aria-label", t("bills.chartLabel", { n: list.length }));
+  svg.style.direction = "ltr";
+  const el = (name, attrs, parent = svg) => {
+    const n = document.createElementNS(NS, name);
+    for (const k in attrs) n.setAttribute(k, attrs[k]);
+    parent.append(n); return n;
+  };
+  // side = physical "left" | "right" | "middle"; Arabic text runs right-to-left, so its anchors swap.
+  const text = (x, y, str, cls, side) => {
+    const anchor = side === "middle" ? "middle" : (side === "left") !== rtl ? "start" : "end";
+    const n = el("text", { x, y, class: cls, "text-anchor": anchor, direction: rtl ? "rtl" : "ltr" });
+    n.textContent = str; return n;
+  };
+  const sideOf = edge => (edge === 0 ? "left" : "right");
+
+  const series = [
+    { key: "kwh", title: t("bills.kwh"), unit: t("unit.kWh"), color: "var(--chart-energy)" },
+    { key: "m3", title: t("bills.m3"), unit: lang === "ar" ? "م³" : "m³", color: "var(--chart-water)" }
+  ];
+  series.forEach((s, p) => {
+    const y0 = p * (panelH + gap), top = y0 + 40, bottom = y0 + panelH - 8;
+    const max = Math.max(...list.map(e => e[s.key]));
+    const step = niceStep(max / 3), yMax = Math.max(step * 3, Math.ceil(max * 1.12 / step) * step);
+    const yOf = v => bottom - (v / yMax) * (bottom - top);
+
+    // Legend swatch + title at the inline start, latest value and change at the inline end.
+    el("rect", { x: rtl ? W - 14 : 0, y: y0 + 8, width: 14, height: 3, rx: 1.5, fill: s.color });
+    text(rtl ? W - 20 : 20, y0 + 13, s.title, "c-title", sideOf(startEdge));
+    const last = list[list.length - 1], prev = list[list.length - 2];
+    let summary = t("bills.latest", { v: fmt(last[s.key], last[s.key] % 1 ? 1 : 0), unit: s.unit });
+    if (prev) summary += " · " + t("bills.change", { pct: pct((last[s.key] - prev[s.key]) / prev[s.key]), month: monthName(prev.m) });
+    text(endEdge, y0 + 30, summary, "c-change", sideOf(endEdge));
+
+    for (let v = 0; v <= yMax + 1e-9; v += step) {
+      el("line", { x1: px(0), x2: px(1), y1: yOf(v), y2: yOf(v), class: v === 0 ? "c-base" : "c-grid" });
+      text(rtl ? W - padStart + 8 : padStart - 8, yOf(v) + 4, fmt(v), "c-axis", rtl ? "left" : "right");
+    }
+    // Break the line where a month is missing, so gaps are not drawn as data.
+    let d = "";
+    list.forEach((e, i) => {
+      const cmd = i > 0 && monthIndex(e.m) - monthIndex(list[i - 1].m) === 1 ? "L" : "M";
+      d += `${cmd}${xOf(e.m).toFixed(1)},${yOf(e[s.key]).toFixed(1)}`;
+    });
+    el("path", { d, fill: "none", stroke: s.color, "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" });
+    list.forEach((e, i) => {
+      const isLast = i === list.length - 1;
+      el("circle", { cx: xOf(e.m), cy: yOf(e[s.key]), r: isLast ? 6 : 4, fill: s.color, stroke: "var(--surface)", "stroke-width": 2 });
+    });
+    text(xOf(last.m), yOf(last[s.key]) - 12, fmt(last[s.key], last[s.key] % 1 ? 1 : 0), "c-val", list.length === 1 ? "middle" : rtl ? "left" : "right");
+  });
+
+  // Month labels on the shared axis, thinned to about six.
+  const every = Math.ceil(list.length / 6);
+  list.forEach((e, i) => {
+    if ((list.length - 1 - i) % every) return;
+    const showYear = i === 0 || e.m.endsWith("-01");
+    text(xOf(e.m), H - 6, shortMonth(e.m) + (showYear ? " " + fmt(+e.m.slice(0, 4)).replace(/[٬,]/g, "") : ""), "c-axis", "middle");
+  });
+
+  // Hover layer: a tall hit area per month shows a guide line and a tooltip with all values.
+  const guide = el("line", { y1: 0, y2: H - axisH, class: "c-hover", visibility: "hidden" });
+  const colW = list.length === 1 ? (W - padStart - padEnd) : Math.max(16, (W - padStart - padEnd) / Math.max(1, span));
+  list.forEach(e => {
+    const x = xOf(e.m);
+    const hit = el("rect", { x: x - colW / 2, y: 0, width: colW, height: H - axisH, class: "c-hit" });
+    hit.addEventListener("pointerenter", () => {
+      guide.setAttribute("x1", x); guide.setAttribute("x2", x); guide.setAttribute("visibility", "visible");
+      tip.innerHTML = "";
+      const b = document.createElement("b"); b.textContent = monthName(e.m); tip.append(b);
+      [[series[0], e.kwh], [series[1], e.m3]].forEach(([s, v]) => {
+        const row = document.createElement("div");
+        const sw = document.createElement("span"); sw.className = "sw"; sw.style.background = s.color;
+        row.append(sw, `${fmt(v, v % 1 ? 1 : 0)} ${s.unit}`); tip.append(row);
+      });
+      const co2 = document.createElement("div"); co2.textContent = `≈ ${fmt(billCo2(e))} ${t("unit.kgCO2")}`; tip.append(co2);
+      tip.hidden = false;
+      const card = box.parentElement.getBoundingClientRect(), r = svg.getBoundingClientRect();
+      const left = r.left - card.left + x * (r.width / W), half = tip.offsetWidth / 2;
+      tip.style.left = Math.min(card.width - tip.offsetWidth - 8, Math.max(8, left - half)) + "px";
+      tip.style.top = (r.top - card.top + 8) + "px";
+    });
+  });
+  svg.addEventListener("pointerleave", () => { guide.setAttribute("visibility", "hidden"); tip.hidden = true; });
+  box.innerHTML = ""; box.append(svg);
+}
+function niceStep(raw) {
+  if (!(raw > 0)) return 1;
+  const mag = Math.pow(10, Math.floor(Math.log10(raw))), n = raw / mag;
+  return (n <= 1 ? 1 : n <= 2 ? 2 : n <= 2.5 ? 2.5 : n <= 5 ? 5 : 10) * mag;
+}
+// Redraw when the chart's width changes (rotation, resizing), not on every pixel of height.
+let billChartWidth = 0;
+new ResizeObserver(([entry]) => {
+  const w = Math.round(entry.contentRect.width);
+  if (w && Math.abs(w - billChartWidth) > 4) { billChartWidth = w; drawBillChart(sortedBills()); }
+}).observe($("billChart"));
+langListeners.push(() => {
+  fillMonthSelects();
+  if (editingBill) { $("billFormTitle").textContent = t("bills.edit", { month: monthName(editingBill) }); $("billSave").textContent = t("bills.saveEdit"); }
+  else { $("billFormTitle").textContent = t("bills.add"); $("billSave").textContent = t("bills.save"); }
+  setBillError("");
+  renderBills();
+});
+
+/* ==== Export / import all saved data ==== */
+const DATA_PARTS = { prefs: d => isObj(d), calc: validCalc, tracker: validTracker, quiz: validQuiz, bills: validBills };
+$("exportData").addEventListener("click", () => {
+  const data = {};
+  for (const k in DATA_PARTS) { const v = store.get(k, DATA_PARTS[k]); if (v) data[k] = v; }
+  // Live values cover the case where storage is blocked.
+  Object.assign(data, { calc: data.calc || { inputs: Object.fromEntries(FIELDS.map(id => [id, $(id).type === "checkbox" ? $(id).checked : $(id).value])), chosen: [...chosen] }, tracker, quiz, bills });
+  const file = `aquawatt-data-${new Date().toISOString().slice(0, 10)}.json`;
+  const blob = new Blob([JSON.stringify({ app: "AquaWatt", version: STORE_VERSION, exported: new Date().toISOString(), data }, null, 2)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob); a.download = file;
+  document.body.append(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  $("dataMsg").textContent = t("data.exported", { file });
+});
+$("importData").addEventListener("change", async e => {
+  const input = e.target, f = input.files[0];
+  input.value = "";
+  if (!f) return;
+  const msg = $("dataMsg");
+  if (!store.available) { msg.textContent = t("data.noStorage"); return; }
+  let parsed;
+  try { parsed = JSON.parse(await f.text()); } catch (err) { parsed = null; }
+  const data = parsed?.app === "AquaWatt" && parsed.version === STORE_VERSION && isObj(parsed.data) ? parsed.data : null;
+  const keys = data ? Object.keys(data).filter(k => k in DATA_PARTS) : [];
+  if (!keys.length || !keys.every(k => DATA_PARTS[k](data[k]))) { msg.textContent = t("data.invalid"); return; }
+  if (!confirm(t("data.confirmImport"))) return;
+  keys.forEach(k => store.set(k, data[k]));
+  msg.textContent = t("data.imported");
+  setTimeout(() => location.reload(), 600);
+});
 
 /* ==== Start ==== */
 loadCalc();

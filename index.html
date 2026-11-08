@@ -50,6 +50,7 @@
       <li><a href="#research" data-i18n="nav.research">Research</a></li>
       <li><a href="#calculator" data-i18n="nav.calculator">Calculator</a></li>
       <li><a href="#quiz" data-i18n="nav.quiz">Habits quiz</a></li>
+      <li><a href="#bills" data-i18n="nav.bills">Bills</a></li>
       <li><a href="#team" data-i18n="nav.team">Team</a></li>
       <li><a href="#references" data-i18n="nav.references">References</a></li>
     </ul></nav>
@@ -286,6 +287,61 @@
           <p data-i18n="quiz.how3">Tips come from your lowest-scoring answers. When two answers tie, the habit that saves more energy in our calculator comes first.</p>
           <p class="hint" data-i18n="quiz.saved">Your answers are saved on this device only.</p>
         </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="bills">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow" data-i18n="bills.eyebrow">Bill tracker</span>
+        <h2 tabindex="-1" data-i18n="bills.title">Track your real bills, month by month</h2>
+        <p class="lead" data-i18n="bills.lead">Enter each month's electricity (kWh) and water (m³) from your bills. You will see the trend, the change from the month before and an approximate CO₂ figure. Everything stays on this device.</p>
+      </div>
+      <div class="bills-grid">
+        <form class="bill-form" id="billForm" novalidate autocomplete="off">
+          <h3 id="billFormTitle" data-i18n="bills.add">Add a month</h3>
+          <div class="fields">
+            <div class="field"><label for="billMonth" data-i18n="bills.month">Month</label><select id="billMonth"></select></div>
+            <div class="field"><label for="billYear" data-i18n="bills.year">Year</label><select id="billYear"></select></div>
+            <div class="field"><label for="billKwh" data-i18n="bills.kwh">Electricity (kWh)</label><input id="billKwh" type="text" inputmode="decimal" aria-describedby="billError"></div>
+            <div class="field"><label for="billM3" data-i18n="bills.m3">Water (m³)</label><input id="billM3" type="text" inputmode="decimal" aria-describedby="billError"></div>
+          </div>
+          <p class="form-error" id="billError" role="alert"></p>
+          <div class="form-actions">
+            <button type="submit" class="btn small" id="billSave" data-i18n="bills.save">Add month</button>
+            <button type="button" class="btn ghost small" id="billCancel" hidden data-i18n="bills.cancel">Cancel</button>
+          </div>
+        </form>
+        <figure class="chart-card">
+          <div class="chart-wrap" id="billChart"></div>
+          <div class="chart-tip" id="billTip" hidden></div>
+          <figcaption class="hint" data-i18n="bills.co2Note">CO₂ is approximate: (kWh + m³ × 0.6) × 0.47 kg, using the calculator's grid factor and water-supply energy.</figcaption>
+        </figure>
+      </div>
+      <div class="table-wrap">
+        <table class="bill-table" id="billTable">
+          <caption data-i18n="bills.tableCaption">Your entries</caption>
+          <thead><tr>
+            <th scope="col" data-i18n="bills.month">Month</th>
+            <th scope="col" data-i18n="bills.kwh">Electricity (kWh)</th>
+            <th scope="col" data-i18n="bills.m3">Water (m³)</th>
+            <th scope="col" data-i18n="bills.co2">CO₂ (≈ kg)</th>
+            <th scope="col"><span class="visually-hidden" data-i18n="bills.actions">Actions</span></th>
+          </tr></thead>
+          <tbody id="billRows"></tbody>
+        </table>
+      </div>
+      <div class="data-tools">
+        <div>
+          <h3 data-i18n="data.title">Your data</h3>
+          <p class="hint" data-i18n="data.text">Save a backup of everything AquaWatt keeps on this device (calculator, savings, quiz and bills), or load it on another phone or computer.</p>
+        </div>
+        <div class="data-btns">
+          <button type="button" class="btn ghost small" id="exportData" data-i18n="data.export">Export my data (JSON)</button>
+          <label class="btn ghost small file-btn"><input type="file" id="importData" accept="application/json,.json"><span data-i18n="data.import">Import from a file</span></label>
+        </div>
+        <p class="hint" id="dataMsg" role="status"></p>
       </div>
     </div>
   </section>
