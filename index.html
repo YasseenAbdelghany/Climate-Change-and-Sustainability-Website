@@ -32,11 +32,17 @@
   var lang = p.lang === "en" ? "en" : "ar", root = document.documentElement;
   root.lang = lang; root.dir = lang === "ar" ? "rtl" : "ltr";
   if (p.theme === "light" || p.theme === "dark") root.setAttribute("data-theme", p.theme);
+  // Hide the page until script.js has filled in the chosen language, so text does not swap in front of the reader.
+  root.classList.add("i18n-pending");
+  setTimeout(function () { root.classList.remove("i18n-pending"); }, 3000);
 })();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans+Arabic:wght@400;600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+<!-- Fonts load without blocking the first render; local fallbacks are size-matched in style.css. -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=IBM+Plex+Mono:wght@500;600&amp;family=IBM+Plex+Sans+Arabic:wght@400;600;700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap">
+<link rel="stylesheet" id="fontCss" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=IBM+Plex+Mono:wght@500;600&amp;family=IBM+Plex+Sans+Arabic:wght@400;600;700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=IBM+Plex+Mono:wght@500;600&amp;family=IBM+Plex+Sans+Arabic:wght@400;600;700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap"></noscript>
 <link rel="stylesheet" href="style.css">
 </head>
 <body id="top">
@@ -74,6 +80,12 @@
 </div>
 
 <main id="main">
+  <div class="print-only print-head">
+    <p class="print-brand"><span class="drops" aria-hidden="true"><i class="d6"></i><i class="d7"></i><i class="d13"></i></span>AquaWatt</p>
+    <p class="print-title" data-i18n="print.title">Our family plan</p>
+    <p id="printMeta"></p>
+    <p id="printInputs"></p>
+  </div>
   <div class="wrap hero">
     <div class="hero-copy">
       <div class="sdg-tags"><span class="tag w" data-i18n="tag.6">SDG 6 · Clean water</span><span class="tag e" data-i18n="tag.7">SDG 7 · Clean energy</span><span class="tag c" data-i18n="tag.13">SDG 13 · Climate action</span></div>

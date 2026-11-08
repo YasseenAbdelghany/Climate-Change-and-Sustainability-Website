@@ -3,17 +3,21 @@
    SDG colours are used only to mark which goal a number belongs to.
    Logical properties (inline-start/end) are used throughout so the same rules serve Arabic (RTL) and English (LTR). */
 
+/* Size-matched local fallbacks: text wraps the same before and after the web fonts arrive, so the page does not jump. */
+@font-face{font-family:"AW Display Fallback";src:local("Segoe UI Bold"),local("SegoeUI-Bold"),local("Segoe UI");font-weight:700 800;size-adjust:99%;unicode-range:U+0000-024F,U+2000-206F,U+2070-209F}
+@font-face{font-family:"AW Latin Fallback";src:local("Segoe UI"),local("Arial");size-adjust:94%;unicode-range:U+0000-024F,U+2000-206F,U+2070-209F}
+@font-face{font-family:"AW Arabic Fallback";src:local("Segoe UI");size-adjust:93%;unicode-range:U+0600-06FF,U+0750-077F,U+08A0-08FF,U+FB50-FDFF,U+FE70-FEFF}
 :root{
   --bg:#f3f7f8; --surface:#ffffff; --ink:#0f2a33; --muted:#4d6670; --line:#d5e1e5;
-  --water:#0a7ea3; --water-soft:#e2f4fa;
+  --water:#0a7399; --water-soft:#e2f4fa;
   --energy:#8a6800; --energy-soft:#fff6d6; --energy-mark:#fcc30b;
   --climate:#3a7540; --climate-soft:#e6f1e7;
   --band:#0f2a33; --band-ink:#eaf3f5; --band-muted:#a9c2c9;
   --danger:#b42318; --danger-soft:#fdecea;
   --sdg6:#26bde2; --sdg7:#fcc30b; --sdg13:#3f7e44;
-  --display:"Bricolage Grotesque", "IBM Plex Sans Arabic", "Segoe UI", Tahoma, system-ui, sans-serif;
-  --body:"Source Sans 3", "IBM Plex Sans Arabic", "Segoe UI", Tahoma, system-ui, sans-serif;
-  --mono:"IBM Plex Mono", "IBM Plex Sans Arabic", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --display:"Bricolage Grotesque", "IBM Plex Sans Arabic", "AW Display Fallback", "AW Arabic Fallback", "Segoe UI", Tahoma, system-ui, sans-serif;
+  --body:"Source Sans 3", "IBM Plex Sans Arabic", "AW Latin Fallback", "AW Arabic Fallback", "Segoe UI", Tahoma, system-ui, sans-serif;
+  --mono:"IBM Plex Mono", "IBM Plex Sans Arabic", "AW Arabic Fallback", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
   --radius:12px;
   color-scheme:light;
 }
@@ -28,6 +32,7 @@
   --climate:#7fc184; --climate-soft:#163322; --band:#06242c; --band-ink:#eaf3f5; --band-muted:#8fb0b8;
   --danger:#ff8a80; --danger-soft:#3a1714; color-scheme:dark}
 
+.i18n-pending body{visibility:hidden}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;overflow-x:clip}
@@ -361,4 +366,38 @@ html:lang(ar) .steps li::before{content:counter(s, arabic-indic)}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+}
+
+/* print: a one-page "Our family plan" */
+.print-only{display:none}
+@media print{
+  @page{size:A4;margin:14mm}
+  /* :not(#print) lifts specificity above the dark-theme rules so print is always light */
+  html:root:not(#print){
+    --bg:#ffffff; --surface:#ffffff; --ink:#0f2a33; --muted:#3d545d; --line:#c9d6db;
+    --water:#0a7399; --water-soft:#e2f4fa; --energy:#7a5c00; --energy-soft:#fff6d6;
+    --climate:#3a7540; --climate-soft:#e6f1e7; --band:#ffffff; --band-ink:#0f2a33; --band-muted:#3d545d; color-scheme:light}
+  html{scroll-behavior:auto}
+  body{font-size:10.5pt;line-height:1.45;background:#fff}
+  body::before,.skip,.site-head,.notice,.hero,#problem,#research,#quiz,#bills,#help,#how,#references,.site-foot,.share-dlg,
+  #calculator .sec-head,#form,.track,.hint-top,details.assume,.impact-empty{display:none!important}
+  .print-only{display:block}
+  .print-head{display:grid;gap:4px;margin-bottom:10px}
+  .print-title{font-family:var(--display);font-weight:700;font-size:20pt;line-height:1.2}
+  .print-brand{display:flex;gap:8px;align-items:center;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:13pt}
+  #printMeta,#printInputs{color:var(--muted);font-size:9.5pt}
+  section{padding-block:10px;border:0}
+  .wrap{max-width:none;padding:0}
+  .impact{background:none;border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:10px}
+  .impact-in{grid-template-columns:1fr 2.4fr}
+  #calculator{padding:0}
+  .calc{display:block}
+  .panel{padding:0;border-radius:0}
+  .readout{margin-bottom:10px}
+  .action{break-inside:avoid;padding:6px 10px;border-color:var(--line);background:none!important}
+  .action:not(:has(input:checked)){display:none}
+  .actions{gap:6px}
+  .plan{background:none;color:var(--ink);border:2px solid var(--ink);break-inside:avoid}
+  .drops i,.meter,.chip{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  a{color:inherit;text-decoration:none}
 }

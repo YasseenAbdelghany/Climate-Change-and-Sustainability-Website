@@ -347,6 +347,9 @@ const I18N = {
   "card.sdgs": { ar: "أهداف التنمية المستدامة ٦ و٧ و١٣", en: "SDG 6 · SDG 7 · SDG 13" },
   "share.summary": { ar: "خطة أسرتنا في AquaWatt توفّر كل شهر {w} لتر مياه و{e} ك.و.س كهرباء و{c} كجم من CO₂. جرّبها لأسرتك: {url}", en: "Our family's AquaWatt plan saves {w} L of water, {e} kWh of electricity and {c} kg of CO₂ every month. Try it for your family: {url}" },
   "share.post": { ar: "استخدمنا AquaWatt، مشروعنا في مقرر GEO217 تغيّر المناخ والاستدامة بجامعة العلمين الدولية، لنخطط كيف يوفّر بيتنا المياه والطاقة.\n\nخطتنا توفّر كل شهر {w} لتر مياه و{e} ك.و.س و{c} كجم من CO₂، أي نحو {c12} كجم من CO₂ في السنة. كل لتر نوفّره يوفّر معه الكهرباء ويقلّل الانبعاثات (الأهداف ٦ و٧ و١٣).\n\nجرّبوا الحاسبة لأسركم: {url}", en: "We used AquaWatt, our GEO217 Climate Change and Sustainability project at Alamein International University, to plan how our home can save water and energy.\n\nOur plan saves {w} L of water, {e} kWh and {c} kg of CO₂ every month, about {c12} kg of CO₂ a year. Every litre we save also saves electricity and cuts emissions (SDG 6, 7 and 13).\n\nTry the calculator for your family: {url}" },
+  "print.title": { ar: "خطة أسرتنا", en: "Our family plan" },
+  "print.meta": { ar: "من حاسبة AquaWatt بتاريخ {date} · {url}", en: "From the AquaWatt calculator on {date} · {url}" },
+  "print.inputs": { ar: "البيت: {people} أفراد · سخّان {heater} · استحمام {shower} دقيقة · {laundry} غسلات أسبوعيًا · {ac} تكييف على {acTemp}° لمدة {acHours} ساعات يوميًا · {bulbs} لمبة منها {led}٪ LED", en: "Home: {people} people · {heater} water heater · {shower}-minute showers · {laundry} laundry loads a week · {ac} AC at {acTemp} °C for {acHours} h a day · {bulbs} bulbs, {led}% LED" },
   "assume.title": { ar: "كيف نحسب (الافتراضات)", en: "How we calculate (assumptions)" },
   "assume.1": { ar: "رأس الدُش العادي ٩ لترات في الدقيقة، والموفّر ٦ لترات؛ ويُسخَّن ٦٠٪ من مياه الاستحمام بمقدار ٢٥ درجة مئوية.", en: "Standard shower head 9 L/min, low-flow 6 L/min; 60% of shower water is heated by 25 °C." },
   "assume.2": { ar: "السخّان الكهربائي: ٠٫٠٣٢ ك.و.س لكل لتر ساخن (كفاءة ٩٠٪). سخّان الغاز: ٠٫٠٠٧٣ كجم CO₂ لكل لتر ساخن. الشمسي: صفر تقريبًا.", en: "Electric heater: 0.032 kWh per heated litre (90% efficient). Gas heater: 0.0073 kg CO₂ per heated litre. Solar: about zero." },
@@ -643,7 +646,17 @@ function update(){
       <span class="py">${t("plan.year", { m3: fmt(p.w * 12 / 1000, 1), c: fmt(p.c * 12), egp: fmt(p.e * 12 * s.price), pw: fmt(p.w / base.water * 100), pc: fmt(p.c / base.co2 * 100) })}</span>`;
   }
   saveCalc();
+  updatePrintHead(s);
   document.dispatchEvent(new CustomEvent("planchange"));
+}
+
+// Header that only appears on the printed "Our family plan" page.
+function updatePrintHead(s) {
+  const date = new Intl.DateTimeFormat(lang === "ar" ? "ar-EG" : "en-GB", { dateStyle: "long" }).format(new Date());
+  $("printMeta").textContent = t("print.meta", { date, url: SITE_URL.replace(/^https:\/\//, "") });
+  const heater = t({ electric: "calc.heaterElectric", gas: "calc.heaterGas", solar: "calc.heaterSolar" }[s.heater]);
+  $("printInputs").textContent = t("print.inputs", { people: s.people, heater: lang === "en" ? heater.toLowerCase() : heater, shower: s.shower,
+    laundry: s.laundry, ac: s.ac, acTemp: s.acTemp, acHours: s.acHours, bulbs: s.bulbs, led: Math.round(s.led * 100) });
 }
 
 function saveCalc() {
@@ -1295,3 +1308,17 @@ document.addEventListener("planchange", updateShareButton);
 /* ==== Start ==== */
 loadCalc();
 setLang(lang, false);
+// Reveal once the main fonts are in (or after 1.2 s at most), so text does not re-wrap and jump in front of the reader.
+(() => {
+  const css = document.getElementById("fontCss");
+  const cssReady = new Promise(r => {
+    if (!css || css.sheet) return r();
+    css.addEventListener("load", r); css.addEventListener("error", r);
+  });
+  const sample = lang === "ar" ? "بت" : "ab";
+  const fontsReady = cssReady.then(() => document.fonts && Promise.all(
+    ["400 1em 'IBM Plex Sans Arabic'", "700 1em 'IBM Plex Sans Arabic'", "800 1em 'Bricolage Grotesque'", "400 1em 'Source Sans 3'", "600 1em 'IBM Plex Mono'"]
+      .map(f => document.fonts.load(f, sample).catch(() => null))));
+  Promise.race([fontsReady, new Promise(r => setTimeout(r, 1200))])
+    .then(() => document.documentElement.classList.remove("i18n-pending"));
+})();
