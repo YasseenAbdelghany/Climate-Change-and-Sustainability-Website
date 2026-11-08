@@ -6,8 +6,8 @@
 <title>AquaWatt · Save water, energy and CO₂ at home</title>
 <meta name="description" content="AquaWatt is a free, private household calculator for Egyptian families that shows how saving water also saves electricity and cuts CO₂ (SDG 6, 7 and 13).">
 <link rel="canonical" href="https://yasseenabdelghany.github.io/Climate-Change-and-Sustainability-Website/">
-<meta name="theme-color" content="#f3f7f8" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0b1a1f" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f2232" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AquaWatt">
@@ -40,9 +40,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- Fonts load without blocking the first render; local fallbacks are size-matched in style.css. -->
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=IBM+Plex+Mono:wght@500;600&amp;family=IBM+Plex+Sans+Arabic:wght@400;600;700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap">
-<link rel="stylesheet" id="fontCss" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=IBM+Plex+Mono:wght@500;600&amp;family=IBM+Plex+Sans+Arabic:wght@400;600;700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=IBM+Plex+Mono:wght@500;600&amp;family=IBM+Plex+Sans+Arabic:wght@400;600;700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=Readex+Pro:wght@500;600;700&amp;display=swap">
+<link rel="stylesheet" id="fontCss" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=Readex+Pro:wght@500;600;700&amp;display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=Readex+Pro:wght@500;600;700&amp;display=swap"></noscript>
 <link rel="stylesheet" href="style.css">
 </head>
 <body id="top">
@@ -50,7 +50,7 @@
 
 <header class="site-head">
   <div class="wrap nav">
-    <a class="brand" href="#top"><span class="drops" aria-hidden="true"><i class="d6"></i><i class="d7"></i><i class="d13"></i></span>AquaWatt</a>
+    <a class="brand" href="#top" translate="no"><span class="drops" aria-hidden="true"><i class="d6"></i><i class="d7"></i><i class="d13"></i></span>AquaWatt</a>
     <nav id="siteNav" aria-label="Sections" data-i18n-attr="aria-label:nav.label"><ul>
       <li><a href="#problem" data-i18n="nav.problem">Problem</a></li>
       <li><a href="#research" data-i18n="nav.research">Research</a></li>
@@ -81,29 +81,34 @@
 
 <main id="main">
   <div class="print-only print-head">
-    <p class="print-brand"><span class="drops" aria-hidden="true"><i class="d6"></i><i class="d7"></i><i class="d13"></i></span>AquaWatt</p>
+    <p class="print-brand" translate="no"><span class="drops" aria-hidden="true"><i class="d6"></i><i class="d7"></i><i class="d13"></i></span>AquaWatt</p>
     <p class="print-title" data-i18n="print.title">Our family plan</p>
     <p id="printMeta"></p>
     <p id="printInputs"></p>
   </div>
   <div class="wrap hero">
     <div class="hero-copy">
-      <div class="sdg-tags"><span class="tag w" data-i18n="tag.6">SDG 6 · Clean water</span><span class="tag e" data-i18n="tag.7">SDG 7 · Clean energy</span><span class="tag c" data-i18n="tag.13">SDG 13 · Climate action</span></div>
-      <h1 data-i18n-html="hero.title">Every litre you save also saves <span class="e">energy</span> and cuts <span class="c">CO₂</span>.</h1>
+      <h1 data-i18n="hero.title">Every litre you save also saves energy and cuts CO₂.</h1>
       <p class="lead" data-i18n="hero.lead">Water, electricity and climate are one connected problem. Heating, pumping and treating water uses power, and in Egypt most power still comes from fossil fuels. AquaWatt shows a household how much it uses and which small changes save the most.</p>
-      <a class="btn" href="#calculator" data-i18n="hero.cta">Calculate your home's footprint →</a>
+      <div class="hero-actions">
+        <a class="btn" href="#calculator" data-i18n="hero.cta">Calculate your home’s footprint</a>
+        <a class="btn ghost" href="#quiz" data-i18n="hero.quiz">Check your habits</a>
+      </div>
     </div>
-    <div class="facts" role="group" aria-label="Key facts from the UN SDG Report 2026" data-i18n-attr="aria-label:facts.label">
-      <div class="fact w"><b data-i18n="fact1.big">&gt;75%</b><span data-i18n="fact1.text">water stress in Northern Africa and Western Asia, the most water-stressed regions on Earth</span><small data-i18n="fact1.src">UN SDG REPORT 2026 · GOAL 6</small></div>
-      <div class="fact e"><b data-i18n="fact2.big">655M</b><span data-i18n="fact2.text">people still had no electricity in 2024, and renewables were only 18% of global energy use</span><small data-i18n="fact2.src">UN SDG REPORT 2026 · GOAL 7</small></div>
-      <div class="fact c"><b data-i18n="fact3.big">57.7 Gt</b><span data-i18n="fact3.text">CO₂-equivalent emitted in 2024, a record. 2015–2025 was the hottest 11-year stretch on record</span><small data-i18n="fact3.src">UN SDG REPORT 2026 · GOAL 13</small></div>
-    </div>
+    <figure class="goal-figure">
+    <ul class="goal-facts" aria-label="Key facts from the UN SDG Report 2026" data-i18n-attr="aria-label:facts.label">
+      <li class="w"><img class="sdg-icon" data-sdg="06" src="assets/sdg/sdg-06-en.png" width="480" height="480" fetchpriority="high" alt="SDG 6: Clean water and sanitation" data-i18n-attr="alt:goal6.alt"><p><b data-i18n="fact1.big">&gt;75%</b> <span data-i18n="fact1.text">water stress in Northern Africa and Western Asia, the most water-stressed regions on Earth</span></p></li>
+      <li class="e"><img class="sdg-icon" data-sdg="07" src="assets/sdg/sdg-07-en.png" width="480" height="480" fetchpriority="high" alt="SDG 7: Affordable and clean energy" data-i18n-attr="alt:goal7.alt"><p><b data-i18n="fact2.big">655M</b> <span data-i18n="fact2.text">people still had no electricity in 2024, and renewables were only 18% of global energy use</span></p></li>
+      <li class="c"><img class="sdg-icon" data-sdg="13" src="assets/sdg/sdg-13-en.png" width="480" height="480" fetchpriority="high" alt="SDG 13: Climate action" data-i18n-attr="alt:goal13.alt"><p><b data-i18n="fact3.big">57.7 Gt</b> <span data-i18n="fact3.text">CO₂-equivalent emitted in 2024, a record. 2015–2025 was the hottest 11-year stretch on record</span></p></li>
+    </ul>
+    <figcaption class="hero-source" data-i18n="facts.source">Figures from the UN Sustainable Development Goals Report 2026.</figcaption>
+    </figure>
   </div>
 
   <section id="impact" class="impact" aria-labelledby="impactTitle">
     <div class="wrap impact-in">
       <div class="impact-head">
-        <h2 id="impactTitle" data-i18n="impact.title">Our home's savings</h2>
+        <h2 id="impactTitle" data-i18n="impact.title">Our home’s savings</h2>
         <p class="hint" data-i18n="impact.note">Estimates from the calculator, not measured savings.</p>
       </div>
       <dl class="counters">
@@ -119,13 +124,12 @@
   <section id="problem">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow" data-i18n="problem.eyebrow">The problem</span>
         <h2 data-i18n="problem.title">Three goals, one household problem</h2>
         <p class="lead" data-i18n="problem.lead">The UN Sustainable Development Goals Report 2026 shows that water stress is not improving, clean energy is growing too slowly, and emissions are still rising. Households in water-scarce countries like Egypt sit where all three meet.</p>
       </div>
       <div class="goals">
         <article class="goal w">
-          <span class="num" data-i18n="goal6.num">SDG 6</span><h3 data-i18n="goal6.title">Clean water and sanitation</h3>
+          <div class="goal-head"><img class="sdg-icon" data-sdg="06" src="assets/sdg/sdg-06-en.png" width="480" height="480" loading="lazy" alt=""><h3 data-i18n="goal6.title">Clean water and sanitation</h3></div>
           <ul>
             <li data-i18n="goal6.1">2.1 billion people lack safely managed drinking water.</li>
             <li data-i18n="goal6.2">Global water stress is stuck at 18%, nearly the same as 2015.</li>
@@ -133,7 +137,7 @@
           </ul>
         </article>
         <article class="goal e">
-          <span class="num" data-i18n="goal7.num">SDG 7</span><h3 data-i18n="goal7.title">Affordable and clean energy</h3>
+          <div class="goal-head"><img class="sdg-icon" data-sdg="07" src="assets/sdg/sdg-07-en.png" width="480" height="480" loading="lazy" alt=""><h3 data-i18n="goal7.title">Affordable and clean energy</h3></div>
           <ul>
             <li data-i18n="goal7.1">Renewables supply only 18% of final energy use.</li>
             <li data-i18n="goal7.2">Electricity is the leading sector, at just over 30% renewable.</li>
@@ -141,7 +145,7 @@
           </ul>
         </article>
         <article class="goal c">
-          <span class="num" data-i18n="goal13.num">SDG 13</span><h3 data-i18n="goal13.title">Climate action</h3>
+          <div class="goal-head"><img class="sdg-icon" data-sdg="13" src="assets/sdg/sdg-13-en.png" width="480" height="480" loading="lazy" alt=""><h3 data-i18n="goal13.title">Climate action</h3></div>
           <ul>
             <li data-i18n="goal13.1">2024 reached 1.55 °C above pre-industrial levels.</li>
             <li data-i18n="goal13.2">Current pledges still lead to 2.3–2.5 °C of warming.</li>
@@ -150,7 +154,7 @@
         </article>
       </div>
       <figure class="loop">
-        <svg id="loopSvg" viewBox="0 0 760 170" role="img" aria-labelledby="loopT">
+        <svg id="loopSvg" viewBox="0 30 760 142" role="img" aria-labelledby="loopT">
           <title id="loopT" data-i18n="loop.title">The water-energy-climate loop</title>
           <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--muted)"/></marker></defs>
           <!-- Shapes are mirrored as a group for RTL; labels are repositioned in script.js so the text itself is never flipped. -->
@@ -180,9 +184,8 @@
   <section id="research">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow" data-i18n="research.eyebrow">What the research says</span>
         <h2 data-i18n="research.title">Feedback changes behaviour, if it is specific</h2>
-        <p class="lead" data-i18n="research.lead">We reviewed peer-reviewed studies on household water and energy use, feedback tools and Egypt's water situation. These are the findings that shaped our design.</p>
+        <p class="lead" data-i18n="research.lead">We reviewed peer-reviewed studies on household water and energy use, feedback tools and Egypt’s water situation. These are the findings that shaped our design.</p>
       </div>
       <div class="findings">
         <div class="finding"><span class="big w" data-i18n="f1.big">8%</span><div><p data-i18n-html="f1.text"><strong>Lasting water savings from smart-meter feedback.</strong> About 47% of 334 households in Valencia kept using 8% less water more than two years later.</p><cite>Cominola et al., 2021</cite></div></div>
@@ -199,27 +202,26 @@
   <section id="calculator" class="band">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow" data-i18n="calc.eyebrow">Our solution</span>
         <h2 data-i18n="calc.title">AquaWatt household calculator</h2>
-        <p class="lead" data-i18n="calc.lead">Enter your household's habits. The numbers update instantly, and nothing you type leaves your browser. The form starts with an example family of five.</p>
+        <p class="lead" data-i18n="calc.lead">Enter your household’s habits. The numbers update instantly, and nothing you type leaves your browser. The form starts with an example family of five.</p>
       </div>
       <div class="calc">
         <form class="panel" id="form" autocomplete="off">
           <div class="panel-head"><h3 data-i18n="calc.formTitle">Your household</h3><button type="button" class="link-btn" id="resetCalc" data-i18n="calc.reset">Reset to the example family</button></div>
           <div class="fields">
-            <div class="field"><label for="people" data-i18n="calc.people">People at home</label><input id="people" type="number" inputmode="numeric" min="1" max="20" value="5"></div>
+            <div class="field"><label for="people" data-i18n="calc.people">People at home</label><input id="people" name="people" type="number" inputmode="numeric" min="1" max="20" value="5"></div>
             <div class="field"><label for="heater" data-i18n="calc.heater">Water heater</label>
-              <select id="heater"><option value="electric" selected data-i18n="calc.heaterElectric">Electric</option><option value="gas" data-i18n="calc.heaterGas">Gas</option><option value="solar" data-i18n="calc.heaterSolar">Solar</option></select></div>
-            <div class="field full"><label for="shower"><span data-i18n="calc.shower">Average shower length:</span> <output id="showerOut" for="shower">8</output> <span data-i18n="unit.min">min</span></label><input id="shower" type="range" min="2" max="25" value="8"><div class="range-row" aria-hidden="true"><span id="showerMin">2</span><span id="showerMax">25 min</span></div></div>
-            <div class="field"><label for="showers" data-i18n="calc.showers">Showers per person per day</label><input id="showers" type="number" inputmode="decimal" min="0" max="3" step="0.5" value="1"></div>
-            <div class="field"><label for="laundry" data-i18n="calc.laundry">Laundry loads per week</label><input id="laundry" type="number" inputmode="numeric" min="0" max="30" value="5"></div>
-            <div class="field"><label for="ac" data-i18n="calc.ac">Air conditioners used</label><input id="ac" type="number" inputmode="numeric" min="0" max="10" value="2"></div>
-            <div class="field"><label for="acHours" data-i18n="calc.acHours">AC hours per day (summer)</label><input id="acHours" type="number" inputmode="numeric" min="0" max="24" value="6"></div>
-            <div class="field"><label for="acTemp" data-i18n="calc.acTemp">AC temperature (°C)</label><input id="acTemp" type="number" inputmode="numeric" min="16" max="30" value="22"></div>
-            <div class="field"><label for="bulbs" data-i18n="calc.bulbs">Light bulbs at home</label><input id="bulbs" type="number" inputmode="numeric" min="0" max="60" value="12"></div>
-            <div class="field full"><label for="led"><span data-i18n="calc.led">Share of bulbs that are LED:</span> <output id="ledOut" for="led">50%</output></label><input id="led" type="range" min="0" max="100" step="10" value="50"></div>
-            <div class="field"><label for="price" data-i18n="calc.price">Electricity price (EGP/kWh)</label><input id="price" type="number" inputmode="decimal" min="0" step="0.05" value="1.60" aria-describedby="priceHint"><span class="hint" id="priceHint" data-i18n="calc.priceHint">Check your bill; prices vary by tier.</span></div>
-            <div class="field end"><label class="check"><input id="tap" type="checkbox" checked> <span data-i18n="calc.tap">Tap runs while brushing teeth</span></label></div>
+              <select id="heater" name="heater"><option value="electric" selected data-i18n="calc.heaterElectric">Electric</option><option value="gas" data-i18n="calc.heaterGas">Gas</option><option value="solar" data-i18n="calc.heaterSolar">Solar</option></select></div>
+            <div class="field full"><label for="shower"><span data-i18n="calc.shower">Average shower length:</span> <output id="showerOut" for="shower">8</output> <span data-i18n="unit.min">min</span></label><input id="shower" name="shower" type="range" min="2" max="25" value="8"><div class="range-row" aria-hidden="true"><span id="showerMin">2</span><span id="showerMax">25 min</span></div></div>
+            <div class="field"><label for="showers" data-i18n="calc.showers">Showers per person per day</label><input id="showers" name="showers" type="number" inputmode="decimal" min="0" max="3" step="0.5" value="1"></div>
+            <div class="field"><label for="laundry" data-i18n="calc.laundry">Laundry loads per week</label><input id="laundry" name="laundry" type="number" inputmode="numeric" min="0" max="30" value="5"></div>
+            <div class="field"><label for="ac" data-i18n="calc.ac">Air conditioners used</label><input id="ac" name="ac" type="number" inputmode="numeric" min="0" max="10" value="2"></div>
+            <div class="field"><label for="acHours" data-i18n="calc.acHours">AC hours per day (summer)</label><input id="acHours" name="acHours" type="number" inputmode="numeric" min="0" max="24" value="6"></div>
+            <div class="field"><label for="acTemp" data-i18n="calc.acTemp">AC temperature (°C)</label><input id="acTemp" name="acTemp" type="number" inputmode="numeric" min="16" max="30" value="22"></div>
+            <div class="field"><label for="bulbs" data-i18n="calc.bulbs">Light bulbs at home</label><input id="bulbs" name="bulbs" type="number" inputmode="numeric" min="0" max="60" value="12"></div>
+            <div class="field full"><label for="led"><span data-i18n="calc.led">Share of bulbs that are LED:</span> <output id="ledOut" for="led">50%</output></label><input id="led" name="led" type="range" min="0" max="100" step="10" value="50"></div>
+            <div class="field"><label for="price" data-i18n="calc.price">Electricity price (EGP/kWh)</label><input id="price" name="price" type="number" inputmode="decimal" min="0" step="0.05" value="1.60" aria-describedby="priceHint"><span class="hint" id="priceHint" data-i18n="calc.priceHint">Check your bill; prices vary by tier.</span></div>
+            <div class="field end"><label class="check"><input id="tap" name="tap" type="checkbox" checked> <span data-i18n="calc.tap">Tap runs while brushing teeth</span></label></div>
           </div>
         </form>
 
@@ -263,7 +265,6 @@
   <section id="quiz">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow" data-i18n="quiz.eyebrow">Habits check</span>
         <h2 data-i18n="quiz.title">How water- and energy-wise is your home?</h2>
         <p class="lead" data-i18n="quiz.lead">Seven quick questions about everyday habits. You get a habit profile and the three tips that would help your home most.</p>
       </div>
@@ -278,13 +279,14 @@
               <legend id="qLegend" tabindex="-1"></legend>
               <div class="opts" id="qOpts"></div>
             </fieldset>
+            <p class="form-error" id="qError" role="alert"></p>
             <div class="q-nav">
               <button type="button" class="btn ghost small" id="qBack" data-i18n="quiz.back">Back</button>
               <button type="submit" class="btn small" id="qNext"></button>
             </div>
           </form>
           <div class="q-result" id="qResult" hidden>
-            <p class="eyebrow" data-i18n="quiz.yourProfile">Your habit profile</p>
+            <p class="q-kicker" data-i18n="quiz.yourProfile">Your habit profile</p>
             <h3 id="qProfile" tabindex="-1"></h3>
             <p class="q-score" id="qScore"></p>
             <p id="qProfileText"></p>
@@ -308,18 +310,17 @@
   <section id="bills">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow" data-i18n="bills.eyebrow">Bill tracker</span>
         <h2 tabindex="-1" data-i18n="bills.title">Track your real bills, month by month</h2>
-        <p class="lead" data-i18n="bills.lead">Enter each month's electricity (kWh) and water (m³) from your bills. You will see the trend, the change from the month before and an approximate CO₂ figure. Everything stays on this device.</p>
+        <p class="lead" data-i18n="bills.lead">Enter each month’s electricity (kWh) and water (m³) from your bills. You will see the trend, the change from the month before and an approximate CO₂ figure. Everything stays on this device.</p>
       </div>
       <div class="bills-grid">
         <form class="bill-form" id="billForm" novalidate autocomplete="off">
           <h3 id="billFormTitle" data-i18n="bills.add">Add a month</h3>
           <div class="fields">
-            <div class="field"><label for="billMonth" data-i18n="bills.month">Month</label><select id="billMonth"></select></div>
-            <div class="field"><label for="billYear" data-i18n="bills.year">Year</label><select id="billYear"></select></div>
-            <div class="field"><label for="billKwh" data-i18n="bills.kwh">Electricity (kWh)</label><input id="billKwh" type="text" inputmode="decimal" aria-describedby="billError"></div>
-            <div class="field"><label for="billM3" data-i18n="bills.m3">Water (m³)</label><input id="billM3" type="text" inputmode="decimal" aria-describedby="billError"></div>
+            <div class="field"><label for="billMonth" data-i18n="bills.month">Month</label><select id="billMonth" name="billMonth"></select></div>
+            <div class="field"><label for="billYear" data-i18n="bills.year">Year</label><select id="billYear" name="billYear"></select></div>
+            <div class="field"><label for="billKwh" data-i18n="bills.kwh">Electricity (kWh)</label><input id="billKwh" name="billKwh" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="billError"></div>
+            <div class="field"><label for="billM3" data-i18n="bills.m3">Water (m³)</label><input id="billM3" name="billM3" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="billError"></div>
           </div>
           <p class="form-error" id="billError" role="alert"></p>
           <div class="form-actions">
@@ -330,7 +331,7 @@
         <figure class="chart-card">
           <div class="chart-wrap" id="billChart"></div>
           <div class="chart-tip" id="billTip" hidden></div>
-          <figcaption class="hint" data-i18n="bills.co2Note">CO₂ is approximate: (kWh + m³ × 0.6) × 0.47 kg, using the calculator's grid factor and water-supply energy.</figcaption>
+          <figcaption class="hint" data-i18n="bills.co2Note">CO₂ is approximate: (kWh + m³ × 0.6) × 0.47 kg, using the calculator’s grid factor and water-supply energy.</figcaption>
         </figure>
       </div>
       <div class="table-wrap">
@@ -353,7 +354,7 @@
         </div>
         <div class="data-btns">
           <button type="button" class="btn ghost small" id="exportData" data-i18n="data.export">Export my data (JSON)</button>
-          <label class="btn ghost small file-btn"><input type="file" id="importData" accept="application/json,.json"><span data-i18n="data.import">Import from a file</span></label>
+          <label class="btn ghost small file-btn"><input type="file" id="importData" name="importData" accept="application/json,.json"><span data-i18n="data.import">Import from a file</span></label>
         </div>
         <p class="hint" id="dataMsg" role="status"></p>
       </div>
@@ -363,13 +364,12 @@
   <section id="help">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow" data-i18n="help.eyebrow">Get help in Egypt</span>
         <h2 data-i18n="help.title">Official numbers for water, electricity and solar</h2>
-        <p class="lead" data-i18n="help.lead">A leak, a power cut, a wrong bill or a question about solar energy? These are official Egyptian bodies. We checked every name, number and link on the organisation's own website.</p>
+        <p class="lead" data-i18n="help.lead">A leak, a power cut, a wrong bill or a question about solar energy? These are official Egyptian bodies. We checked every name, number and link on the organisation’s own website.</p>
       </div>
       <div class="help-search">
         <label for="helpQ" data-i18n="help.searchLabel">Search the directory</label>
-        <input id="helpQ" type="search" data-i18n-attr="placeholder:help.placeholder" placeholder="e.g. water, power cut, solar, 125" autocomplete="off">
+        <input id="helpQ" name="helpQ" type="search" data-i18n-attr="placeholder:help.placeholder" placeholder="e.g. water, power cut, solar, 125…" autocomplete="off">
         <p class="hint" id="helpCount" aria-live="polite"></p>
       </div>
       <ul class="help-list" id="helpList"></ul>
@@ -381,7 +381,7 @@
   <section id="how">
     <div class="wrap two">
       <div>
-        <div class="sec-head"><span class="eyebrow" data-i18n="how.eyebrow">How we built it</span><h2 data-i18n="how.title">Simple, private, works on any phone</h2></div>
+        <div class="sec-head"><h2 data-i18n="how.eyebrow">How we built it</h2><p class="lead" data-i18n="how.title">Simple, private, works on any phone</p></div>
         <ol class="steps">
           <li><div><h3 data-i18n="how.1t">Research</h3><p data-i18n="how.1">We chose SDG 6, 7 and 13 from the UN SDG Report 2026 and reviewed peer-reviewed papers from Google Scholar and ScienceDirect.</p></div></li>
           <li><div><h3 data-i18n="how.2t">Model</h3><p data-i18n="how.2">We turned the research into a simple model of household water, electricity and CO₂ use, with every assumption listed on the page.</p></div></li>
@@ -390,9 +390,8 @@
         </ol>
       </div>
       <div id="team">
-        <div class="sec-head tight"><span class="eyebrow" data-i18n="team.eyebrow">The team</span></div>
         <div class="team-head"><h2 data-i18n="team.title">Who we are</h2><span class="teamno" id="teamNo">Team No. —</span></div>
-        <p class="lead team-lead" data-i18n="team.lead">Computer engineering students, Alamein International University · GEO217 Climate Change and Sustainability.</p>
+        <p class="lead team-lead" data-i18n="team.lead">Computer engineering students at Alamein International University, taking GEO217 Climate Change and Sustainability.</p>
         <ul class="team" id="teamList"></ul>
       </div>
     </div>
@@ -400,7 +399,7 @@
 
   <section id="references">
     <div class="wrap">
-      <div class="sec-head"><span class="eyebrow" data-i18n="refs.eyebrow">Sources</span><h2 data-i18n="refs.title">References (APA 7)</h2></div>
+      <div class="sec-head"><h2 data-i18n="refs.title">References (APA 7)</h2></div>
       <ol class="refs" lang="en" dir="ltr">
         <li>Abdelzaher, M. A., Farahat, E. M., Abdel-Ghafar, H. M., Balboul, B. A. A., &amp; Awad, M. M. (2023). Environmental policy to develop a conceptual design for the water–energy–food nexus: A case study in Wadi-Dara on the Red Sea coast, Egypt. <em>Water, 15</em>(4), 780. <a href="https://doi.org/10.3390/w15040780" target="_blank" rel="noopener">https://doi.org/10.3390/w15040780</a></li>
         <li>Albertarelli, S., Fraternali, P., Herrera, S., Melenhorst, M., Novak, J., Pasini, C., Rizzoli, A.-E., &amp; Rottondi, C. (2018). A survey on the design of gamified systems for energy and water sustainability. <em>Games, 9</em>(3), 38. <a href="https://doi.org/10.3390/g9030038" target="_blank" rel="noopener">https://doi.org/10.3390/g9030038</a></li>
@@ -420,7 +419,14 @@
 </main>
 
 <footer class="site-foot">
-  <div class="wrap"><span data-i18n="footer.line">AquaWatt · GEO217 Climate Change and Sustainability · Alamein International University</span><span>#SDGs #GEO217 #AIU</span></div>
+  <div class="wrap foot-grid">
+    <div>
+      <p class="foot-brand" translate="no"><span class="drops" aria-hidden="true"><i class="d6"></i><i class="d7"></i><i class="d13"></i></span>AquaWatt</p>
+      <p data-i18n="footer.about">A student project for GEO217 Climate Change and Sustainability at Alamein International University.</p>
+    </div>
+    <p><span data-i18n="footer.icons">The SDG icons are from the</span> <a href="https://www.un.org/sustainabledevelopment/news/communications-material/" target="_blank" rel="noopener" data-i18n="footer.un">United Nations</a>. <span data-i18n="footer.disclaimer">This site is not endorsed by the United Nations.</span></p>
+    <p class="foot-tags" lang="en" dir="ltr">#SDGs #GEO217 #AIU</p>
+  </div>
 </footer>
 
 <dialog class="share-dlg" id="shareDlg" aria-labelledby="shareTitle">
@@ -438,7 +444,7 @@
     <a class="btn ghost small" id="shareLinkedIn" target="_blank" rel="noopener" data-i18n="share.linkedin">Share on LinkedIn</a>
   </div>
   <label class="share-label" for="sharePost" data-i18n="share.postLabel">Ready-to-copy post</label>
-  <textarea id="sharePost" rows="7" readonly></textarea>
+  <textarea id="sharePost" name="sharePost" rows="7" readonly></textarea>
   <div class="share-foot">
     <button type="button" class="btn ghost small" id="shareCopyPost" data-i18n="share.copyPost">Copy post text</button>
     <p class="hint" id="shareMsg" role="status"></p>

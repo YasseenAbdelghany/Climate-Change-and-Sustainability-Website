@@ -32,9 +32,14 @@ const I18N = {
   "tag.6": { ar: "الهدف ٦ · المياه النظيفة", en: "SDG 6 · Clean water" },
   "tag.7": { ar: "الهدف ٧ · الطاقة النظيفة", en: "SDG 7 · Clean energy" },
   "tag.13": { ar: "الهدف ١٣ · العمل المناخي", en: "SDG 13 · Climate action" },
-  "hero.title": { ar: 'كل لتر مياه توفّره يوفّر معه <span class="e">الكهرباء</span> ويقلّل <span class="c">انبعاثات الكربون</span>.', en: 'Every litre you save also saves <span class="e">energy</span> and cuts <span class="c">CO₂</span>.' },
+  "hero.title": { ar: "كل لتر مياه توفّره يوفّر معه الكهرباء ويقلّل انبعاثات الكربون.", en: "Every litre you save also saves energy and cuts CO₂." },
   "hero.lead": { ar: "المياه والكهرباء والمناخ مشكلة واحدة مترابطة. تسخين المياه وضخّها ومعالجتها يحتاج إلى كهرباء، ومعظم الكهرباء في مصر ما زال يُنتَج من الوقود الأحفوري. يوضّح AquaWatt لكل أسرة حجم استهلاكها، وأيّ التغييرات الصغيرة توفّر أكثر.", en: "Water, electricity and climate are one connected problem. Heating, pumping and treating water uses power, and in Egypt most power still comes from fossil fuels. AquaWatt shows a household how much it uses and which small changes save the most." },
-  "hero.cta": { ar: "احسب بصمة بيتك ←", en: "Calculate your home's footprint →" },
+  "hero.cta": { ar: "احسب بصمة بيتك", en: "Calculate your home’s footprint" },
+  "hero.quiz": { ar: "اختبر عادات بيتك", en: "Check your habits" },
+  "facts.source": { ar: "الأرقام من تقرير الأمم المتحدة لأهداف التنمية المستدامة ٢٠٢٦.", en: "Figures from the UN Sustainable Development Goals Report 2026." },
+  "goal6.alt": { ar: "الهدف ٦: المياه النظيفة والنظافة الصحية", en: "SDG 6: Clean water and sanitation" },
+  "goal7.alt": { ar: "الهدف ٧: طاقة نظيفة وبأسعار معقولة", en: "SDG 7: Affordable and clean energy" },
+  "goal13.alt": { ar: "الهدف ١٣: العمل المناخي", en: "SDG 13: Climate action" },
   "facts.label": { ar: "حقائق رئيسية من تقرير الأمم المتحدة لأهداف التنمية المستدامة ٢٠٢٦", en: "Key facts from the UN SDG Report 2026" },
   "fact1.big": { ar: "+٧٥٪", en: ">75%" },
   "fact1.text": { ar: "نسبة الإجهاد المائي في شمال أفريقيا وغرب آسيا، وهما أكثر مناطق العالم إجهادًا مائيًا", en: "water stress in Northern Africa and Western Asia, the most water-stressed regions on Earth" },
@@ -76,7 +81,7 @@ const I18N = {
 
   "research.eyebrow": { ar: "ماذا تقول الأبحاث", en: "What the research says" },
   "research.title": { ar: "معرفة الاستهلاك تغيّر السلوك، بشرط أن تكون محددة", en: "Feedback changes behaviour, if it is specific" },
-  "research.lead": { ar: "راجعنا دراسات علمية محكّمة عن استهلاك المياه والطاقة في البيوت، وعن أدوات متابعة الاستهلاك، وعن الوضع المائي في مصر. هذه أهم النتائج التي بنينا عليها تصميمنا.", en: "We reviewed peer-reviewed studies on household water and energy use, feedback tools and Egypt's water situation. These are the findings that shaped our design." },
+  "research.lead": { ar: "راجعنا دراسات علمية محكّمة عن استهلاك المياه والطاقة في البيوت، وعن أدوات متابعة الاستهلاك، وعن الوضع المائي في مصر. هذه أهم النتائج التي بنينا عليها تصميمنا.", en: "We reviewed peer-reviewed studies on household water and energy use, feedback tools and Egypt’s water situation. These are the findings that shaped our design." },
   "f1.big": { ar: "٨٪", en: "8%" },
   "f1.text": { ar: "<strong>توفير دائم في المياه بفضل متابعة العدّادات الذكية.</strong> نحو ٤٧٪ من ٣٣٤ أسرة في فالنسيا استمرّت في استهلاك مياه أقل بنسبة ٨٪ بعد أكثر من عامين.", en: "<strong>Lasting water savings from smart-meter feedback.</strong> About 47% of 334 households in Valencia kept using 8% less water more than two years later." },
   "f2.big": { ar: "≈١٠٪", en: "~10%" },
@@ -93,7 +98,7 @@ const I18N = {
 
   "calc.eyebrow": { ar: "حلّنا", en: "Our solution" },
   "calc.title": { ar: "حاسبة AquaWatt المنزلية", en: "AquaWatt household calculator" },
-  "calc.lead": { ar: "أدخل عادات أسرتك، وستتغيّر الأرقام فورًا. لا يغادر أي شيء تكتبه متصفحك. تبدأ الحاسبة بمثال لأسرة من خمسة أفراد.", en: "Enter your household's habits. The numbers update instantly, and nothing you type leaves your browser. The form starts with an example family of five." },
+  "calc.lead": { ar: "أدخل عادات أسرتك، وستتغيّر الأرقام فورًا. لا يغادر أي شيء تكتبه متصفحك. تبدأ الحاسبة بمثال لأسرة من خمسة أفراد.", en: "Enter your household’s habits. The numbers update instantly, and nothing you type leaves your browser. The form starts with an example family of five." },
   "calc.formTitle": { ar: "أسرتك", en: "Your household" },
   "calc.reset": { ar: "العودة إلى مثال الأسرة", en: "Reset to the example family" },
   "calc.people": { ar: "عدد أفراد البيت", en: "People at home" },
@@ -136,7 +141,7 @@ const I18N = {
   "act.laundry.t": { ar: "اغسل بحمولة كاملة وماء بارد", en: "Wash full loads in cold water" },
   "act.laundry.why": { ar: "غسلات أقل، ولا تسخين للمياه داخل الغسالة.", en: "Fewer loads and no water heating in the machine." },
   "act.solar.t": { ar: "ركّب سخّانًا شمسيًا", en: "Install a solar water heater" },
-  "act.solar.why": { ar: "شمس مصر قادرة على تسخين كل مياه البيت الساخنة تقريبًا.", en: "Egypt's sunshine can heat almost all household hot water." },
+  "act.solar.why": { ar: "شمس مصر قادرة على تسخين كل مياه البيت الساخنة تقريبًا.", en: "Egypt’s sunshine can heat almost all household hot water." },
   "chip.money": { ar: "≈ {n} جنيه / شهر", en: "≈ {n} EGP / month" },
   "plan.title": { ar: "خطتك", en: "Your plan" },
   "plan.empty": { ar: "اختر إجراءً من الأعلى لترى ما توفّره أسرتك.", en: "Tick an action above to see what your family saves." },
@@ -151,7 +156,7 @@ const I18N = {
   "unit.kgCO2": { ar: "كجم CO₂", en: "kg CO₂" },
 
   "unit.kg": { ar: "كجم", en: "kg" },
-  "impact.title": { ar: "ما وفّره بيتنا", en: "Our home's savings" },
+  "impact.title": { ar: "ما وفّره بيتنا", en: "Our home’s savings" },
   "impact.note": { ar: "تقديرات من الحاسبة، وليست قياسات فعلية.", en: "Estimates from the calculator, not measured savings." },
   "impact.water": { ar: "مياه موفّرة", en: "Water saved" },
   "impact.energy": { ar: "كهرباء موفّرة", en: "Electricity saved" },
@@ -163,15 +168,18 @@ const I18N = {
   "track.done": { ar: "✓ سُجّل شهر {month}", en: "✓ Added for {month}" },
   "track.undo": { ar: "تراجع", en: "Undo" },
   "track.needPlan": { ar: "اختر إجراءً واحدًا على الأقل لتسجّل شهرك.", en: "Choose at least one action to record your month." },
-  "track.ready": { ar: "يضيف توفير خطتك الشهري إلى إجمالي بيتك لشهر {month}. مرة واحدة كل شهر.", en: "Adds your plan's monthly savings to your home's totals for {month}. Once per month." },
-  "track.added": { ar: "أُضيف توفير شهر {month} إلى إجمالي بيتك.", en: "{month}'s savings were added to your home's totals." },
+  "track.ready": { ar: "يضيف توفير خطتك الشهري إلى إجمالي بيتك لشهر {month}. مرة واحدة كل شهر.", en: "Adds your plan’s monthly savings to your home’s totals for {month}. Once per month." },
+  "track.added": { ar: "أُضيف توفير شهر {month} إلى إجمالي بيتك.", en: "{month}’s savings were added to your home’s totals." },
   "track.undone": { ar: "أُلغي تسجيل شهر {month}.", en: "{month} was removed from your totals." },
   "track.again": { ar: "يمكنك التسجيل مرة أخرى الشهر القادم. لتغيير ما سُجّل، تراجع ثم سجّل من جديد.", en: "You can record again next month. To change this month, undo and record again." },
   "nav.quiz": { ar: "اختبار العادات", en: "Habits quiz" },
   "quiz.eyebrow": { ar: "فحص العادات", en: "Habits check" },
   "quiz.title": { ar: "ما مدى حرص بيتكم على المياه والطاقة؟", en: "How water- and energy-wise is your home?" },
-  "quiz.lead": { ar: "سبعة أسئلة سريعة عن العادات اليومية، تحصلون بعدها على ملف عاداتكم وأهم ثلاث نصائح تفيد بيتكم.", en: "Seven quick questions about everyday habits. You get a habit profile and the three tips that would help your home most." },
+  "quiz.lead": { ar: "٧ أسئلة سريعة عن العادات اليومية، تحصلون بعدها على ملف عاداتكم وأهم ثلاث نصائح تفيد بيتكم.", en: "7 quick questions about everyday habits. You get a habit profile and the three tips that would help your home most." },
   "quiz.count": { ar: "السؤال {n} من {total}", en: "Question {n} of {total}" },
+  "quiz.need": { ar: "اختر إجابة واحدة للمتابعة.", en: "Choose one answer to continue." },
+  "calc.resetConfirm": { ar: "هل تريد مسح بيانات أسرتك والعودة إلى مثال الأسرة؟", en: "Clear your household’s numbers and go back to the example family?" },
+  "bills.leave": { ar: "لديك بيانات فاتورة لم تُحفظ بعد.", en: "You have bill details that are not saved yet." },
   "quiz.back": { ar: "السابق", en: "Back" },
   "quiz.next": { ar: "التالي", en: "Next" },
   "quiz.finish": { ar: "اعرض نتيجتي", en: "See my result" },
@@ -236,7 +244,7 @@ const I18N = {
   "tip.laundry.t": { ar: "اغسلوا حمولة كاملة بماء بارد", en: "Wash full loads in cold water" },
   "tip.laundry.why": { ar: "غسلات أقل، ولا تسخين للمياه داخل الغسالة.", en: "Fewer loads and no water heating in the machine." },
   "tip.heater.t": { ar: "فكّروا في سخّان شمسي", en: "Consider a solar water heater" },
-  "tip.heater.why": { ar: "شمس مصر قادرة على تسخين كل مياه البيت الساخنة تقريبًا.", en: "Egypt's sunshine can heat almost all household hot water." },
+  "tip.heater.why": { ar: "شمس مصر قادرة على تسخين كل مياه البيت الساخنة تقريبًا.", en: "Egypt’s sunshine can heat almost all household hot water." },
   "tip.bills.t": { ar: "تابعوا فواتيركم كل شهر", en: "Track your bills every month" },
   "tip.bills.why": { ar: "المتابعة المتكررة مع أهداف واضحة تحقق أكبر توفير في الطاقة (Karlin et al., 2015).", en: "Frequent feedback with clear goals saves the most energy (Karlin et al., 2015)." },
   "profile.0": { ar: "جاهزون للبداية", en: "Ready to start" },
@@ -250,7 +258,7 @@ const I18N = {
   "nav.bills": { ar: "الفواتير", en: "Bills" },
   "bills.eyebrow": { ar: "متتبّع الفواتير", en: "Bill tracker" },
   "bills.title": { ar: "تابِع فواتيرك الحقيقية شهرًا بشهر", en: "Track your real bills, month by month" },
-  "bills.lead": { ar: "أدخل استهلاك كل شهر من الكهرباء (ك.و.س) والمياه (م³) كما في فواتيرك. سترى الاتجاه، والتغيّر عن الشهر السابق، ورقمًا تقريبيًا لانبعاثات CO₂. كل شيء يبقى على هذا الجهاز.", en: "Enter each month's electricity (kWh) and water (m³) from your bills. You will see the trend, the change from the month before and an approximate CO₂ figure. Everything stays on this device." },
+  "bills.lead": { ar: "أدخل استهلاك كل شهر من الكهرباء (ك.و.س) والمياه (م³) كما في فواتيرك. سترى الاتجاه، والتغيّر عن الشهر السابق، ورقمًا تقريبيًا لانبعاثات CO₂. كل شيء يبقى على هذا الجهاز.", en: "Enter each month’s electricity (kWh) and water (m³) from your bills. You will see the trend, the change from the month before and an approximate CO₂ figure. Everything stays on this device." },
   "bills.add": { ar: "أضف شهرًا", en: "Add a month" },
   "bills.edit": { ar: "تعديل {month}", en: "Edit {month}" },
   "bills.month": { ar: "الشهر", en: "Month" },
@@ -274,7 +282,7 @@ const I18N = {
   "bills.errKwh": { ar: "أدخل استهلاك الكهرباء رقمًا موجبًا بالكيلوواط ساعة.", en: "Enter electricity use as a positive number of kWh." },
   "bills.errM3": { ar: "أدخل استهلاك المياه رقمًا موجبًا بالمتر المكعب.", en: "Enter water use as a positive number of m³." },
   "bills.errBig": { ar: "هذا الرقم يبدو كبيرًا جدًا لبيت واحد. راجع الفاتورة.", en: "That number looks too large for one home. Check the bill." },
-  "bills.co2Note": { ar: "رقم CO₂ تقريبي: (ك.و.س + م³ × ٠٫٦) × ٠٫٤٧ كجم، باستخدام معامل الشبكة وطاقة إمداد المياه من الحاسبة.", en: "CO₂ is approximate: (kWh + m³ × 0.6) × 0.47 kg, using the calculator's grid factor and water-supply energy." },
+  "bills.co2Note": { ar: "رقم CO₂ تقريبي: (ك.و.س + م³ × ٠٫٦) × ٠٫٤٧ كجم، باستخدام معامل الشبكة وطاقة إمداد المياه من الحاسبة.", en: "CO₂ is approximate: (kWh + m³ × 0.6) × 0.47 kg, using the calculator’s grid factor and water-supply energy." },
   "bills.chartEmpty": { ar: "أضف شهرًا واحدًا على الأقل لترى الرسم، وشهرين لترى الاتجاه.", en: "Add at least one month to see the chart, and two to see a trend." },
   "bills.chartLabel": { ar: "رسمان خطيان لاستهلاك الكهرباء والمياه خلال {n} شهر. الأرقام نفسها في الجدول أسفله.", en: "Line charts of electricity and water use over {n} months. The same numbers are in the table below." },
   "bills.latest": { ar: "آخر شهر: {v} {unit}", en: "Latest: {v} {unit}" },
@@ -291,9 +299,9 @@ const I18N = {
   "nav.help": { ar: "أرقام مهمة", en: "Get help" },
   "help.eyebrow": { ar: "مساعدة في مصر", en: "Get help in Egypt" },
   "help.title": { ar: "أرقام رسمية للمياه والكهرباء والطاقة الشمسية", en: "Official numbers for water, electricity and solar" },
-  "help.lead": { ar: "تسريب مياه، أو انقطاع كهرباء، أو فاتورة غير صحيحة، أو سؤال عن الطاقة الشمسية؟ هذه جهات مصرية رسمية، وقد راجعنا كل اسم ورقم ورابط على الموقع الرسمي للجهة نفسها.", en: "A leak, a power cut, a wrong bill or a question about solar energy? These are official Egyptian bodies. We checked every name, number and link on the organisation's own website." },
+  "help.lead": { ar: "تسريب مياه، أو انقطاع كهرباء، أو فاتورة غير صحيحة، أو سؤال عن الطاقة الشمسية؟ هذه جهات مصرية رسمية، وقد راجعنا كل اسم ورقم ورابط على الموقع الرسمي للجهة نفسها.", en: "A leak, a power cut, a wrong bill or a question about solar energy? These are official Egyptian bodies. We checked every name, number and link on the organisation’s own website." },
   "help.searchLabel": { ar: "ابحث في الدليل", en: "Search the directory" },
-  "help.placeholder": { ar: "مثلًا: مياه، انقطاع، شمسي، 125", en: "e.g. water, power cut, solar, 125" },
+  "help.placeholder": { ar: "مثلًا: مياه، انقطاع، شمسي، 125…", en: "e.g. water, power cut, solar, 125…" },
   "help.count": { ar: { zero: "لا توجد نتائج", one: "نتيجة واحدة", two: "نتيجتان", few: "{n} نتائج", many: "{n} نتيجة", other: "{n} نتيجة" }, en: { one: "{n} result", other: "{n} results" } },
   "help.none": { ar: "لا توجد جهة تطابق بحثك. جرّب كلمة أخرى مثل «مياه» أو «كهرباء».", en: "Nothing matches your search. Try another word such as “water” or “electricity”." },
   "help.note": { ar: "قد تتغيّر الأرقام. إذا لم يعمل رقم، افتح رابط المصدر لمراجعة أحدث البيانات. AquaWatt مشروع طلابي وليس تابعًا لأي من هذه الجهات.", en: "Numbers can change. If a number does not connect, open the source link to check the latest details. AquaWatt is a student project and is not connected to any of these organisations." },
@@ -301,7 +309,7 @@ const I18N = {
   "help.copyLabel": { ar: "نسخ الرقم {phone}", en: "Copy number {phone}" },
   "help.copied": { ar: "تم النسخ", en: "Copied" },
   "help.copiedStatus": { ar: "تم نسخ الرقم {phone}", en: "Number {phone} copied" },
-  "help.checked": { ar: "رُوجِع في {date} · ", en: "Checked on {date} · " },
+  "help.checked": { ar: "رُوجِع في {date}. ", en: "Checked on {date}. " },
   "help.source": { ar: "المصدر", en: "Source" },
   "help.site": { ar: "الموقع الرسمي", en: "Official website" },
   "help.cat.water": { ar: "مياه", en: "Water" },
@@ -317,10 +325,10 @@ const I18N = {
   "help.eehc.desc": { ar: "الخط الساخن للكهرباء يعمل على مدار الساعة للإبلاغ عن الأعطال والشكاوى، والمنصة الموحدة لخدمات الكهرباء لتقديم الطلبات والاستفسارات والشكاوى عبر الإنترنت.", en: "The 24/7 electricity hotline for faults and complaints, and the unified electricity services platform for online requests, questions and complaints." },
   "help.eehc.p1": { ar: "الخط الساخن 24/7", en: "24/7 hotline" },
   "help.egyptera.name": { ar: "جهاز تنظيم مرفق الكهرباء وحماية المستهلك", en: "Egyptian Electric Utility and Consumer Protection Regulatory Agency (EgyptERA)" },
-  "help.egyptera.desc": { ar: "إذا قدّمت شكواك لشركة الكهرباء ولم تُحَل، يمكنك رفعها إلى الجهاز عبر نموذج الشكاوى على موقعه، مع صورة الشكوى ورد الشركة.", en: "If you complained to your electricity company and it was not solved, you can take it to the regulator through the complaint form on its website, with a copy of your complaint and the company's reply." },
+  "help.egyptera.desc": { ar: "إذا قدّمت شكواك لشركة الكهرباء ولم تُحَل، يمكنك رفعها إلى الجهاز عبر نموذج الشكاوى على موقعه، مع صورة الشكوى ورد الشركة.", en: "If you complained to your electricity company and it was not solved, you can take it to the regulator through the complaint form on its website, with a copy of your complaint and the company’s reply." },
   "help.egyptera.p1": { ar: "إدارة الشكاوى (داخلي ١٥٤)", en: "Complaints (extension 154)" },
   "help.solar.name": { ar: "ربط محطة طاقة شمسية يملكها العميل", en: "Connecting a rooftop solar system you own" },
-  "help.solar.desc": { ar: "صفحة جهاز تنظيم مرفق الكهرباء التي تسرد المستندات المطلوبة لربط محطة شمسية منزلية بالشبكة، ومنها شهادة تأهيل الشركة المنفّذة الصادرة من هيئة الطاقة الجديدة والمتجددة.", en: "EgyptERA's page listing the documents needed to connect a home solar system to the grid, including the installer's qualification certificate from the New and Renewable Energy Authority." },
+  "help.solar.desc": { ar: "صفحة جهاز تنظيم مرفق الكهرباء التي تسرد المستندات المطلوبة لربط محطة شمسية منزلية بالشبكة، ومنها شهادة تأهيل الشركة المنفّذة الصادرة من هيئة الطاقة الجديدة والمتجددة.", en: "EgyptERA’s page listing the documents needed to connect a home solar system to the grid, including the installer’s qualification certificate from the New and Renewable Energy Authority." },
   "help.shakwa.name": { ar: "منظومة الشكاوى الحكومية الموحدة (مجلس الوزراء)", en: "Unified Government Complaints System (Cabinet)" },
   "help.shakwa.desc": { ar: "إذا لم تُحَل شكواك لدى الجهة المختصة، يمكنك تقديمها عبر بوابة الشكاوى الحكومية أو الخط الساخن أو تطبيق «في خدمتك».", en: "If a complaint is not solved by the service provider, you can file it through the government complaints portal, its hotline or the “Fi Khedmetak” app." },
   "help.shakwa.p1": { ar: "الخط الساخن", en: "Hotline" },
@@ -338,14 +346,14 @@ const I18N = {
   "share.downloaded": { ar: "تم تنزيل الصورة.", en: "Image downloaded." },
   "share.note": { ar: "تُصنع الصورة داخل متصفحك، ولا يُرفع أي شيء إلا إذا اخترت المشاركة.", en: "The image is made in your browser. Nothing is uploaded unless you choose to share it." },
   "share.needPlan": { ar: "اختر إجراءً واحدًا على الأقل لتشارك خطتك.", en: "Choose at least one action to share your plan." },
-  "share.alt": { ar: "بطاقة AquaWatt: خطة أسرتنا توفّر كل شهر {w} لتر مياه و{e} ك.و.س و{c} كجم CO₂.", en: "AquaWatt card: our family's plan saves {w} L of water, {e} kWh and {c} kg of CO₂ every month." },
-  "card.lead": { ar: "خطة أسرتنا توفّر كل شهر", en: "Our family's plan saves every month" },
+  "share.alt": { ar: "بطاقة AquaWatt: خطة أسرتنا توفّر كل شهر {w} لتر مياه و{e} ك.و.س و{c} كجم CO₂.", en: "AquaWatt card: our family’s plan saves {w} L of water, {e} kWh and {c} kg of CO₂ every month." },
+  "card.lead": { ar: "خطة أسرتنا توفّر كل شهر", en: "Our family’s plan saves every month" },
   "card.water": { ar: "لتر مياه", en: "litres of water" },
   "card.energy": { ar: "ك.و.س كهرباء", en: "kWh of electricity" },
   "card.co2": { ar: "كجم CO₂", en: "kg of CO₂" },
   "card.year": { ar: "خلال سنة: نحو {m3} م³ من المياه و{c} كجم CO₂", en: "Over a year: about {m3} m³ of water and {c} kg of CO₂" },
   "card.sdgs": { ar: "أهداف التنمية المستدامة ٦ و٧ و١٣", en: "SDG 6 · SDG 7 · SDG 13" },
-  "share.summary": { ar: "خطة أسرتنا في AquaWatt توفّر كل شهر {w} لتر مياه و{e} ك.و.س كهرباء و{c} كجم من CO₂. جرّبها لأسرتك: {url}", en: "Our family's AquaWatt plan saves {w} L of water, {e} kWh of electricity and {c} kg of CO₂ every month. Try it for your family: {url}" },
+  "share.summary": { ar: "خطة أسرتنا في AquaWatt توفّر كل شهر {w} لتر مياه و{e} ك.و.س كهرباء و{c} كجم من CO₂. جرّبها لأسرتك: {url}", en: "Our family’s AquaWatt plan saves {w} L of water, {e} kWh of electricity and {c} kg of CO₂ every month. Try it for your family: {url}" },
   "share.post": { ar: "استخدمنا AquaWatt، مشروعنا في مقرر GEO217 تغيّر المناخ والاستدامة بجامعة العلمين الدولية، لنخطط كيف يوفّر بيتنا المياه والطاقة.\n\nخطتنا توفّر كل شهر {w} لتر مياه و{e} ك.و.س و{c} كجم من CO₂، أي نحو {c12} كجم من CO₂ في السنة. كل لتر نوفّره يوفّر معه الكهرباء ويقلّل الانبعاثات (الأهداف ٦ و٧ و١٣).\n\nجرّبوا الحاسبة لأسركم: {url}", en: "We used AquaWatt, our GEO217 Climate Change and Sustainability project at Alamein International University, to plan how our home can save water and energy.\n\nOur plan saves {w} L of water, {e} kWh and {c} kg of CO₂ every month, about {c12} kg of CO₂ a year. Every litre we save also saves electricity and cuts emissions (SDG 6, 7 and 13).\n\nTry the calculator for your family: {url}" },
   "print.title": { ar: "خطة أسرتنا", en: "Our family plan" },
   "print.meta": { ar: "من حاسبة AquaWatt بتاريخ {date} · {url}", en: "From the AquaWatt calculator on {date} · {url}" },
@@ -360,8 +368,8 @@ const I18N = {
   "assume.7": { ar: "إمداد المياه ومعالجتها: ٠٫٦ ك.و.س لكل م³. معامل انبعاثات الشبكة نحو ٠٫٤٧ كجم CO₂ لكل ك.و.س (متوسط تقريبي لمصر). الشهر ٣٠ يومًا.", en: "Water supply and treatment: 0.6 kWh per m³. Grid emission factor about 0.47 kg CO₂/kWh (approximate Egypt average). 30-day month." },
   "assume.8": { ar: "هذه تقديرات للتوعية وليست فاتورة. أرقامك الحقيقية تعتمد على أجهزتك وعاداتك.", en: "These are estimates for awareness, not a bill. Your real numbers depend on your appliances and habits." },
 
-  "how.eyebrow": { ar: "كيف بنيناه", en: "How we built it" },
-  "how.title": { ar: "بسيط، يحفظ خصوصيتك، ويعمل على أي هاتف", en: "Simple, private, works on any phone" },
+  "how.eyebrow": { ar: "كيف بنينا الموقع", en: "How we built it" },
+  "how.title": { ar: "بسيط، يحفظ خصوصيتك، ويعمل على أي هاتف.", en: "Simple, private and works on any phone." },
   "how.1t": { ar: "البحث", en: "Research" },
   "how.1": { ar: "اخترنا الأهداف ٦ و٧ و١٣ من تقرير الأمم المتحدة لأهداف التنمية المستدامة ٢٠٢٦، وراجعنا أوراقًا بحثية محكّمة من Google Scholar وScienceDirect.", en: "We chose SDG 6, 7 and 13 from the UN SDG Report 2026 and reviewed peer-reviewed papers from Google Scholar and ScienceDirect." },
   "how.2t": { ar: "النموذج", en: "Model" },
@@ -373,7 +381,7 @@ const I18N = {
   "team.eyebrow": { ar: "الفريق", en: "The team" },
   "team.title": { ar: "من نحن", en: "Who we are" },
   "team.no": { ar: "فريق رقم {n}", en: "Team No. {n}" },
-  "team.lead": { ar: "طلاب هندسة الحاسبات، جامعة العلمين الدولية · مقرر GEO217 تغيّر المناخ والاستدامة.", en: "Computer engineering students, Alamein International University · GEO217 Climate Change and Sustainability." },
+  "team.lead": { ar: "طلاب هندسة الحاسبات في جامعة العلمين الدولية، ضمن مقرر GEO217 تغيّر المناخ والاستدامة.", en: "Computer engineering students at Alamein International University, taking GEO217 Climate Change and Sustainability." },
   "role.researchAnalysis": { ar: "البحث والتحليل", en: "Research & Analysis" },
   "role.contentDevelopment": { ar: "إعداد المحتوى", en: "Content Development" },
   "role.deployingAI": { ar: "توظيف أدوات الذكاء الاصطناعي", en: "Deploying AI tools" },
@@ -381,6 +389,10 @@ const I18N = {
   "role.finalOutput": { ar: "المُخرَج النهائي", en: "Final output" },
   "refs.eyebrow": { ar: "المصادر", en: "Sources" },
   "refs.title": { ar: "المراجع (APA 7)", en: "References (APA 7)" },
+  "footer.about": { ar: "مشروع طلابي لمقرر GEO217 تغيّر المناخ والاستدامة في جامعة العلمين الدولية.", en: "A student project for GEO217 Climate Change and Sustainability at Alamein International University." },
+  "footer.icons": { ar: "أيقونات أهداف التنمية المستدامة من", en: "The SDG icons are from the" },
+  "footer.un": { ar: "الأمم المتحدة", en: "United Nations" },
+  "footer.disclaimer": { ar: "هذا الموقع غير معتمد من الأمم المتحدة.", en: "This site is not endorsed by the United Nations." },
   "footer.line": { ar: "AquaWatt · مقرر GEO217 تغيّر المناخ والاستدامة · جامعة العلمين الدولية", en: "AquaWatt · GEO217 Climate Change and Sustainability · Alamein International University" }
 };
 
@@ -451,6 +463,8 @@ function setLang(next, save = true) {
   btn.textContent = t("lang.other");
   btn.lang = lang === "ar" ? "en" : "ar";
   btn.setAttribute("aria-label", t("lang.switch"));
+  // Official UN goal icons exist in both languages; show the one that matches the page.
+  document.querySelectorAll("img[data-sdg]").forEach(img => { img.src = `assets/sdg/sdg-${img.dataset.sdg}-${lang}.png`; });
   layoutLoop();
   updateThemeButton();
   langListeners.forEach(fn => fn());
@@ -679,7 +693,10 @@ function loadCalc() {
 
 $("form").addEventListener("input", update);
 $("form").addEventListener("submit", e => e.preventDefault());
-$("resetCalc").addEventListener("click", () => { store.remove("calc"); loadCalc(); update(); });
+$("resetCalc").addEventListener("click", () => {
+  if (!confirm(t("calc.resetConfirm"))) return;
+  store.remove("calc"); loadCalc(); update();
+});
 langListeners.push(() => { $("showerMin").textContent = fmt(2); $("showerMax").textContent = `${fmt(25)} ${t("unit.min")}`; update(); });
 
 /* ==== Impact tracker: plan savings added once per calendar month ==== */
@@ -795,12 +812,13 @@ function renderQuiz(focus = false) {
     lab.append(r, span); opts.append(lab);
   });
   $("qBack").disabled = quiz.step === 0;
+  $("qError").textContent = "";
   updateQuizNav();
   if (focus) $("qLegend").focus({ preventScroll: true });
 }
 function updateQuizNav() {
   $("qNext").textContent = t(quiz.step === QUIZ.length - 1 ? "quiz.finish" : "quiz.next");
-  $("qNext").disabled = !(QUIZ_ORDER[quiz.step] in quiz.answers);
+  if (QUIZ_ORDER[quiz.step] in quiz.answers) $("qError").textContent = "";
 }
 function renderBands() {
   const ul = $("qBands"); ul.innerHTML = "";
@@ -855,7 +873,8 @@ function showTarget(q) {
 
 $("quizForm").addEventListener("submit", e => {
   e.preventDefault();
-  if (!(QUIZ_ORDER[quiz.step] in quiz.answers)) return;
+  // Next stays enabled; an unanswered question gets a clear message and focus on the first option.
+  if (!(QUIZ_ORDER[quiz.step] in quiz.answers)) { $("qError").textContent = t("quiz.need"); $("qOpts").querySelector("input")?.focus(); return; }
   if (quiz.step < QUIZ.length - 1) quiz.step++; else quiz.done = true;
   saveQuiz(); renderQuiz(true);
 });
@@ -924,6 +943,10 @@ $("billForm").addEventListener("submit", e => {
   renderBills();
 });
 $("billCancel").addEventListener("click", () => resetBillForm(true));
+// Warn before leaving with half-typed bill numbers, which are not saved until "Add month".
+window.addEventListener("beforeunload", e => {
+  if (editingBill || $("billKwh").value.trim() || $("billM3").value.trim()) { e.preventDefault(); e.returnValue = t("bills.leave"); }
+});
 
 function resetBillForm(focus) {
   editingBill = null;
@@ -1212,11 +1235,11 @@ langListeners.push(renderHelp);
 
 /* ==== Share card (canvas) ==== */
 const HASHTAGS = "#AIU #SDGs #Climate_change_Sustainability #GEO217 #Alamein_International_University";
-const CARD = { w: 1200, h: 630, bg: "#0f2a33", ink: "#eaf3f5", muted: "#a9c2c9",
+const CARD = { w: 1200, h: 630, bg: "#12395a", ink: "#eaf3f5", muted: "#a9c2c9",
   sdg: ["#26bde2", "#fcc30b", "#3f7e44"], text: ["#4cc7ec", "#f5cd4a", "#7fc184"] };
 
 async function drawShareCard(p) {
-  const fontsReady = ["800 72px 'Bricolage Grotesque'", "600 64px 'IBM Plex Mono'", "700 30px 'IBM Plex Sans Arabic'", "600 30px 'Source Sans 3'"]
+  const fontsReady = ["700 40px 'Readex Pro'", "600 72px 'Readex Pro'", "600 30px 'IBM Plex Sans Arabic'", "600 30px 'IBM Plex Sans'"]
     .map(f => document.fonts?.load(f).catch(() => null));
   await Promise.all(fontsReady);
   const c = document.createElement("canvas"); c.width = CARD.w; c.height = CARD.h;
@@ -1229,7 +1252,7 @@ async function drawShareCard(p) {
     ctx.fillText(str, X(x), y, opts.max);
   };
   const arFont = "'IBM Plex Sans Arabic'";
-  const body = (wt, px) => `${wt} ${px}px ${rtl ? arFont : "'Source Sans 3'"}, ${arFont}, system-ui, sans-serif`;
+  const body = (wt, px) => `${wt} ${px}px ${rtl ? arFont : "'IBM Plex Sans'"}, ${arFont}, system-ui, sans-serif`;
 
   ctx.fillStyle = CARD.bg; ctx.fillRect(0, 0, W, CARD.h);
   // The three goal colours as one band across the top.
@@ -1237,7 +1260,7 @@ async function drawShareCard(p) {
 
   // Brand: three dots + wordmark (always Latin, left-to-right).
   CARD.sdg.forEach((col, i) => { ctx.fillStyle = col; ctx.beginPath(); ctx.arc(X(M + 10 + i * 28), 92, 10, 0, Math.PI * 2); ctx.fill(); });
-  ctx.font = "800 40px 'Bricolage Grotesque', system-ui, sans-serif"; ctx.fillStyle = CARD.ink; ctx.direction = "ltr";
+  ctx.font = "700 40px 'Readex Pro', system-ui, sans-serif"; ctx.fillStyle = CARD.ink; ctx.direction = "ltr";
   ctx.textAlign = rtl ? "right" : "left"; ctx.fillText("AquaWatt", X(M + 96), 106);
 
   write(t("card.lead"), M, 196, body(600, 32), CARD.muted);
@@ -1245,12 +1268,12 @@ async function drawShareCard(p) {
   [[p.w, "card.water"], [p.e, "card.energy"], [p.c, "card.co2"]].forEach(([v, label], i) => {
     const x = M + i * colW;
     ctx.fillStyle = CARD.sdg[i]; ctx.fillRect(rtl ? X(x) - 64 : X(x), 236, 64, 6);
-    write(fmt(v), x, 330, `600 72px 'IBM Plex Mono', ${arFont}, monospace`, CARD.text[i], { max: colW - 24 });
+    write(fmt(v), x, 330, `600 72px 'Readex Pro', ${arFont}, sans-serif`, CARD.text[i], { max: colW - 24 });
     write(t(label), x, 376, body(600, 28), CARD.ink, { max: colW - 24 });
   });
   write(t("card.year", { m3: fmt(p.w * 12 / 1000, 1), c: fmt(p.c * 12) }), M, 456, body(400, 28), CARD.muted, { max: W - 2 * M });
   write(t("card.sdgs") + " · GEO217 · AIU", M, 540, body(600, 22), CARD.muted);
-  write(SITE_URL.replace(/^https:\/\//, "").replace(/\/$/, ""), M, 580, "500 22px 'IBM Plex Mono', monospace", CARD.ink, { ltr: true, max: W - 2 * M });
+  write(SITE_URL.replace(/^https:\/\//, "").replace(/\/$/, ""), M, 580, "500 22px 'IBM Plex Sans', sans-serif", CARD.ink, { ltr: true, max: W - 2 * M });
   return c;
 }
 
@@ -1317,7 +1340,7 @@ setLang(lang, false);
   });
   const sample = lang === "ar" ? "بت" : "ab";
   const fontsReady = cssReady.then(() => document.fonts && Promise.all(
-    ["400 1em 'IBM Plex Sans Arabic'", "700 1em 'IBM Plex Sans Arabic'", "800 1em 'Bricolage Grotesque'", "400 1em 'Source Sans 3'", "600 1em 'IBM Plex Mono'"]
+    ["400 1em 'IBM Plex Sans Arabic'", "600 1em 'IBM Plex Sans Arabic'", "600 1em 'Readex Pro'", "400 1em 'IBM Plex Sans'", "600 1em 'IBM Plex Sans'"]
       .map(f => document.fonts.load(f, sample).catch(() => null))));
   Promise.race([fontsReady, new Promise(r => setTimeout(r, 1200))])
     .then(() => document.documentElement.classList.remove("i18n-pending"));
