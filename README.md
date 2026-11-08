@@ -1,4 +1,4 @@
-# AquaWatt
+# AquaWatt 
 
 **Every litre you save also saves energy and cuts CO₂.**
 A free, private household calculator for Egyptian families, built by **Team 78** for **GEO217 Climate Change and Sustainability** at **Alamein International University (AIU)**.
