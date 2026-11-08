@@ -324,6 +324,29 @@ const I18N = {
   "help.shakwa.name": { ar: "منظومة الشكاوى الحكومية الموحدة (مجلس الوزراء)", en: "Unified Government Complaints System (Cabinet)" },
   "help.shakwa.desc": { ar: "إذا لم تُحَل شكواك لدى الجهة المختصة، يمكنك تقديمها عبر بوابة الشكاوى الحكومية أو الخط الساخن أو تطبيق «في خدمتك».", en: "If a complaint is not solved by the service provider, you can file it through the government complaints portal, its hotline or the “Fi Khedmetak” app." },
   "help.shakwa.p1": { ar: "الخط الساخن", en: "Hotline" },
+  "share.open": { ar: "شارك خطتنا", en: "Share our plan" },
+  "share.title": { ar: "شارك خطة أسرتك", en: "Share our plan" },
+  "share.close": { ar: "إغلاق", en: "Close" },
+  "share.download": { ar: "نزّل الصورة (PNG)", en: "Download image (PNG)" },
+  "share.native": { ar: "مشاركة…", en: "Share…" },
+  "share.copySummary": { ar: "انسخ الملخص", en: "Copy summary" },
+  "share.linkedin": { ar: "شارك على LinkedIn", en: "Share on LinkedIn" },
+  "share.postLabel": { ar: "منشور جاهز للنسخ", en: "Ready-to-copy post" },
+  "share.copyPost": { ar: "انسخ نص المنشور", en: "Copy post text" },
+  "share.copied": { ar: "تم النسخ.", en: "Copied." },
+  "share.copyFail": { ar: "تعذّر النسخ تلقائيًا. حدّد النص وانسخه يدويًا.", en: "Could not copy automatically. Select the text and copy it yourself." },
+  "share.downloaded": { ar: "تم تنزيل الصورة.", en: "Image downloaded." },
+  "share.note": { ar: "تُصنع الصورة داخل متصفحك، ولا يُرفع أي شيء إلا إذا اخترت المشاركة.", en: "The image is made in your browser. Nothing is uploaded unless you choose to share it." },
+  "share.needPlan": { ar: "اختر إجراءً واحدًا على الأقل لتشارك خطتك.", en: "Choose at least one action to share your plan." },
+  "share.alt": { ar: "بطاقة AquaWatt: خطة أسرتنا توفّر كل شهر {w} لتر مياه و{e} ك.و.س و{c} كجم CO₂.", en: "AquaWatt card: our family's plan saves {w} L of water, {e} kWh and {c} kg of CO₂ every month." },
+  "card.lead": { ar: "خطة أسرتنا توفّر كل شهر", en: "Our family's plan saves every month" },
+  "card.water": { ar: "لتر مياه", en: "litres of water" },
+  "card.energy": { ar: "ك.و.س كهرباء", en: "kWh of electricity" },
+  "card.co2": { ar: "كجم CO₂", en: "kg of CO₂" },
+  "card.year": { ar: "خلال سنة: نحو {m3} م³ من المياه و{c} كجم CO₂", en: "Over a year: about {m3} m³ of water and {c} kg of CO₂" },
+  "card.sdgs": { ar: "أهداف التنمية المستدامة ٦ و٧ و١٣", en: "SDG 6 · SDG 7 · SDG 13" },
+  "share.summary": { ar: "خطة أسرتنا في AquaWatt توفّر كل شهر {w} لتر مياه و{e} ك.و.س كهرباء و{c} كجم من CO₂. جرّبها لأسرتك: {url}", en: "Our family's AquaWatt plan saves {w} L of water, {e} kWh of electricity and {c} kg of CO₂ every month. Try it for your family: {url}" },
+  "share.post": { ar: "استخدمنا AquaWatt، مشروعنا في مقرر GEO217 تغيّر المناخ والاستدامة بجامعة العلمين الدولية، لنخطط كيف يوفّر بيتنا المياه والطاقة.\n\nخطتنا توفّر كل شهر {w} لتر مياه و{e} ك.و.س و{c} كجم من CO₂، أي نحو {c12} كجم من CO₂ في السنة. كل لتر نوفّره يوفّر معه الكهرباء ويقلّل الانبعاثات (الأهداف ٦ و٧ و١٣).\n\nجرّبوا الحاسبة لأسركم: {url}", en: "We used AquaWatt, our GEO217 Climate Change and Sustainability project at Alamein International University, to plan how our home can save water and energy.\n\nOur plan saves {w} L of water, {e} kWh and {c} kg of CO₂ every month, about {c12} kg of CO₂ a year. Every litre we save also saves electricity and cuts emissions (SDG 6, 7 and 13).\n\nTry the calculator for your family: {url}" },
   "assume.title": { ar: "كيف نحسب (الافتراضات)", en: "How we calculate (assumptions)" },
   "assume.1": { ar: "رأس الدُش العادي ٩ لترات في الدقيقة، والموفّر ٦ لترات؛ ويُسخَّن ٦٠٪ من مياه الاستحمام بمقدار ٢٥ درجة مئوية.", en: "Standard shower head 9 L/min, low-flow 6 L/min; 60% of shower water is heated by 25 °C." },
   "assume.2": { ar: "السخّان الكهربائي: ٠٫٠٣٢ ك.و.س لكل لتر ساخن (كفاءة ٩٠٪). سخّان الغاز: ٠٫٠٠٧٣ كجم CO₂ لكل لتر ساخن. الشمسي: صفر تقريبًا.", en: "Electric heater: 0.032 kWh per heated litre (90% efficient). Gas heater: 0.0073 kg CO₂ per heated litre. Solar: about zero." },
@@ -1173,6 +1196,101 @@ function renderHelp() {
 }
 $("helpQ").addEventListener("input", renderHelp);
 langListeners.push(renderHelp);
+
+/* ==== Share card (canvas) ==== */
+const HASHTAGS = "#AIU #SDGs #Climate_change_Sustainability #GEO217 #Alamein_International_University";
+const CARD = { w: 1200, h: 630, bg: "#0f2a33", ink: "#eaf3f5", muted: "#a9c2c9",
+  sdg: ["#26bde2", "#fcc30b", "#3f7e44"], text: ["#4cc7ec", "#f5cd4a", "#7fc184"] };
+
+async function drawShareCard(p) {
+  const fontsReady = ["800 72px 'Bricolage Grotesque'", "600 64px 'IBM Plex Mono'", "700 30px 'IBM Plex Sans Arabic'", "600 30px 'Source Sans 3'"]
+    .map(f => document.fonts?.load(f).catch(() => null));
+  await Promise.all(fontsReady);
+  const c = document.createElement("canvas"); c.width = CARD.w; c.height = CARD.h;
+  const ctx = c.getContext("2d"), rtl = lang === "ar", W = CARD.w, M = 80;
+  const X = x => (rtl ? W - x : x);
+  const write = (str, x, y, font, color, opts = {}) => {
+    ctx.font = font; ctx.fillStyle = color;
+    ctx.direction = opts.ltr ? "ltr" : rtl ? "rtl" : "ltr";
+    ctx.textAlign = rtl ? "right" : "left";
+    ctx.fillText(str, X(x), y, opts.max);
+  };
+  const arFont = "'IBM Plex Sans Arabic'";
+  const body = (wt, px) => `${wt} ${px}px ${rtl ? arFont : "'Source Sans 3'"}, ${arFont}, system-ui, sans-serif`;
+
+  ctx.fillStyle = CARD.bg; ctx.fillRect(0, 0, W, CARD.h);
+  // The three goal colours as one band across the top.
+  CARD.sdg.forEach((col, i) => { ctx.fillStyle = col; ctx.fillRect(rtl ? W - (i + 1) * W / 3 : i * W / 3, 0, W / 3, 10); });
+
+  // Brand: three dots + wordmark (always Latin, left-to-right).
+  CARD.sdg.forEach((col, i) => { ctx.fillStyle = col; ctx.beginPath(); ctx.arc(X(M + 10 + i * 28), 92, 10, 0, Math.PI * 2); ctx.fill(); });
+  ctx.font = "800 40px 'Bricolage Grotesque', system-ui, sans-serif"; ctx.fillStyle = CARD.ink; ctx.direction = "ltr";
+  ctx.textAlign = rtl ? "right" : "left"; ctx.fillText("AquaWatt", X(M + 96), 106);
+
+  write(t("card.lead"), M, 196, body(600, 32), CARD.muted);
+  const colW = (W - 2 * M) / 3;
+  [[p.w, "card.water"], [p.e, "card.energy"], [p.c, "card.co2"]].forEach(([v, label], i) => {
+    const x = M + i * colW;
+    ctx.fillStyle = CARD.sdg[i]; ctx.fillRect(rtl ? X(x) - 64 : X(x), 236, 64, 6);
+    write(fmt(v), x, 330, `600 72px 'IBM Plex Mono', ${arFont}, monospace`, CARD.text[i], { max: colW - 24 });
+    write(t(label), x, 376, body(600, 28), CARD.ink, { max: colW - 24 });
+  });
+  write(t("card.year", { m3: fmt(p.w * 12 / 1000, 1), c: fmt(p.c * 12) }), M, 456, body(400, 28), CARD.muted, { max: W - 2 * M });
+  write(t("card.sdgs") + " · GEO217 · AIU", M, 540, body(600, 22), CARD.muted);
+  write(SITE_URL.replace(/^https:\/\//, "").replace(/\/$/, ""), M, 580, "500 22px 'IBM Plex Mono', monospace", CARD.ink, { ltr: true, max: W - 2 * M });
+  return c;
+}
+
+let shareBlob = null, shareUrl = null, shareOpener = null;
+function shareTexts() {
+  const p = current.plan;
+  const vars = { w: fmt(p.w), e: fmt(p.e), c: fmt(p.c), c12: fmt(p.c * 12), url: SITE_URL };
+  return { summary: t("share.summary", vars), post: t("share.post", vars) + "\n\n" + HASHTAGS, alt: t("share.alt", vars) };
+}
+async function openShare() {
+  if (!current?.plan) return;
+  shareOpener = document.activeElement;
+  const texts = shareTexts();
+  $("sharePost").value = texts.post;
+  $("shareMsg").textContent = "";
+  $("shareLinkedIn").href = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(SITE_URL);
+  $("shareDlg").showModal();
+  const canvas = await drawShareCard(current.plan);
+  shareBlob = await new Promise(r => canvas.toBlob(r, "image/png"));
+  if (shareUrl) URL.revokeObjectURL(shareUrl);
+  shareUrl = URL.createObjectURL(shareBlob);
+  $("sharePreview").src = shareUrl;
+  $("sharePreview").alt = texts.alt;
+  const file = new File([shareBlob], "aquawatt-plan.png", { type: "image/png" });
+  $("shareNative").hidden = !(navigator.canShare && (navigator.canShare({ files: [file] }) || navigator.canShare({ text: texts.summary })));
+}
+async function copyAndReport(text) {
+  $("shareMsg").textContent = (await copyText(text)) ? t("share.copied") : t("share.copyFail");
+}
+$("shareOpen").addEventListener("click", openShare);
+$("shareClose").addEventListener("click", () => $("shareDlg").close());
+$("shareDlg").addEventListener("close", () => shareOpener?.focus?.());
+// Clicking the dimmed backdrop closes the dialog.
+$("shareDlg").addEventListener("click", e => { if (e.target === e.currentTarget) e.currentTarget.close(); });
+$("shareDownload").addEventListener("click", () => {
+  if (!shareUrl) return;
+  const a = document.createElement("a"); a.href = shareUrl; a.download = "aquawatt-plan.png";
+  document.body.append(a); a.click(); a.remove();
+  $("shareMsg").textContent = t("share.downloaded");
+});
+$("shareCopy").addEventListener("click", () => copyAndReport(shareTexts().summary));
+$("shareCopyPost").addEventListener("click", () => copyAndReport($("sharePost").value));
+$("shareNative").addEventListener("click", async () => {
+  const texts = shareTexts(), file = new File([shareBlob], "aquawatt-plan.png", { type: "image/png" });
+  const data = navigator.canShare?.({ files: [file] }) ? { files: [file], text: texts.summary } : { text: texts.summary, url: SITE_URL };
+  try { await navigator.share(data); } catch (e) { /* the person cancelled */ }
+});
+function updateShareButton() {
+  const btn = $("shareOpen");
+  btn.disabled = !current?.plan;
+  btn.title = current?.plan ? "" : t("share.needPlan");
+}
+document.addEventListener("planchange", updateShareButton);
 
 /* ==== Start ==== */
 loadCalc();

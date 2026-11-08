@@ -226,6 +226,7 @@
             <div class="track-row">
               <button type="button" class="btn" id="markMonth" data-i18n="track.mark">We did our plan this month</button>
               <button type="button" class="link-btn" id="undoMonth" hidden data-i18n="track.undo">Undo</button>
+              <button type="button" class="btn ghost small share-open" id="shareOpen" data-i18n="share.open">Share our plan</button>
             </div>
             <p class="hint" id="trackMsg" aria-live="polite"></p>
           </div>
@@ -409,6 +410,29 @@
 <footer class="site-foot">
   <div class="wrap"><span data-i18n="footer.line">AquaWatt · GEO217 Climate Change and Sustainability · Alamein International University</span><span>#SDGs #GEO217 #AIU</span></div>
 </footer>
+
+<dialog class="share-dlg" id="shareDlg" aria-labelledby="shareTitle">
+  <div class="dlg-head">
+    <h2 id="shareTitle" data-i18n="share.title">Share our plan</h2>
+    <button type="button" class="tool icon" id="shareClose" data-i18n-attr="aria-label:share.close">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <img class="share-preview" id="sharePreview" alt="" width="1200" height="630">
+  <div class="share-btns">
+    <button type="button" class="btn small" id="shareDownload" data-i18n="share.download">Download image (PNG)</button>
+    <button type="button" class="btn ghost small" id="shareNative" hidden data-i18n="share.native">Share…</button>
+    <button type="button" class="btn ghost small" id="shareCopy" data-i18n="share.copySummary">Copy summary</button>
+    <a class="btn ghost small" id="shareLinkedIn" target="_blank" rel="noopener" data-i18n="share.linkedin">Share on LinkedIn</a>
+  </div>
+  <label class="share-label" for="sharePost" data-i18n="share.postLabel">Ready-to-copy post</label>
+  <textarea id="sharePost" rows="7" readonly></textarea>
+  <div class="share-foot">
+    <button type="button" class="btn ghost small" id="shareCopyPost" data-i18n="share.copyPost">Copy post text</button>
+    <p class="hint" id="shareMsg" role="status"></p>
+  </div>
+  <p class="hint" data-i18n="share.note">The image is made in your browser. Nothing is uploaded unless you choose to share it.</p>
+</dialog>
 
 <script src="script.js"></script>
 </body>

@@ -321,6 +321,19 @@ html:lang(ar) .chart-wrap :is(.c-change,.c-axis,.c-val){font-family:var(--body)}
 .help-empty{padding:18px 0;color:var(--muted)}
 .help-note{margin-top:18px;max-width:80ch}
 
+/* share dialog */
+.share-open{margin-inline-start:auto}
+.share-dlg{width:min(720px, calc(100vw - 24px));max-height:calc(100dvh - 24px);border:1px solid var(--line);border-radius:16px;background:var(--surface);color:var(--ink);padding:20px;display:none}
+.share-dlg[open]{display:grid;gap:12px}
+.share-dlg::backdrop{background:rgb(6 20 25/.6)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.dlg-head h2{font-size:1.4rem}
+.share-preview{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:var(--band)}
+.share-btns{display:flex;flex-wrap:wrap;gap:8px}
+.share-label{font-weight:600;font-size:.92rem}
+.share-dlg textarea{font:inherit;font-size:.92rem;width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);resize:vertical}
+.share-foot{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+
 /* how / team */
 .two{display:grid;grid-template-columns:1fr 1fr;gap:32px}
 @media (max-width:860px){.two{grid-template-columns:1fr}}
