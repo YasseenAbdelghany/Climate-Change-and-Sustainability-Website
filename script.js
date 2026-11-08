@@ -1328,6 +1328,11 @@ document.addEventListener("planchange", updateShareButton);
 /* ==== Start ==== */
 loadCalc();
 setLang(lang);
+// Every open or refresh starts at the top: drop a leftover #section from the address and scroll up instantly.
+if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+// Some browsers jump to a remembered spot once everything has loaded, so repeat it then.
+window.addEventListener("load", () => window.scrollTo({ top: 0, left: 0, behavior: "instant" }), { once: true });
 // Reveal once the main fonts are in (or after 1.2 s at most), so text does not re-wrap and jump in front of the reader.
 (() => {
   const css = document.getElementById("fontCss");

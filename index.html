@@ -28,6 +28,7 @@
 (function () {
   var root = document.documentElement;
   root.lang = "en"; root.dir = "ltr";
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
   root.setAttribute("data-theme", "light");
   // Hide the page until script.js has filled in the chosen language, so text does not swap in front of the reader.
   root.classList.add("i18n-pending");
@@ -151,26 +152,27 @@
         </article>
       </div>
       <figure class="loop">
-        <svg id="loopSvg" viewBox="0 30 760 142" role="img" aria-labelledby="loopT">
+        <svg id="loopSvg" viewBox="0 0 760 164" role="img" aria-labelledby="loopT">
           <title id="loopT" data-i18n="loop.title">The water-energy-climate loop</title>
-          <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--muted)"/></marker></defs>
+          <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1.5 L9,5 L1,8.5 Z" fill="var(--muted)"/></marker></defs>
           <!-- Shapes are mirrored as a group for RTL; labels are repositioned in script.js so the text itself is never flipped. -->
-          <g id="loopShapes">
-            <rect x="10" y="40" width="190" height="70" rx="10" fill="var(--water-soft)"/>
-            <rect x="285" y="40" width="190" height="70" rx="10" fill="var(--energy-soft)"/>
-            <rect x="560" y="40" width="190" height="70" rx="10" fill="var(--climate-soft)"/>
-            <line x1="204" y1="75" x2="280" y2="75" stroke="var(--muted)" stroke-width="2" marker-end="url(#ar)"/>
-            <line x1="479" y1="75" x2="555" y2="75" stroke="var(--muted)" stroke-width="2" marker-end="url(#ar)"/>
-            <path d="M655 114 C655 160, 105 160, 105 116" fill="none" stroke="var(--muted)" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#ar)"/>
+          <g id="loopShapes" fill="none" stroke="var(--muted)" stroke-width="1.75">
+            <rect x="10" y="8" width="190" height="76" rx="10" fill="var(--water-soft)" stroke="none"/>
+            <rect x="285" y="8" width="190" height="76" rx="10" fill="var(--energy-soft)" stroke="none"/>
+            <rect x="560" y="8" width="190" height="76" rx="10" fill="var(--climate-soft)" stroke="none"/>
+            <path d="M210 46 H276" marker-end="url(#ar)"/>
+            <path d="M485 46 H551" marker-end="url(#ar)"/>
+            <!-- Feedback: from CO2 back to water use, drawn as a rounded loop under the boxes so it never crosses its label. -->
+            <path d="M655 92 V110 Q655 120 645 120 H115 Q105 120 105 110 V93" stroke-dasharray="6 5" marker-end="url(#ar)"/>
           </g>
           <g class="loop-text" font-size="15">
-            <text x="105" y="70" text-anchor="middle" font-weight="700" fill="var(--water)" data-i18n="loop.water">Water use</text>
-            <text x="105" y="92" text-anchor="middle" fill="var(--muted)" font-size="13" data-i18n="loop.waterSub">showers, taps, laundry</text>
-            <text x="380" y="70" text-anchor="middle" font-weight="700" fill="var(--energy)" data-i18n="loop.energy">Electricity</text>
-            <text x="380" y="92" text-anchor="middle" fill="var(--muted)" font-size="13" data-i18n="loop.energySub">heating, pumping, treating</text>
-            <text x="655" y="70" text-anchor="middle" font-weight="700" fill="var(--climate)" data-i18n="loop.co2">CO₂ emissions</text>
-            <text x="655" y="92" text-anchor="middle" fill="var(--muted)" font-size="13" data-i18n="loop.co2Sub">mostly gas-fired power</text>
-            <text x="380" y="160" text-anchor="middle" fill="var(--muted)" font-size="13" data-i18n="loop.back">warming → drought and heat → more water and cooling demand</text>
+            <text x="105" y="41" text-anchor="middle" font-weight="600" fill="var(--water)" data-i18n="loop.water">Water use</text>
+            <text x="105" y="64" text-anchor="middle" fill="var(--muted)" font-size="13" data-i18n="loop.waterSub">showers, taps, laundry</text>
+            <text x="380" y="41" text-anchor="middle" font-weight="600" fill="var(--energy)" data-i18n="loop.energy">Electricity</text>
+            <text x="380" y="64" text-anchor="middle" fill="var(--muted)" font-size="13" data-i18n="loop.energySub">heating, pumping, treating</text>
+            <text x="655" y="41" text-anchor="middle" font-weight="600" fill="var(--climate)" data-i18n="loop.co2">CO₂ emissions</text>
+            <text x="655" y="64" text-anchor="middle" fill="var(--muted)" font-size="13" data-i18n="loop.co2Sub">mostly gas-fired power</text>
+            <text x="380" y="148" text-anchor="middle" fill="var(--muted)" font-size="13" data-i18n="loop.back">warming → drought and heat → more water and cooling demand</text>
           </g>
         </svg>
         <figcaption class="loop-cap" data-i18n="loop.cap">This loop is why we treat SDG 6, 7 and 13 together. Saving hot water saves the most, because heating water takes far more energy than pumping it.</figcaption>
