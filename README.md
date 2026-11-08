@@ -1,9 +1,10 @@
 # AquaWatt
 
 **Every litre you save also saves energy and cuts CO₂.**
-A free, private household calculator for Egyptian families, built for **GEO217 Climate Change and Sustainability** at **Alamein International University (AIU)**.
+A free, private household calculator for Egyptian families, built by **Team 78** for **GEO217 Climate Change and Sustainability** at **Alamein International University (AIU)**.
 
-Live site: `https://yasseenabdelghany.github.io/Climate-Change-and-Sustainability-Website/` (after you publish it, see [Deploy on GitHub Pages](#deploy-on-github-pages))
+- **Live site:** https://yasseenabdelghany.github.io/Climate-Change-and-Sustainability-Website/
+- **Project report:** [Word](docs/GEO217_SDG_Project_AquaWatt.docx) · [PDF](docs/GEO217_SDG_Project_AquaWatt.pdf)
 
 [العربية ↓](#aquawatt-بالعربية)
 
@@ -23,22 +24,22 @@ AquaWatt treats three UN Sustainable Development Goals as **one household proble
 
 ## Features
 
-- **English and Arabic**: the site opens in English with the light theme; one click switches to Arabic with a full right-to-left layout and Arabic-Indic digits, and another switches to dark mode.
+- **English and Arabic**: the site opens in English with the light theme at the top of the page. One click switches to Arabic with a full right-to-left layout, Arabic-Indic digits and the official Arabic SDG icons; another switches to dark mode.
 - **Household calculator**: monthly water (L), electricity (kWh) and CO₂ (kg), 7 actions ranked by CO₂ saved, and a "Your plan" total with yearly savings.
 - **Our home's savings**: mark "We did our plan this month" once per calendar month (with undo); running totals of water, electricity and CO₂ saved. These are estimates from the calculator, not measured savings.
 - **Habits quiz**: 7 questions, a habit profile, and the top 3 tips for your weakest habits. Each tip jumps to the matching action in the calculator. Scoring is explained on the page.
-- **Bill tracker**: enter real monthly bills (kWh and m³), edit or delete them, see a hand-drawn SVG chart with the change from the month before and an approximate CO₂ figure.
+- **Bill tracker**: enter real monthly bills (kWh and m³), edit or delete them, and see an SVG chart with the change from the month before and an approximate CO₂ figure.
 - **Your data**: export everything to a JSON file and import it on another device.
-- **Get help in Egypt**: a searchable list of official water, electricity and solar contacts, each checked on the organisation's own website with a "Checked on" date and source link.
+- **Get help in Egypt**: a searchable list of official water, electricity and solar contacts (for example 125 for water and 121 for electricity), each checked on the organisation's own website, with a "Checked on" date and source link.
 - **Share our plan**: an image card made in the browser (PNG download, copy text, Web Share, LinkedIn) with a ready-to-copy post.
-- **Light and dark themes**, print stylesheet ("Our family plan" on one page), works on phones, keyboard-friendly, respects reduced motion.
+- **Accessible and responsive**: works on phones, tablets and desktops, keyboard-friendly, WCAG AA colour contrast in both themes, respects reduced motion, and prints a one-page "Our family plan".
 
 ## How to run it
 
 No installation and no build step. Either:
 
 1. **Double-click `index.html`** to open it in your browser, or
-2. open the published GitHub Pages link.
+2. open the [live site](https://yasseenabdelghany.github.io/Climate-Change-and-Sustainability-Website/).
 
 To check that the calculator gives the same numbers as the original version (needs [Node.js](https://nodejs.org/)):
 
@@ -51,26 +52,14 @@ Expected output for the example family of five: **24,836 L, 838 kWh and 394 kg C
 ## Files
 
 ```
-index.html         page structure (every visible text has a data-i18n key)
-style.css          design, light/dark themes, right-to-left support, print layout
-script.js          team details, translations, calculator model and all features
-assets/favicon.svg three dots in the SDG 6 / 7 / 13 colours
+index.html           page structure (every visible text has a data-i18n key)
+style.css            design, light/dark themes, right-to-left support, print layout
+script.js            team details, translations, calculator model and all features
+assets/favicon.svg   three dots in the SDG 6 / 7 / 13 colours
 assets/og-image.png  1200×630 preview image for LinkedIn and other social sites
-tests/             calculator check (Node.js) and a copy of the original model
-```
-
-### Edit the team details
-
-Open `script.js`. The `TEAM` object is at the very top:
-
-```js
-const TEAM = {
-  number: "__",
-  members: [
-    { name: { ar: "احمد خالد احمد سعيد", en: "Ahmed Khaled Ahmed Said" }, role: "researchAnalysis" },
-    ...
-  ]
-};
+assets/sdg/          official UN icons for SDG 6, 7 and 13 in English and Arabic
+docs/                final project report (Word and PDF)
+tests/               calculator check (Node.js) and a copy of the original model
 ```
 
 Change `number` and each member's Arabic and English name. Roles are translated automatically.
@@ -121,7 +110,7 @@ These are estimates for awareness, not a bill. Real numbers depend on each home'
 
 ## Team
 
-Team No. 78 · Computer engineering students, Alamein International University
+Team No. 78, computer engineering students at Alamein International University.
 
 | Name | Role |
 |---|---|
@@ -131,28 +120,41 @@ Team No. 78 · Computer engineering students, Alamein International University
 | Ahmed Khaled Fathy Ahmed | Digital publishing |
 | Yasseen Ahmed ELSayed Abdelghany | Final output |
 
-## Deploy on GitHub Pages
+## Update the live site
 
-A step-by-step guide for a first-time user. It takes about 5 minutes.
+The site is published with GitHub Pages from the `main` branch (Settings → Pages → Deploy from a branch → `main` / root).
+To publish a change, commit it and push:
 
-1. **Create a GitHub account** at [github.com](https://github.com/) if you don't have one, and sign in.
-2. **Create a repository.** Click **+** (top right) → **New repository**. Give it a name (for example `Climate-Change-and-Sustainability-Website`), choose **Public**, and click **Create repository**.
-   *(This project already has a repository: `YasseenAbdelghany/Climate-Change-and-Sustainability-Website`.)*
-3. **Upload the files.** On the repository page, click **Add file → Upload files**. Drag in `index.html`, `style.css`, `script.js`, `README.md` and the **`assets`** folder (and `tests` if you like). Scroll down and click **Commit changes**.
-   *If you use Git on your computer instead:* `git push origin main`.
-4. **Turn on GitHub Pages.** Open the repository's **Settings** tab → **Pages** (left menu). Under **Build and deployment**, set **Source** to **Deploy from a branch**, then choose branch **`main`** and folder **`/ (root)`**, and click **Save**.
-5. **Wait 1–2 minutes.** Refresh the Pages settings screen until it shows "Your site is live at …". You can also watch progress in the **Actions** tab.
-6. **Open your site:** `https://<username>.github.io/<repo>/`
-   For this project: `https://yasseenabdelghany.github.io/Climate-Change-and-Sustainability-Website/`
-7. **If you used a different username or repository name,** replace the old address in four places so links and the LinkedIn preview point to your site: the `canonical`, `og:url`, `og:image` and `twitter:image` lines near the top of `index.html`, and `SITE_URL` near the top of `script.js`.
-8. **Check the LinkedIn preview** with the [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/) by pasting your site's address.
+```bash
+git push origin main
+```
+
+GitHub rebuilds the site in 1–2 minutes; you can watch progress in the **Actions** tab.
+
+### Publishing a copy from scratch
+
+1. Create a **public** repository on [GitHub](https://github.com/) and upload `index.html`, `style.css`, `script.js`, `README.md` and the `assets` folder (**Add file → Upload files → Commit changes**).
+2. Open **Settings → Pages**, set **Source** to **Deploy from a branch**, choose **`main`** and **`/ (root)`**, and click **Save**.
+3. After 1–2 minutes the site is live at `https://<username>.github.io/<repo>/`.
+4. If your username or repository name is different, replace the old address in the `canonical`, `og:url`, `og:image` and `twitter:image` lines near the top of `index.html`, and in `SITE_URL` near the top of `script.js`.
+5. Check the LinkedIn preview with the [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/).
+
+## Credits
+
+- SDG icons: [United Nations](https://www.un.org/sustainabledevelopment/news/communications-material/). This project is not endorsed by the United Nations.
+- Fonts: Readex Pro and IBM Plex Sans / IBM Plex Sans Arabic from Google Fonts.
+
+#AIU #SDGs #Climate_change_Sustainability #GEO217 #Alamein_International_University
 
 ---
 
 # AquaWatt بالعربية
 
 **كل لتر مياه توفّره يوفّر معه الكهرباء ويقلّل انبعاثات الكربون.**
-حاسبة منزلية مجانية تحفظ خصوصيتك، صُمّمت للأسر المصرية ضمن مقرر **GEO217 تغيّر المناخ والاستدامة** في **جامعة العلمين الدولية**.
+حاسبة منزلية مجانية تحفظ خصوصيتك، صمّمها **الفريق رقم ٧٨** للأسر المصرية ضمن مقرر **GEO217 تغيّر المناخ والاستدامة** في **جامعة العلمين الدولية**.
+
+- **الموقع:** https://yasseenabdelghany.github.io/Climate-Change-and-Sustainability-Website/
+- **تقرير المشروع:** [Word](docs/GEO217_SDG_Project_AquaWatt.docx) · [PDF](docs/GEO217_SDG_Project_AquaWatt.pdf)
 
 ## ما هو AquaWatt؟
 
@@ -160,7 +162,7 @@ A step-by-step guide for a first-time user. It takes about 5 minutes.
 
 | الهدف | لماذا يهم في البيت |
 |---|---|
-| **الهدف ٦** المياه النظيفة والصرف الصحي | مصر بلد يعاني شحّ المياه، والإجهاد المائي في شمال أفريقيا وغرب آسيا يتجاوز ٧٥٪. |
+| **الهدف ٦** المياه النظيفة والنظافة الصحية | مصر بلد يعاني شحّ المياه، والإجهاد المائي في شمال أفريقيا وغرب آسيا يتجاوز ٧٥٪. |
 | **الهدف ٧** طاقة نظيفة وبأسعار معقولة | تسخين المياه وضخّها ومعالجتها يحتاج إلى كهرباء. |
 | **الهدف ١٣** العمل المناخي | معظم كهرباء مصر ما زال يُنتَج من الوقود الأحفوري، فتنتج عنها انبعاثات CO₂. |
 
@@ -168,19 +170,19 @@ A step-by-step guide for a first-time user. It takes about 5 minutes.
 
 ## المزايا
 
-- **الإنجليزية والعربية:** يفتح الموقع بالإنجليزية وبالوضع الفاتح، وبضغطة واحدة يتحوّل إلى العربية باتجاه كامل من اليمين إلى اليسار وأرقام عربية، أو إلى الوضع الداكن.
+- **الإنجليزية والعربية:** يفتح الموقع بالإنجليزية وبالوضع الفاتح من أعلى الصفحة، وبضغطة واحدة يتحوّل إلى العربية باتجاه كامل من اليمين إلى اليسار وأرقام عربية وأيقونات الأهداف الرسمية بالعربية، أو إلى الوضع الداكن.
 - **الحاسبة المنزلية:** استهلاك شهري للمياه (لتر) والكهرباء (ك.و.س) وCO₂ (كجم)، و٧ إجراءات مرتّبة حسب توفير CO₂، وإجمالي «خطتك» مع التوفير السنوي.
 - **ما وفّره بيتنا:** زر «طبّقنا خطتنا هذا الشهر» مرة واحدة كل شهر (مع إمكانية التراجع)، وإجمالي تراكمي للمياه والكهرباء وCO₂. هذه تقديرات من الحاسبة وليست قياسات فعلية.
 - **اختبار العادات:** ٧ أسئلة، وملف لعادات أسرتك، وأهم ٣ نصائح لأضعف عاداتكم، وكل نصيحة تنقلك إلى الإجراء المناسب في الحاسبة. طريقة حساب النقاط موضّحة في الصفحة.
 - **متتبّع الفواتير:** أدخل فواتيرك الحقيقية (ك.و.س و م³)، وعدّلها أو احذفها، وشاهد رسمًا بيانيًا يوضّح التغيّر عن الشهر السابق ورقمًا تقريبيًا لـ CO₂.
 - **بياناتك:** صدّر كل بياناتك في ملف JSON واستوردها على جهاز آخر.
-- **أرقام مهمة في مصر:** دليل قابل للبحث لجهات رسمية في المياه والكهرباء والطاقة الشمسية، راجعنا كل رقم فيه على الموقع الرسمي للجهة، مع تاريخ المراجعة ورابط المصدر.
+- **أرقام مهمة في مصر:** دليل قابل للبحث لجهات رسمية في المياه والكهرباء والطاقة الشمسية (مثل ١٢٥ للمياه و١٢١ للكهرباء)، راجعنا كل رقم فيه على الموقع الرسمي للجهة، مع تاريخ المراجعة ورابط المصدر.
 - **شارك خطتنا:** بطاقة صورة تُصنع داخل المتصفح (تنزيل PNG، نسخ النص، المشاركة من الهاتف، LinkedIn) مع منشور جاهز للنسخ.
-- **وضع فاتح وداكن**، وطباعة «خطة أسرتنا» في صفحة واحدة، ويعمل على الهواتف وبلوحة المفاتيح، ويحترم إعداد تقليل الحركة.
+- **سهل الاستخدام للجميع:** يعمل على الهاتف والتابلت والكمبيوتر وبلوحة المفاتيح، بتباين ألوان يحقق معيار WCAG AA في الوضعين، ويحترم إعداد تقليل الحركة، ويطبع «خطة أسرتنا» في صفحة واحدة.
 
 ## طريقة التشغيل
 
-لا يحتاج إلى تثبيت. إمّا أن **تفتح ملف `index.html` بالنقر المزدوج**، أو تفتح رابط GitHub Pages بعد النشر.
+لا يحتاج إلى تثبيت. إمّا أن **تفتح ملف `index.html` بالنقر المزدوج**، أو تفتح [الموقع المنشور](https://yasseenabdelghany.github.io/Climate-Change-and-Sustainability-Website/).
 
 ## كيف نحسب (الافتراضات)
 
@@ -216,7 +218,7 @@ A step-by-step guide for a first-time user. It takes about 5 minutes.
 
 ## الفريق
 
-فريق رقم ٧٨ · طلاب هندسة الحاسبات، جامعة العلمين الدولية
+الفريق رقم ٧٨، طلاب هندسة الحاسبات في جامعة العلمين الدولية.
 
 | الاسم | الدور |
 |---|---|
@@ -226,16 +228,14 @@ A step-by-step guide for a first-time user. It takes about 5 minutes.
 | احمد خالد فتحي احمد | النشر الرقمي |
 | ياسين أحمد السيد عبدالغني | المُخرَج النهائي |
 
-## النشر على GitHub Pages خطوة بخطوة
+## تحديث الموقع المنشور
 
-1. **أنشئ حسابًا على GitHub** من [github.com](https://github.com/) إن لم يكن لديك حساب، ثم سجّل الدخول.
-2. **أنشئ مستودعًا (Repository):** اضغط **+** أعلى الصفحة ← **New repository**، واكتب اسمًا (مثل `Climate-Change-and-Sustainability-Website`)، واختر **Public**، ثم **Create repository**.
-3. **ارفع الملفات:** من صفحة المستودع اضغط **Add file ← Upload files**، واسحب الملفات `index.html` و`style.css` و`script.js` و`README.md` ومجلد **`assets`**، ثم اضغط **Commit changes**.
-4. **فعّل GitHub Pages:** افتح تبويب **Settings** ← **Pages**. في قسم **Build and deployment** اختر **Deploy from a branch**، ثم الفرع **`main`** والمجلد **`/ (root)`**، واضغط **Save**.
-5. **انتظر دقيقة أو دقيقتين** حتى تظهر رسالة "Your site is live at …".
-6. **افتح موقعك:** `https://<username>.github.io/<repo>/`
-   ولهذا المشروع: `https://yasseenabdelghany.github.io/Climate-Change-and-Sustainability-Website/`
-7. **إذا استخدمت اسم مستخدم أو مستودع مختلفًا،** غيّر العنوان القديم في أسطر `canonical` و`og:url` و`og:image` و`twitter:image` أعلى `index.html`، وفي `SITE_URL` أعلى `script.js`.
+الموقع منشور على GitHub Pages من الفرع `main`. لنشر أي تعديل، احفظه (commit) ثم ارفعه بالأمر `git push origin main`، وسيتحدّث الموقع خلال دقيقة أو دقيقتين.
+
+## شكر وتقدير
+
+- أيقونات أهداف التنمية المستدامة من [الأمم المتحدة](https://www.un.org/sustainabledevelopment/news/communications-material/)، وهذا المشروع غير معتمد من الأمم المتحدة.
+- الخطوط: Readex Pro وIBM Plex Sans وIBM Plex Sans Arabic من Google Fonts.
 
 ---
 
