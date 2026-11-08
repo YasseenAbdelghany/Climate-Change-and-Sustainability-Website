@@ -51,6 +51,7 @@
       <li><a href="#calculator" data-i18n="nav.calculator">Calculator</a></li>
       <li><a href="#quiz" data-i18n="nav.quiz">Habits quiz</a></li>
       <li><a href="#bills" data-i18n="nav.bills">Bills</a></li>
+      <li><a href="#help" data-i18n="nav.help">Get help</a></li>
       <li><a href="#team" data-i18n="nav.team">Team</a></li>
       <li><a href="#references" data-i18n="nav.references">References</a></li>
     </ul></nav>
@@ -343,6 +344,24 @@
         </div>
         <p class="hint" id="dataMsg" role="status"></p>
       </div>
+    </div>
+  </section>
+
+  <section id="help">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow" data-i18n="help.eyebrow">Get help in Egypt</span>
+        <h2 data-i18n="help.title">Official numbers for water, electricity and solar</h2>
+        <p class="lead" data-i18n="help.lead">A leak, a power cut, a wrong bill or a question about solar energy? These are official Egyptian bodies. We checked every name, number and link on the organisation's own website.</p>
+      </div>
+      <div class="help-search">
+        <label for="helpQ" data-i18n="help.searchLabel">Search the directory</label>
+        <input id="helpQ" type="search" data-i18n-attr="placeholder:help.placeholder" placeholder="e.g. water, power cut, solar, 125" autocomplete="off">
+        <p class="hint" id="helpCount" aria-live="polite"></p>
+      </div>
+      <ul class="help-list" id="helpList"></ul>
+      <p class="hint help-note" data-i18n="help.note">Numbers can change. If a number does not connect, open the source link to check the latest details. AquaWatt is a student project and is not connected to any of these organisations.</p>
+      <p class="visually-hidden" id="copyStatus" aria-live="polite"></p>
     </div>
   </section>
 

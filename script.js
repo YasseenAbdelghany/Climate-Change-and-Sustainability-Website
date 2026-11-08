@@ -288,6 +288,42 @@ const I18N = {
   "data.imported": { ar: "تم الاستيراد. جارٍ إعادة تحميل الصفحة…", en: "Imported. Reloading the page…" },
   "data.invalid": { ar: "هذا الملف ليس نسخة احتياطية صالحة من AquaWatt.", en: "This file is not a valid AquaWatt backup." },
   "data.noStorage": { ar: "الاستيراد يحتاج إلى التخزين المحلي، وهو محظور في هذا المتصفح.", en: "Importing needs browser storage, which is blocked here." },
+  "nav.help": { ar: "أرقام مهمة", en: "Get help" },
+  "help.eyebrow": { ar: "مساعدة في مصر", en: "Get help in Egypt" },
+  "help.title": { ar: "أرقام رسمية للمياه والكهرباء والطاقة الشمسية", en: "Official numbers for water, electricity and solar" },
+  "help.lead": { ar: "تسريب مياه، أو انقطاع كهرباء، أو فاتورة غير صحيحة، أو سؤال عن الطاقة الشمسية؟ هذه جهات مصرية رسمية، وقد راجعنا كل اسم ورقم ورابط على الموقع الرسمي للجهة نفسها.", en: "A leak, a power cut, a wrong bill or a question about solar energy? These are official Egyptian bodies. We checked every name, number and link on the organisation's own website." },
+  "help.searchLabel": { ar: "ابحث في الدليل", en: "Search the directory" },
+  "help.placeholder": { ar: "مثلًا: مياه، انقطاع، شمسي، 125", en: "e.g. water, power cut, solar, 125" },
+  "help.count": { ar: { zero: "لا توجد نتائج", one: "نتيجة واحدة", two: "نتيجتان", few: "{n} نتائج", many: "{n} نتيجة", other: "{n} نتيجة" }, en: { one: "{n} result", other: "{n} results" } },
+  "help.none": { ar: "لا توجد جهة تطابق بحثك. جرّب كلمة أخرى مثل «مياه» أو «كهرباء».", en: "Nothing matches your search. Try another word such as “water” or “electricity”." },
+  "help.note": { ar: "قد تتغيّر الأرقام. إذا لم يعمل رقم، افتح رابط المصدر لمراجعة أحدث البيانات. AquaWatt مشروع طلابي وليس تابعًا لأي من هذه الجهات.", en: "Numbers can change. If a number does not connect, open the source link to check the latest details. AquaWatt is a student project and is not connected to any of these organisations." },
+  "help.copy": { ar: "نسخ", en: "Copy" },
+  "help.copyLabel": { ar: "نسخ الرقم {phone}", en: "Copy number {phone}" },
+  "help.copied": { ar: "تم النسخ", en: "Copied" },
+  "help.copiedStatus": { ar: "تم نسخ الرقم {phone}", en: "Number {phone} copied" },
+  "help.checked": { ar: "رُوجِع في {date} · ", en: "Checked on {date} · " },
+  "help.source": { ar: "المصدر", en: "Source" },
+  "help.site": { ar: "الموقع الرسمي", en: "Official website" },
+  "help.cat.water": { ar: "مياه", en: "Water" },
+  "help.cat.energy": { ar: "كهرباء", en: "Electricity" },
+  "help.cat.solar": { ar: "طاقة شمسية", en: "Solar" },
+  "help.cat.general": { ar: "شكاوى حكومية", en: "Government complaints" },
+  "help.hcww.name": { ar: "الشركة القابضة لمياه الشرب والصرف الصحى", en: "Holding Company for Water & Waste Water" },
+  "help.hcww.desc": { ar: "لشكاوى المياه في كل المحافظات، ولشكاوى الصرف الصحي خارج القاهرة والإسكندرية. وتتيح الشركة أيضًا تطبيق HCWW 125 لتقديم الشكاوى بالصور والموقع.", en: "Water complaints in every governorate, and sewage complaints outside Cairo and Alexandria. The company also offers the HCWW 125 app for complaints with a photo and location." },
+  "help.hcww.p1": { ar: "شكاوى المياه", en: "Water complaints" },
+  "help.hcww.p2": { ar: "الصرف الصحي في القاهرة والإسكندرية", en: "Sewage in Cairo and Alexandria" },
+  "help.hcww.p3": { ar: "المدن الجديدة (هيئة المجتمعات العمرانية الجديدة)", en: "New cities (New Urban Communities Authority)" },
+  "help.eehc.name": { ar: "الشركة القابضة لكهرباء مصر", en: "Egyptian Electricity Holding Company" },
+  "help.eehc.desc": { ar: "الخط الساخن للكهرباء يعمل على مدار الساعة للإبلاغ عن الأعطال والشكاوى، والمنصة الموحدة لخدمات الكهرباء لتقديم الطلبات والاستفسارات والشكاوى عبر الإنترنت.", en: "The 24/7 electricity hotline for faults and complaints, and the unified electricity services platform for online requests, questions and complaints." },
+  "help.eehc.p1": { ar: "الخط الساخن 24/7", en: "24/7 hotline" },
+  "help.egyptera.name": { ar: "جهاز تنظيم مرفق الكهرباء وحماية المستهلك", en: "Egyptian Electric Utility and Consumer Protection Regulatory Agency (EgyptERA)" },
+  "help.egyptera.desc": { ar: "إذا قدّمت شكواك لشركة الكهرباء ولم تُحَل، يمكنك رفعها إلى الجهاز عبر نموذج الشكاوى على موقعه، مع صورة الشكوى ورد الشركة.", en: "If you complained to your electricity company and it was not solved, you can take it to the regulator through the complaint form on its website, with a copy of your complaint and the company's reply." },
+  "help.egyptera.p1": { ar: "إدارة الشكاوى (داخلي ١٥٤)", en: "Complaints (extension 154)" },
+  "help.solar.name": { ar: "ربط محطة طاقة شمسية يملكها العميل", en: "Connecting a rooftop solar system you own" },
+  "help.solar.desc": { ar: "صفحة جهاز تنظيم مرفق الكهرباء التي تسرد المستندات المطلوبة لربط محطة شمسية منزلية بالشبكة، ومنها شهادة تأهيل الشركة المنفّذة الصادرة من هيئة الطاقة الجديدة والمتجددة.", en: "EgyptERA's page listing the documents needed to connect a home solar system to the grid, including the installer's qualification certificate from the New and Renewable Energy Authority." },
+  "help.shakwa.name": { ar: "منظومة الشكاوى الحكومية الموحدة (مجلس الوزراء)", en: "Unified Government Complaints System (Cabinet)" },
+  "help.shakwa.desc": { ar: "إذا لم تُحَل شكواك لدى الجهة المختصة، يمكنك تقديمها عبر بوابة الشكاوى الحكومية أو الخط الساخن أو تطبيق «في خدمتك».", en: "If a complaint is not solved by the service provider, you can file it through the government complaints portal, its hotline or the “Fi Khedmetak” app." },
+  "help.shakwa.p1": { ar: "الخط الساخن", en: "Hotline" },
   "assume.title": { ar: "كيف نحسب (الافتراضات)", en: "How we calculate (assumptions)" },
   "assume.1": { ar: "رأس الدُش العادي ٩ لترات في الدقيقة، والموفّر ٦ لترات؛ ويُسخَّن ٦٠٪ من مياه الاستحمام بمقدار ٢٥ درجة مئوية.", en: "Standard shower head 9 L/min, low-flow 6 L/min; 60% of shower water is heated by 25 °C." },
   "assume.2": { ar: "السخّان الكهربائي: ٠٫٠٣٢ ك.و.س لكل لتر ساخن (كفاءة ٩٠٪). سخّان الغاز: ٠٫٠٠٧٣ كجم CO₂ لكل لتر ساخن. الشمسي: صفر تقريبًا.", en: "Electric heater: 0.032 kWh per heated litre (90% efficient). Gas heater: 0.0073 kg CO₂ per heated litre. Solar: about zero." },
@@ -1057,6 +1093,86 @@ $("importData").addEventListener("change", async e => {
   msg.textContent = t("data.imported");
   setTimeout(() => location.reload(), 600);
 });
+
+/* ==== Get help in Egypt ==== */
+// Every entry was checked on the organisation's own website on the "checked" date; "source" is that page.
+const HELP_CHECKED = "2026-11-08";
+const HELP = [
+  { id: "hcww", cat: "water", site: "https://www.hcww.com.eg/",
+    phones: [{ n: "125", label: "help.hcww.p1" }, { n: "175", label: "help.hcww.p2" }, { n: "15100", label: "help.hcww.p3" }],
+    source: "https://www.hcww.com.eg/faq-items/", tags: "leak pipe sewage bill water مياه تسريب ماسورة صرف فاتورة حنفية" },
+  { id: "eehc", cat: "energy", site: "https://eservices.eehc.gov.eg/",
+    phones: [{ n: "121", label: "help.eehc.p1" }],
+    source: "https://eservices.eehc.gov.eg/", tags: "power cut outage fault meter bill electricity كهرباء انقطاع عطل عداد فاتورة" },
+  { id: "egyptera", cat: "energy", site: "https://egyptera.org/ar/ComplaintsForm.aspx",
+    phones: [{ n: "0223421476", show: "02-23421476", label: "help.egyptera.p1" }],
+    source: "https://egyptera.org/ar/ComplaintsProc.aspx", tags: "regulator complaint bill consumer electricity جهاز تنظيم شكوى فاتورة مستهلك كهرباء" },
+  { id: "solar", cat: "solar", site: "https://egyptera.org/ar/SolarStation.aspx", phones: [],
+    source: "https://egyptera.org/ar/SolarStation.aspx", tags: "solar rooftop panels pv net metering NREA شمسي ألواح سطح خلايا صافي القياس الطاقة المتجددة" },
+  { id: "shakwa", cat: "general", site: "https://www.shakwa.eg/",
+    phones: [{ n: "16528", label: "help.shakwa.p1" }],
+    source: "https://www.shakwa.eg/GCP/StaticContent/View.aspx?ID=1", tags: "government complaint cabinet escalate شكوى حكومية مجلس الوزراء تصعيد" }
+];
+
+// Fold Arabic letter variants, diacritics and digits so "أنقطاع", "انقطاع" and "١٢٥" all match.
+const foldText = s => String(s).toLowerCase()
+  .replace(/[ً-ْـ]/g, "").replace(/[أإآ]/g, "ا").replace(/ة/g, "ه").replace(/ى/g, "ي")
+  .replace(/[٠-٩]/g, d => d.charCodeAt(0) - 0x0660);
+const helpIndex = item => foldText([
+  ...["ar", "en"].flatMap(l => [I18N[`help.${item.id}.name`][l], I18N[`help.${item.id}.desc`][l], I18N[`help.cat.${item.cat}`][l]]),
+  ...item.phones.flatMap(p => [p.n, p.show || "", I18N[p.label].ar, I18N[p.label].en]), item.tags
+].join(" "));
+
+async function copyText(text) {
+  try { await navigator.clipboard.writeText(text); return true; }
+  catch (e) {
+    // Fallback for file:// pages and older browsers.
+    const ta = document.createElement("textarea"); ta.value = text; ta.setAttribute("readonly", "");
+    ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.append(ta); ta.select();
+    let ok = false; try { ok = document.execCommand("copy"); } catch (err) {}
+    ta.remove(); return ok;
+  }
+}
+
+function renderHelp() {
+  const q = foldText($("helpQ").value.trim()), words = q.split(/\s+/).filter(Boolean);
+  const list = HELP.filter(item => { const idx = helpIndex(item); return words.every(w => idx.includes(w)); });
+  const ul = $("helpList"); ul.innerHTML = "";
+  const date = new Intl.DateTimeFormat(lang === "ar" ? "ar-EG" : "en-GB", { day: "numeric", month: "long", year: "numeric" }).format(new Date(HELP_CHECKED + "T12:00:00"));
+  list.forEach(item => {
+    const li = document.createElement("li"); li.className = "help-item";
+    const add = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; li.append(n); return n; };
+    add("span", "cat " + item.cat, t("help.cat." + item.cat));
+    add("h3", "", t(`help.${item.id}.name`));
+    // Show the official name in the other language too, so it can be searched for elsewhere.
+    const other = I18N[`help.${item.id}.name`][lang === "ar" ? "en" : "ar"];
+    const alt = add("span", "alt", other); alt.lang = lang === "ar" ? "en" : "ar";
+    add("p", "", t(`help.${item.id}.desc`));
+    item.phones.forEach(p => {
+      const row = add("div", "help-contact");
+      const a = document.createElement("a"); a.className = "phone"; a.href = "tel:" + p.n; a.textContent = p.show || p.n;
+      const lab = document.createElement("span"); lab.className = "hint"; lab.textContent = t(p.label);
+      const btn = document.createElement("button"); btn.type = "button"; btn.className = "copy-btn"; btn.textContent = t("help.copy");
+      btn.setAttribute("aria-label", t("help.copyLabel", { phone: p.show || p.n }));
+      btn.addEventListener("click", async () => {
+        if (!(await copyText(p.n))) return;
+        btn.textContent = t("help.copied");
+        $("copyStatus").textContent = t("help.copiedStatus", { phone: p.show || p.n });
+        setTimeout(() => { btn.textContent = t("help.copy"); }, 1800);
+      });
+      row.append(a, btn, lab);
+    });
+    const site = add("a", "site", t("help.site")); site.href = item.site; site.target = "_blank"; site.rel = "noopener";
+    const checked = add("span", "checked", t("help.checked", { date }));
+    const src = document.createElement("a"); src.href = item.source; src.target = "_blank"; src.rel = "noopener"; src.textContent = t("help.source");
+    checked.append(src);
+    ul.append(li);
+  });
+  if (!list.length) { const li = document.createElement("li"); li.className = "help-empty"; li.textContent = t("help.none"); ul.append(li); }
+  $("helpCount").textContent = words.length ? t("help.count", { n: list.length }) : "";
+}
+$("helpQ").addEventListener("input", renderHelp);
+langListeners.push(renderHelp);
 
 /* ==== Start ==== */
 loadCalc();

@@ -78,7 +78,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 :root[data-theme="dark"] .i-sun{display:block} :root[data-theme="dark"] .i-moon{display:none}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .i-sun{display:block}:root:not([data-theme="light"]) .i-moon{display:none}}
 .tool.menu-btn{display:none}
-@media (max-width:960px){
+@media (max-width:1180px){
   .tool.menu-btn{display:grid}
   .nav{flex-wrap:wrap}
   #siteNav{order:5;flex-basis:100%;display:none}
@@ -298,6 +298,28 @@ html:lang(ar) .chart-wrap :is(.c-change,.c-axis,.c-val){font-family:var(--body)}
 .file-btn{position:relative}
 .file-btn input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%}
 .file-btn:focus-within{outline:3px solid var(--water);outline-offset:2px}
+
+/* help directory */
+.help-search{display:grid;gap:6px;max-width:520px;margin-bottom:18px}
+.help-search label{font-weight:600}
+.help-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px}
+@media (max-width:760px){.help-list{grid-template-columns:1fr}}
+.help-item{display:grid;gap:6px;padding:18px 0;border-top:1px solid var(--line);align-content:start}
+.help-item .cat{font-family:var(--mono);font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.help-item .cat.water{color:var(--water)} .help-item .cat.energy{color:var(--energy)} .help-item .cat.solar{color:var(--energy)} .help-item .cat.general{color:var(--climate)}
+.help-item h3{font-size:1.08rem}
+.help-item .alt{font-size:.85rem;color:var(--muted)}
+.help-item p{color:var(--muted);font-size:.95rem}
+.help-contact{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin-top:2px}
+.phone{font-family:var(--mono);font-weight:600;font-size:1.35rem;color:var(--ink);text-decoration:none;user-select:all;direction:ltr;unicode-bidi:isolate}
+.phone:hover{text-decoration:underline}
+.copy-btn{font:inherit;font-size:.82rem;font-weight:600;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:6px;padding:4px 10px;min-height:32px;cursor:pointer}
+.copy-btn:hover{background:var(--bg)}
+.help-item .site{font-weight:600;font-size:.95rem;overflow-wrap:anywhere}
+.help-item .checked{font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+.help-item .checked a{color:inherit}
+.help-empty{padding:18px 0;color:var(--muted)}
+.help-note{margin-top:18px;max-width:80ch}
 
 /* how / team */
 .two{display:grid;grid-template-columns:1fr 1fr;gap:32px}
